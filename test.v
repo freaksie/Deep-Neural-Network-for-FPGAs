@@ -32,7 +32,14 @@ reg ap_done;
 reg ap_idle;
 reg ap_ready;
 reg layer7_out_0_V_ap_vld;
+parameter DS = 15;
+reg signed [DS:0] w0_0;
+reg signed [DS:0] w1_0;
 
+initial begin 
+w0_0 = 16'd65248;
+w1_0 = 16'd304;
+end
 
 wire   [15:0] res_0_V_write_assign_fu_1431_p2;
 
