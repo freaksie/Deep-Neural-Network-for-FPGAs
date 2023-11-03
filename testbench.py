@@ -153,7 +153,3 @@ async def testbench(dut):
             #     print(i+1,y[i],pred[i])
     print(count1/count)
     # print(pred,y[0:10])
-
-
-    
-    
