@@ -135,7 +135,7 @@ reg   [15:0] ap_return_5_int_reg;
 reg   [15:0] ap_return_6_int_reg;
 reg   [15:0] ap_return_7_int_reg;
 
-parameter DS = 15;
+localparam DS = 15;
 reg signed [DS:0] w0_0;
 reg signed[DS:0] w0_1;
 reg signed [DS:0] w0_2;
@@ -223,7 +223,7 @@ always @ (posedge ap_clk) begin
         tmp_3_reg_1568 <= {{r_V_s_fu_110_p2[25:10]}};
         tmp_reg_1562 <= tmp_fu_1180_p1;
         tmp_s_reg_1573 <= {{r_V_10_0_1_fu_104_p2[25:10]}};
-        tmp_33_0_5_fu_1410_p4 <= r_V_10_0_5_fu_1404_p2;
+        tmp_33_0_5_fu_1410_p4 <= {{r_V_10_0_5_fu_1404_p2[25:10]}};
     end
 end
 always @ (*) begin
