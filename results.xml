@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1698969225" />
-    <testcase name="testbench" classname="testbench" file="/home/neelvora/Projects/Verilog/verilog/testbench.py" lineno="15" time="0.0024721622467041016" sim_time_ns="24.001" ratio_time="9708.505188928537" />
+    <property name="random_seed" value="1698971503" />
+    <testcase name="testbench" classname="testbench" file="/home/neelvora/Projects/Verilog/verilog/testbench.py" lineno="41" time="1.4133062362670898" sim_time_ns="2398.001" ratio_time="1696.7313512560065" />
   </testsuite>
 </testsuites>
