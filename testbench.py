@@ -41,9 +41,9 @@ def getData(X,Y):
 @cocotb.test()
 async def testbench(dut):
     pred=[]
-    x,y=getData('tb_data/x_test.npy','tb_data/y_test.npy')
+    x,y=getData('tb_data/x_test_her.npy','tb_data/y_test_her.npy')
     
-    for i in range(1000):
+    for i in range(3400):
         clock = Clock(dut.ap_clk, 2, units="ns")
         cocotb.start_soon(clock.start())
         # print("---Start---")
@@ -61,73 +61,73 @@ async def testbench(dut):
 
         
 
-        # Rising Edge to send input to input_2_v_preg and input_2_V_in_sig
-        # await RisingEdge(dut.ap_clk)
-        print(dut.input_2_V.value)
-        print('--- Input to HiddenLayer 1----')
-        print(dut.input_2_V_in_sig.value)
-        print("---Output from HiddenLayer 1----")
-        # Rising Edge to get output from HiddenLayer 1
-        # await RisingEdge(dut.ap_clk)
-        print(dut.layer2_out_0_V_reg_209.value)
-        print(dut.layer2_out_1_V_reg_214.value)
-        print(dut.layer2_out_2_V_reg_219.value)
-        print(dut.layer2_out_3_V_reg_224.value)
-        print(dut.layer2_out_4_V_reg_229.value)
-        print(dut.layer2_out_5_V_reg_234.value)
-        print(dut.layer2_out_6_V_reg_239.value)
-        print(dut.layer2_out_7_V_reg_244.value)
+        # # Rising Edge to send input to input_2_v_preg and input_2_V_in_sig
+        # # await RisingEdge(dut.ap_clk)
+        # print(dut.input_2_V.value)
+        # print('--- Input to HiddenLayer 1----')
+        # print(dut.input_2_V_in_sig.value)
+        # print("---Output from HiddenLayer 1----")
+        # # Rising Edge to get output from HiddenLayer 1
+        # # await RisingEdge(dut.ap_clk)
+        # print(dut.layer2_out_0_V_reg_209.value)
+        # print(dut.layer2_out_1_V_reg_214.value)
+        # print(dut.layer2_out_2_V_reg_219.value)
+        # print(dut.layer2_out_3_V_reg_224.value)
+        # print(dut.layer2_out_4_V_reg_229.value)
+        # print(dut.layer2_out_5_V_reg_234.value)
+        # print(dut.layer2_out_6_V_reg_239.value)
+        # print(dut.layer2_out_7_V_reg_244.value)
 
     
-        print('---Output from RelU----')
-        # Rising Edge to get output from Relu
-        # await RisingEdge(dut.ap_clk)
-        print(dut.layer3_out_0_V_reg_249.value)
-        print(dut.layer3_out_1_V_reg_254.value)
-        print(dut.layer3_out_2_V_reg_259.value)
-        print(dut.layer3_out_3_V_reg_264.value)
-        print(dut.layer3_out_4_V_reg_269.value)
-        print(dut.layer3_out_5_V_reg_274.value)
-        print(dut.layer3_out_6_V_reg_279.value)
-        print(dut.layer3_out_7_V_reg_284.value)
+        # print('---Output from RelU----')
+        # # Rising Edge to get output from Relu
+        # # await RisingEdge(dut.ap_clk)
+        # print(dut.layer3_out_0_V_reg_249.value)
+        # print(dut.layer3_out_1_V_reg_254.value)
+        # print(dut.layer3_out_2_V_reg_259.value)
+        # print(dut.layer3_out_3_V_reg_264.value)
+        # print(dut.layer3_out_4_V_reg_269.value)
+        # print(dut.layer3_out_5_V_reg_274.value)
+        # print(dut.layer3_out_6_V_reg_279.value)
+        # print(dut.layer3_out_7_V_reg_284.value)
 
 
 
-        # await RisingEdge(dut.ap_clk)
-        # await RisingEdge(dut.ap_clk)
-        # await RisingEdge(dut.ap _clk)
+        # # await RisingEdge(dut.ap_clk)
+        # # await RisingEdge(dut.ap_clk)
+        # # await RisingEdge(dut.ap _clk)
 
 
-        # Rising Edge to get output from Hiddenlayer2
-        # await RisingEdge(dut.ap_clk)
-        print("---Output from HiddenLayer 2----")
-        print(dut.layer4_out_0_V_reg_289.value)
-        print(dut.layer4_out_1_V_reg_294.value)
-        print(dut.layer4_out_2_V_reg_299.value)
-        print(dut.layer4_out_3_V_reg_304.value)
+        # # Rising Edge to get output from Hiddenlayer2
+        # # await RisingEdge(dut.ap_clk)
+        # print("---Output from HiddenLayer 2----")
+        # print(dut.layer4_out_0_V_reg_289.value)
+        # print(dut.layer4_out_1_V_reg_294.value)
+        # print(dut.layer4_out_2_V_reg_299.value)
+        # print(dut.layer4_out_3_V_reg_304.value)
 
-        # Rising Edge to get output from Relu2
-        # await RisingEdge(dut.ap_clk)
-        print("---Output from Relu 2----")
-        print(dut.layer5_out_0_V_reg_309.value)
-        print(dut.layer5_out_1_V_reg_314.value)
-        print(dut.layer5_out_2_V_reg_319.value)
-        print(dut.layer5_out_3_V_reg_324.value)
+        # # Rising Edge to get output from Relu2
+        # # await RisingEdge(dut.ap_clk)
+        # print("---Output from Relu 2----")
+        # print(dut.layer5_out_0_V_reg_309.value)
+        # print(dut.layer5_out_1_V_reg_314.value)
+        # print(dut.layer5_out_2_V_reg_319.value)
+        # print(dut.layer5_out_3_V_reg_324.value)
 
-        # Rising Edge to get output from OutputLayer
+        # # Rising Edge to get output from OutputLayer
 
 
-        # await RisingEdge(dut.ap_clk)
-        # await RisingEdge(dut.ap_clk)
+        # # await RisingEdge(dut.ap_clk)
+        # # await RisingEdge(dut.ap_clk)
         
-        print("---Output from OutputLayer----")
-        print(dut.layer6_out_0_V_reg_329.value)
+        # print("---Output from OutputLayer----")
+        # print(dut.layer6_out_0_V_reg_329.value)
 
-        # await RisingEdge(dut.ap_clk)
-        # await RisingEdge(dut.ap_clk)
-        print("---Prediction----")
-        print(str(dut.layer7_out_0_V.value))
-        print(int(str(dut.layer7_out_0_V.value),2)/2**10)
+        # # await RisingEdge(dut.ap_clk)
+        # # await RisingEdge(dut.ap_clk)
+        # print("---Prediction----")
+        # print(str(dut.layer7_out_0_V.value))
+        # print(int(str(dut.layer7_out_0_V.value),2)/2**10)
 
         y_pred=int(str(dut.layer7_out_0_V.value),2)/2**10
         pred.append(y_pred)
