@@ -90,19 +90,19 @@ assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
 assign r_V_6_1_fu_73_p0 = data_1_V_read;
 
-assign r_V_6_1_fu_73_p2 = ($signed(r_V_6_1_fu_73_p0) * $signed(-'h18D));
+assign r_V_6_1_fu_73_p2 = ($signed(r_V_6_1_fu_73_p0) * $signed(16'd65139));
 
 assign r_V_6_2_fu_70_p0 = data_2_V_read;
 
-assign r_V_6_2_fu_70_p2 = ($signed(r_V_6_2_fu_70_p0) * $signed('h38F));
+assign r_V_6_2_fu_70_p2 = ($signed(r_V_6_2_fu_70_p0) * $signed(16'd911));
 
 assign r_V_6_3_fu_72_p0 = data_3_V_read;
 
-assign r_V_6_3_fu_72_p2 = ($signed(r_V_6_3_fu_72_p0) * $signed(-'h346));
+assign r_V_6_3_fu_72_p2 = ($signed(r_V_6_3_fu_72_p0) * $signed(16'd64698));
 
 assign r_V_6_fu_71_p0 = data_0_V_read;
 
-assign r_V_6_fu_71_p2 = ($signed(r_V_6_fu_71_p0) * $signed(-'h2CA));
+assign r_V_6_fu_71_p2 = ($signed(r_V_6_fu_71_p0) * $signed(16'd64822));
 
 assign res_V_write_assign_fu_241_p2 = (tmp1_fu_236_p2 + tmp_fu_227_p2);
 
