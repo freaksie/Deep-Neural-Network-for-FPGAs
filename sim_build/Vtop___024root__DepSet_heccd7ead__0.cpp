@@ -101,10 +101,8 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->myproject__DOT__layer5_out_3_V_reg_324;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_10_fu_3825_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_9_reg_4097;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_19_cast_fu_3837_p1 
-        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_18_reg_4142;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_cast_fu_3882_p1 
-        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_reg_4182;
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_25_cast_fu_3735_p1 
+        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_12_fu_3828_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_11_reg_4107;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_20_fu_3840_p1 
@@ -119,108 +117,12 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_21_reg_4152;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_27_fu_3849_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_1_fu_215_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffeb1U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_2_fu_197_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x3afU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_fu_221_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x18aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_3_fu_3292_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0x3ffffbeU), 
-                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg)))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_2_fu_210_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffc98U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_3_fu_219_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2ceU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_fu_223_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x282U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_1_fu_203_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2cU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_1_fu_204_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffe8aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_2_fu_212_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2bcU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_3_fu_217_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x33cU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_fu_213_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xacU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_1_fu_202_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffe23U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_2_fu_214_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x49bU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_3_fu_198_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffdb3U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_fu_192_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xcaU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_2_fu_196_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xffffff7aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_3_fu_207_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xffffff24U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_1_fu_216_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2c0U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_fu_3507_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0xaU), 
-                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009)))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_3_fu_194_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x25U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_1_fu_208_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffd1bU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_2_fu_206_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x1b0U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_fu_195_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x14aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_fu_211_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffd31U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_1_fu_3636_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0x3ffffe2U), 
-                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995)))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_2_fu_193_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x46U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_3_fu_200_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xffffffe3U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_fu_205_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x12eU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_2_fu_218_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xc8U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_3_fu_222_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x91U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_1_fu_3719_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0x3ffffd9U), 
-                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_19_cast_fu_3837_p1 
+        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_18_reg_4142;
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_cast_fu_3882_p1 
+        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_reg_4182;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_8_fu_3467_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_7_reg_4042;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_fu_3790_p2 
-        = (0xffffU & ((IData)(0x9fU) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4)));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_25_cast_fu_3735_p1 
-        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_5_fu_3464_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_4_reg_4032;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_6_fu_3473_p1 
@@ -237,6 +139,137 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_ready;
     vlSelf->myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_ready 
         = vlSelf->myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__ap_ready;
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_1_fu_215_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_1)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_2_fu_197_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_fu_221_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_0)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_3_fu_3292_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_3))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_2_fu_210_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_3_fu_219_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_3)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_fu_223_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_0)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_1_fu_203_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_1)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_1_fu_204_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_1)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_2_fu_212_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_3_fu_217_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_3)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_fu_213_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_0)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_1_fu_202_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_1)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_2_fu_214_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_3_fu_198_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_3)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_fu_192_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_0)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_2_fu_196_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_3_fu_207_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_3)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_1_fu_216_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_1)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_fu_3507_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_0))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_3_fu_194_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_3)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_1_fu_208_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_1)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_2_fu_206_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_fu_195_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_0)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_fu_211_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_0)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_1_fu_3636_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_1))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_2_fu_193_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_3_fu_200_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_3)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_fu_205_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_0)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_2_fu_218_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_2)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_3_fu_222_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_3)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_1_fu_3719_p2 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_1))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987)))));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_fu_3790_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b1) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4)));
     vlSelf->layer7_out_0_V = vlSelf->myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom_U__DOT__q0;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_fu_1393_p3 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_reg_1562) 
@@ -367,15 +400,15 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp12_fu_3852_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_5_reg_4117) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_9_reg_4097)));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp19_fu_3878_p2 
-        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_4_1_reg_4102) 
-                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_5_1_reg_4122)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp26_fu_3906_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_11_reg_4107) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_5_2_reg_4127)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp33_fu_3934_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_13_reg_4112) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_15_reg_4132)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp19_fu_3878_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_4_1_reg_4102) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_5_1_reg_4122)));
     vlSelf->myproject__DOT__ap_clk = vlSelf->ap_clk;
     myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT____VdfgTmp_h1f434ff9__0 
         = ((IData)(vlSelf->myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_CS_fsm) 
@@ -386,15 +419,18 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_fu_192_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp14_fu_3857_p2 
-        = (0xffffU & ((IData)(0xfeebU) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_7_reg_4157)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_reg_4182) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_18_reg_4142)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp14_fu_3857_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b0) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_7_reg_4157)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2 
-        = (0xffffU & ((IData)(0x166U) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162)));
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b2) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp35_fu_3940_p2 
-        = (0xffffU & ((IData)(0xff8eU) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167)));
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b3) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167)));
     vlSelf->myproject__DOT__ap_idle_pp0_0to11 = (1U 
                                                  & ((~ (IData)(vlSelf->myproject__DOT__ap_enable_reg_pp0_iter11)) 
                                                     & ((~ (IData)(vlSelf->myproject__DOT__ap_enable_reg_pp0_iter10)) 
@@ -634,14 +670,14 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_fu_192_p0;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_3_fu_198_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_fu_192_p0;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2 
-        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_6_reg_4137) 
-                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp14_fu_3857_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_cast_fu_3891_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp18_fu_3895_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp19_fu_3878_p2) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_6_reg_4137) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp14_fu_3857_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp27_fu_3917_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_19_reg_4147) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2)));
@@ -748,12 +784,12 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp_fu_227_p2)));
     vlSelf->myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__clk 
         = vlSelf->myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_clk;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp11_fu_3867_p2 
-        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp12_fu_3852_p2) 
-                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_1_V_fu_3901_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp15_reg_4177) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp18_fu_3895_p2)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp11_fu_3867_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp12_fu_3852_p2) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp25_fu_3923_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp26_fu_3906_p2) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp27_fu_3917_p2)));
@@ -1408,17 +1444,17 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_7_reg_4157 
             = (0xffffU & (vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_fu_205_p2 
                           >> 0xaU));
+        vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_18_reg_4142 
+            = (0xffffU & (vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_1_fu_3636_p2 
+                          >> 0xaU));
+        vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_reg_4182 
+            = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_fu_3790_p2;
         vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167 
             = (0xffffU & (vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_3_fu_222_p2 
                           >> 0xaU));
         vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162 
             = (0xffffU & (vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_2_fu_218_p2 
                           >> 0xaU));
-        vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_18_reg_4142 
-            = (0xffffU & (vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_1_fu_3636_p2 
-                          >> 0xaU));
-        vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_reg_4182 
-            = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_fu_3790_p2;
         vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987 
             = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read_int_reg;
         vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995 
@@ -1661,65 +1697,82 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_ce_reg 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_1_fu_215_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffeb1U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_1)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_2_fu_197_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x3afU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_fu_221_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x18aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_0)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_3_fu_3292_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0x3ffffbeU), 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w0_3))), 
                                     (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_2_fu_197_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_1_fu_202_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffe23U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_1)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_2_fu_214_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x49bU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_3_fu_198_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffdb3U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_3)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_fu_192_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xcaU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_0)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_fu_192_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read_int_reg;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_1_fu_204_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffe8aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_1)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_2_fu_212_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2bcU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_3_fu_217_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x33cU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_3)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_fu_213_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xacU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_0)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_1_fu_204_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_2_V_read_int_reg;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_2_fu_210_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffc98U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_3_fu_219_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2ceU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_3)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_fu_223_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x282U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_0)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_1_fu_203_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2cU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_1)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_1_fu_203_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_1_V_read_int_reg;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_fu_3790_p2 
-        = (0xffffU & ((IData)(0x9fU) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_25_cast_fu_3735_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4;
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_fu_3790_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b1) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp23_fu_3796_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_0_2_reg_4027) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_1_2_reg_4047)));
@@ -1777,15 +1830,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_13_reg_4112) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_15_reg_4132)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp14_fu_3857_p2 
-        = (0xffffU & ((IData)(0xfeebU) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_7_reg_4157)));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_27_fu_3849_p1 
-        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp35_fu_3940_p2 
-        = (0xffffU & ((IData)(0xff8eU) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167)));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_25_fu_3846_p1 
-        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2 
-        = (0xffffU & ((IData)(0x166U) + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162)));
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b0) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_7_reg_4157)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_19_cast_fu_3837_p1 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_18_reg_4142;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_cast_fu_3882_p1 
@@ -1793,6 +1839,16 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_reg_4182) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_18_reg_4142)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_27_fu_3849_p1 
+        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167;
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp35_fu_3940_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b3) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_26_reg_4167)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_25_fu_3846_p1 
+        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162;
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b2) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162)));
     vlSelf->myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__data_V_read 
         = vlSelf->myproject__DOT__layer6_out_0_V_reg_329;
     vlSelf->myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__r_V_fu_75_p3 
@@ -1804,58 +1860,74 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = (0xfffU & ((IData)(vlSelf->myproject__DOT__layer6_out_0_V_reg_329) 
                      >> 4U));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_fu_205_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x12eU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_0)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_2_fu_218_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xc8U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_3_fu_222_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x91U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_3)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_1_fu_3719_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0x3ffffd9U), 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_1))), 
                                     (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_fu_205_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_fu_211_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffd31U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_0)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_1_fu_3636_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0x3ffffe2U), 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_1))), 
                                     (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_2_fu_193_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x46U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_3_fu_200_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xffffffe3U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_3)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_2_fu_193_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_3_fu_194_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x25U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_3)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_1_fu_208_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xfffffd1bU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_1)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_2_fu_206_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x1b0U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_fu_195_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x14aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_0)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_3_fu_194_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003;
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_2_fu_196_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xffffff7aU), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_2)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_3_fu_207_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0xffffff24U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_3)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_1_fu_216_p2 
-        = (0x3ffffffU & VL_MULS_III(32, (IData)(0x2c0U), 
-                                    VL_EXTENDS_II(32,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))));
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009))), 
+                                    (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_1)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_fu_3507_p2 
-        = (0x3ffffffU & VL_MULS_III(26, (IData)(0xaU), 
+        = (0x3ffffffU & VL_MULS_III(26, (0x3ffffffU 
+                                         & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_0))), 
                                     (0x3ffffffU & VL_EXTENDS_II(26,16, (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009)))));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_2_fu_196_p0 
         = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009;
@@ -2082,17 +2154,17 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_6_reg_4137) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp14_fu_3857_p2)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_cast_fu_3891_p1 
+        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2;
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp18_fu_3895_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp19_fu_3878_p2) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp34_fu_3946_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_21_reg_4152) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp35_fu_3940_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp27_fu_3917_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_19_reg_4147) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2)));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_cast_fu_3891_p1 
-        = vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2;
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp18_fu_3895_p2 
-        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp19_fu_3878_p2) 
-                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2)));
     vlSelf->myproject__DOT__ap_block_state1_pp0_stage0_iter0 
         = (1U & ((~ (IData)(vlSelf->myproject__DOT__input_2_V_ap_vld_in_sig)) 
                  | (~ (IData)(vlSelf->ap_start))));
@@ -2287,15 +2359,15 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp11_fu_3867_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp12_fu_3852_p2) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2)));
+    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_1_V_fu_3901_p2 
+        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp15_reg_4177) 
+                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp18_fu_3895_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp32_fu_3952_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp33_fu_3934_p2) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp34_fu_3946_p2)));
     vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp25_fu_3923_p2 
         = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp26_fu_3906_p2) 
                       + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp27_fu_3917_p2)));
-    vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_1_V_fu_3901_p2 
-        = (0xffffU & ((IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp15_reg_4177) 
-                      + (IData)(vlSelf->myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp18_fu_3895_p2)));
     vlSelf->myproject__DOT__ap_block_state1_pp0_stage0_iter0_ignore_call25 
         = vlSelf->myproject__DOT__ap_block_state1_pp0_stage0_iter0;
     vlSelf->myproject__DOT__ap_block_state1_pp0_stage0_iter0_ignore_call35 

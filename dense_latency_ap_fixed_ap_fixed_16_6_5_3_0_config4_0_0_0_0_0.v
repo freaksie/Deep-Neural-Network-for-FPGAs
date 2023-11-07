@@ -248,6 +248,83 @@ reg   [15:0] ap_return_1_int_reg;
 reg   [15:0] ap_return_2_int_reg;
 reg   [15:0] ap_return_3_int_reg;
 
+localparam DS = 15;
+reg signed [DS:0] w0_0;
+reg signed[DS:0] w0_1;
+reg signed [DS:0] w0_2;
+reg signed [DS:0] w0_3;
+reg signed [DS:0] w1_0;
+reg signed [DS:0] w1_1;
+reg signed [DS:0] w1_2;
+reg signed [DS:0] w1_3;
+reg signed [DS:0] w2_0;
+reg signed [DS:0] w2_1;
+reg signed [DS:0] w2_2;
+reg signed [DS:0] w2_3;
+reg signed [DS:0] w3_0;
+reg signed [DS:0] w3_1;
+reg signed [DS:0] w3_2;
+reg signed [DS:0] w3_3;
+reg signed [DS:0] w4_0;
+reg signed [DS:0] w4_1;
+reg signed [DS:0] w4_2;
+reg signed [DS:0] w4_3;
+reg signed [DS:0] w5_0;
+reg signed [DS:0] w5_1;
+reg signed [DS:0] w5_2;
+reg signed [DS:0] w5_3;
+reg signed [DS:0] w6_0;
+reg signed [DS:0] w6_1;
+reg signed [DS:0] w6_2;
+reg signed [DS:0] w6_3;
+reg signed [DS:0] w7_0;
+reg signed [DS:0] w7_1;
+reg signed [DS:0] w7_2;
+reg signed [DS:0] w7_3;
+reg signed [DS:0] b0;
+reg signed [DS:0] b1;
+reg signed [DS:0] b2;
+reg signed [DS:0] b3;
+
+initial begin
+w0_0 = 16'd394 ;
+w0_1 = 16'd65201 ;
+w0_2 = 16'd943 ;
+w0_3 = 16'd65470 ;
+w1_0 = 16'd642 ;
+w1_1 = 16'd44 ;
+w1_2 = 16'd64664 ;
+w1_3 = 16'd718 ;
+w2_0 = 16'd172 ;
+w2_1 = 16'd65162 ;
+w2_2 = 16'd700 ;
+w2_3 = 16'd828 ;
+w3_0 = 16'd202 ;
+w3_1 = 16'd65060 ;
+w3_2 = 16'd1179 ;
+w3_3 = 16'd64947 ;
+w4_0 = 16'd10 ;
+w4_1 = 16'd704 ;
+w4_2 = 16'd65402 ;
+w4_3 = 16'd65316 ;
+w5_0 = 16'd330 ;
+w5_1 = 16'd64795 ;
+w5_2 = 16'd432 ;
+w5_3 = 16'd37 ;
+w6_0 = 16'd64817 ;
+w6_1 = 16'd65506 ;
+w6_2 = 16'd70 ;
+w6_3 = 16'd65507 ;
+w7_0 = 16'd302 ;
+w7_1 = 16'd65497 ;
+w7_2 = 16'd200 ;
+w7_3 = 16'd145 ;
+b0 = 16'd65260 ;
+b1 = 16'd159 ;
+b2 = 16'd358 ;
+b3 = 16'd65423 ;
+end 
+
 always @ (posedge ap_clk) begin
     ap_ce_reg <= ap_ce;
 end
@@ -429,123 +506,123 @@ assign r_V_7_cast_fu_3672_p1 = data_7_V_read11_reg_3987;
 
 assign r_V_8_0_1_fu_215_p0 = r_V_cast_fu_3225_p1;
 
-assign r_V_8_0_1_fu_215_p2 = ($signed(r_V_8_0_1_fu_215_p0) * $signed(-'h14F));
+assign r_V_8_0_1_fu_215_p2 = ($signed(r_V_8_0_1_fu_215_p0) * $signed(w0_1));
 
 assign r_V_8_0_2_fu_197_p0 = r_V_cast_fu_3225_p1;
 
-assign r_V_8_0_2_fu_197_p2 = ($signed(r_V_8_0_2_fu_197_p0) * $signed('h3AF));
+assign r_V_8_0_2_fu_197_p2 = ($signed(r_V_8_0_2_fu_197_p0) * $signed(w0_2));
 
-assign r_V_8_0_3_fu_3292_p2 = ($signed(16'd65470) * $signed(r_V_neel_D0_3));
+assign r_V_8_0_3_fu_3292_p2 = ($signed(w0_3) * $signed(r_V_neel_D0_3));
 
 assign r_V_8_1_1_fu_203_p0 = r_V_1_cast1_fu_3308_p0;
 
-assign r_V_8_1_1_fu_203_p2 = ($signed(r_V_8_1_1_fu_203_p0) * $signed('h2C));
+assign r_V_8_1_1_fu_203_p2 = ($signed(r_V_8_1_1_fu_203_p0) * $signed(w1_1));
 
 assign r_V_8_1_2_fu_210_p0 = r_V_1_cast_fu_3313_p1;
 
-assign r_V_8_1_2_fu_210_p2 = ($signed(r_V_8_1_2_fu_210_p0) * $signed(-'h368));
+assign r_V_8_1_2_fu_210_p2 = ($signed(r_V_8_1_2_fu_210_p0) * $signed(w1_2));
 
 assign r_V_8_1_3_fu_219_p0 = r_V_1_cast_fu_3313_p1;
 
-assign r_V_8_1_3_fu_219_p2 = ($signed(r_V_8_1_3_fu_219_p0) * $signed('h2CE));
+assign r_V_8_1_3_fu_219_p2 = ($signed(r_V_8_1_3_fu_219_p0) * $signed(w1_3));
 
 assign r_V_8_1_fu_223_p0 = r_V_1_cast_fu_3313_p1;
 
-assign r_V_8_1_fu_223_p2 = ($signed(r_V_8_1_fu_223_p0) * $signed('h282));
+assign r_V_8_1_fu_223_p2 = ($signed(r_V_8_1_fu_223_p0) * $signed(w1_0));
 
 assign r_V_8_2_1_fu_204_p0 = r_V_2_cast1_fu_3360_p1;
 
-assign r_V_8_2_1_fu_204_p2 = ($signed(r_V_8_2_1_fu_204_p0) * $signed(-'h176));
+assign r_V_8_2_1_fu_204_p2 = ($signed(r_V_8_2_1_fu_204_p0) * $signed(w2_1));
 
 assign r_V_8_2_2_fu_212_p0 = r_V_2_cast1_fu_3360_p1;
 
-assign r_V_8_2_2_fu_212_p2 = ($signed(r_V_8_2_2_fu_212_p0) * $signed('h2BC));
+assign r_V_8_2_2_fu_212_p2 = ($signed(r_V_8_2_2_fu_212_p0) * $signed(w2_2));
 
 assign r_V_8_2_3_fu_217_p0 = r_V_2_cast1_fu_3360_p1;
 
-assign r_V_8_2_3_fu_217_p2 = ($signed(r_V_8_2_3_fu_217_p0) * $signed('h33C));
+assign r_V_8_2_3_fu_217_p2 = ($signed(r_V_8_2_3_fu_217_p0) * $signed(w2_3));
 
 assign r_V_8_2_fu_213_p0 = r_V_2_cast_fu_3367_p0;
 
-assign r_V_8_2_fu_213_p2 = ($signed(r_V_8_2_fu_213_p0) * $signed('hAC));
+assign r_V_8_2_fu_213_p2 = ($signed(r_V_8_2_fu_213_p0) * $signed(w2_0));
 
 assign r_V_8_3_1_fu_202_p0 = r_V_3_cast1_fu_3412_p1;
 
-assign r_V_8_3_1_fu_202_p2 = ($signed(r_V_8_3_1_fu_202_p0) * $signed(-'h1DD));
+assign r_V_8_3_1_fu_202_p2 = ($signed(r_V_8_3_1_fu_202_p0) * $signed(w3_1));
 
 assign r_V_8_3_2_fu_214_p0 = r_V_3_cast1_fu_3412_p1;
 
-assign r_V_8_3_2_fu_214_p2 = ($signed(r_V_8_3_2_fu_214_p0) * $signed('h49B));
+assign r_V_8_3_2_fu_214_p2 = ($signed(r_V_8_3_2_fu_214_p0) * $signed(w3_2));
 
 assign r_V_8_3_3_fu_198_p0 = r_V_3_cast1_fu_3412_p1;
 
-assign r_V_8_3_3_fu_198_p2 = ($signed(r_V_8_3_3_fu_198_p0) * $signed(-'h24D));
+assign r_V_8_3_3_fu_198_p2 = ($signed(r_V_8_3_3_fu_198_p0) * $signed(w3_3));
 
 assign r_V_8_3_fu_192_p0 = r_V_3_cast_fu_3419_p0;
 
-assign r_V_8_3_fu_192_p2 = ($signed(r_V_8_3_fu_192_p0) * $signed('hCA));
+assign r_V_8_3_fu_192_p2 = ($signed(r_V_8_3_fu_192_p0) * $signed(w3_0));
 
 assign r_V_8_4_1_fu_216_p0 = data_4_V_read_2_reg_4009;
 
-assign r_V_8_4_1_fu_216_p2 = ($signed(r_V_8_4_1_fu_216_p0) * $signed('h2C0));
+assign r_V_8_4_1_fu_216_p2 = ($signed(r_V_8_4_1_fu_216_p0) * $signed(w4_1));
 
 assign r_V_8_4_2_fu_196_p0 = r_V_4_cast_fu_3476_p1;
 
-assign r_V_8_4_2_fu_196_p2 = ($signed(r_V_8_4_2_fu_196_p0) * $signed(-'h86));
+assign r_V_8_4_2_fu_196_p2 = ($signed(r_V_8_4_2_fu_196_p0) * $signed(w4_2));
 
 assign r_V_8_4_3_fu_207_p0 = r_V_4_cast_fu_3476_p1;
 
-assign r_V_8_4_3_fu_207_p2 = ($signed(r_V_8_4_3_fu_207_p0) * $signed(-'hDC));
+assign r_V_8_4_3_fu_207_p2 = ($signed(r_V_8_4_3_fu_207_p0) * $signed(w4_3));
 
-assign r_V_8_4_fu_3507_p2 = ($signed(16'd10) * $signed(r_V_neel_D4_1));
+assign r_V_8_4_fu_3507_p2 = ($signed(w4_0) * $signed(r_V_neel_D4_1));
 
 assign r_V_8_5_1_fu_208_p0 = r_V_5_cast_fu_3557_p1;
 
-assign r_V_8_5_1_fu_208_p2 = ($signed(r_V_8_5_1_fu_208_p0) * $signed(-'h2E5));
+assign r_V_8_5_1_fu_208_p2 = ($signed(r_V_8_5_1_fu_208_p0) * $signed(w5_1));
 
 assign r_V_8_5_2_fu_206_p0 = r_V_5_cast_fu_3557_p1;
 
-assign r_V_8_5_2_fu_206_p2 = ($signed(r_V_8_5_2_fu_206_p0) * $signed('h1B0));
+assign r_V_8_5_2_fu_206_p2 = ($signed(r_V_8_5_2_fu_206_p0) * $signed(w5_2));
 
 assign r_V_8_5_3_fu_194_p0 = data_5_V_read_2_reg_4003;
 
-assign r_V_8_5_3_fu_194_p2 = ($signed(r_V_8_5_3_fu_194_p0) * $signed('h25));
+assign r_V_8_5_3_fu_194_p2 = ($signed(r_V_8_5_3_fu_194_p0) * $signed(w5_3));
 
 assign r_V_8_5_fu_195_p0 = r_V_5_cast_fu_3557_p1;
 
-assign r_V_8_5_fu_195_p2 = ($signed(r_V_8_5_fu_195_p0) * $signed('h14A));
+assign r_V_8_5_fu_195_p2 = ($signed(r_V_8_5_fu_195_p0) * $signed(w5_0));
 
-assign r_V_8_6_1_fu_3636_p2 = ($signed(16'd65506) * $signed(r_V_neel_D6_2));
+assign r_V_8_6_1_fu_3636_p2 = ($signed(w6_1) * $signed(r_V_neel_D6_2));
 
 assign r_V_8_6_2_fu_193_p0 = data_6_V_read_2_reg_3995;
 
-assign r_V_8_6_2_fu_193_p2 = ($signed(r_V_8_6_2_fu_193_p0) * $signed('h46));
+assign r_V_8_6_2_fu_193_p2 = ($signed(r_V_8_6_2_fu_193_p0) * $signed(w6_2));
 
 assign r_V_8_6_3_fu_200_p0 = r_V_6_cast2_fu_3607_p1;
 
-assign r_V_8_6_3_fu_200_p2 = ($signed(r_V_8_6_3_fu_200_p0) * $signed(-'h1D));
+assign r_V_8_6_3_fu_200_p2 = ($signed(r_V_8_6_3_fu_200_p0) * $signed(w6_3));
 
 assign r_V_8_6_fu_211_p0 = data_6_V_read_2_reg_3995;
 
-assign r_V_8_6_fu_211_p2 = ($signed(r_V_8_6_fu_211_p0) * $signed(-'h2CF));
+assign r_V_8_6_fu_211_p2 = ($signed(r_V_8_6_fu_211_p0) * $signed(w6_0));
 
-assign r_V_8_7_1_fu_3719_p2 = ($signed(16'd65497) * $signed(r_V_neel_D7_2));
+assign r_V_8_7_1_fu_3719_p2 = ($signed(w7_1) * $signed(r_V_neel_D7_2));
 
 assign r_V_8_7_2_fu_218_p0 = r_V_7_cast_fu_3672_p1;
 
-assign r_V_8_7_2_fu_218_p2 = ($signed(r_V_8_7_2_fu_218_p0) * $signed('hC8));
+assign r_V_8_7_2_fu_218_p2 = ($signed(r_V_8_7_2_fu_218_p0) * $signed(w7_2));
 
 assign r_V_8_7_3_fu_222_p0 = r_V_7_cast_fu_3672_p1;
 
-assign r_V_8_7_3_fu_222_p2 = ($signed(r_V_8_7_3_fu_222_p0) * $signed('h91));
+assign r_V_8_7_3_fu_222_p2 = ($signed(r_V_8_7_3_fu_222_p0) * $signed(w7_3));
 
 assign r_V_8_7_fu_205_p0 = data_7_V_read11_reg_3987;
 
-assign r_V_8_7_fu_205_p2 = ($signed(r_V_8_7_fu_205_p0) * $signed('h12E));
+assign r_V_8_7_fu_205_p2 = ($signed(r_V_8_7_fu_205_p0) * $signed(w7_0));
 
 assign r_V_8_fu_221_p0 = r_V_cast_fu_3225_p1;
 
-assign r_V_8_fu_221_p2 = ($signed(r_V_8_fu_221_p0) * $signed('h18A));
+assign r_V_8_fu_221_p2 = ($signed(r_V_8_fu_221_p0) * $signed(w0_0));
 
 assign r_V_cast_fu_3225_p0 = data_0_V_read_int_reg;
 
@@ -561,7 +638,7 @@ assign tmp12_fu_3852_p2 = ($signed(tmp_17_5_reg_4117) + $signed(tmp_10_fu_3825_p
 
 assign tmp13_fu_3862_p2 = (tmp_17_6_reg_4137 + tmp14_fu_3857_p2);
 
-assign tmp14_fu_3857_p2 = ($signed(tmp_17_7_reg_4157) + $signed(16'd65259));
+assign tmp14_fu_3857_p2 = ($signed(tmp_17_7_reg_4157) + $signed(b0));
 
 assign tmp15_fu_3784_p2 = (tmp16_fu_3775_p2 + tmp17_fu_3780_p2);
 
@@ -579,7 +656,7 @@ assign tmp20_fu_3885_p2 = ($signed(tmp_19_cast_fu_3837_p1) + $signed(tmp21_cast_
 
 assign tmp21_cast_fu_3882_p1 = $signed(tmp21_reg_4182);
 
-assign tmp21_fu_3790_p2 = ($signed(tmp_25_cast_fu_3735_p1) + $signed(16'd159));
+assign tmp21_fu_3790_p2 = ($signed(tmp_25_cast_fu_3735_p1) + $signed(b1));
 
 assign tmp22_fu_3804_p2 = (tmp23_fu_3796_p2 + tmp24_fu_3800_p2);
 
@@ -593,7 +670,7 @@ assign tmp26_fu_3906_p2 = ($signed(tmp_17_5_2_reg_4127) + $signed(tmp_12_fu_3828
 
 assign tmp27_fu_3917_p2 = ($signed(tmp_20_fu_3840_p1) + $signed(tmp28_fu_3911_p2));
 
-assign tmp28_fu_3911_p2 = ($signed(tmp_25_fu_3846_p1) + $signed(16'd358));
+assign tmp28_fu_3911_p2 = ($signed(tmp_25_fu_3846_p1) + $signed(b2));
 
 assign tmp29_fu_3819_p2 = (tmp30_fu_3810_p2 + tmp31_fu_3815_p2);
 
@@ -607,7 +684,7 @@ assign tmp33_fu_3934_p2 = ($signed(tmp_16_fu_3834_p1) + $signed(tmp_14_fu_3831_p
 
 assign tmp34_fu_3946_p2 = ($signed(tmp_22_fu_3843_p1) + $signed(tmp35_fu_3940_p2));
 
-assign tmp35_fu_3940_p2 = ($signed(tmp_27_fu_3849_p1) + $signed(16'd65422));
+assign tmp35_fu_3940_p2 = ($signed(tmp_27_fu_3849_p1) + $signed(b3));
 
 assign tmp9_fu_3759_p2 = (tmp_17_1_reg_4037 + tmp_1_reg_4017);
 
