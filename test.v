@@ -1,7 +1,4 @@
 `timescale 1 ns / 1 ps 
-
-(* CORE_GENERATION_INFO="myproject,hls_ip_2018_3,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7vx485tffg1761-2,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=4.082000,HLS_SYN_LAT=12,HLS_SYN_TPT=1,HLS_SYN_MEM=1,HLS_SYN_DSP=47,HLS_SYN_FF=1723,HLS_SYN_LUT=1992,HLS_VERSION=2018_3}" *)
-
 module test (
         ap_clk,
         ap_rst,
@@ -16,7 +13,6 @@ module test (
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
-
 input   ap_clk;
 input   ap_rst;
 input   ap_start;

@@ -14,10 +14,7 @@ async def testbench(dut):
     dut.input_2_V_ap_vld.value=1
     dut.input_2_V.value=4181650118
     await RisingEdge(dut.ap_clk)
-    # 11111001001111101110101011000110
-    # 1111100100111110  00000000000000001110101011000110
 
-    # 1101101101111101 <-- 0000010010010011
     
 
     # Rising Edge to send input to input_2_v_preg and input_2_V_in_sig
@@ -40,6 +37,11 @@ async def testbench(dut):
 
 # 11111101111111100110100000
 # 1111110111111110
+
+# 11111101111111100110100000
+# 0000010010010011
+# 1111111011100000
+
 
 
     

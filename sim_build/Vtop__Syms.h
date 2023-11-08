@@ -31,15 +31,7 @@ class alignas(VL_CACHE_LINE_BYTES)Vtop__Syms final : public VerilatedSyms {
 
     // SCOPE NAMES
     VerilatedScope __Vscope_TOP;
-    VerilatedScope __Vscope_myproject;
-    VerilatedScope __Vscope_myproject__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73;
-    VerilatedScope __Vscope_myproject__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100;
-    VerilatedScope __Vscope_myproject__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92;
-    VerilatedScope __Vscope_myproject__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67;
-    VerilatedScope __Vscope_myproject__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55;
-    VerilatedScope __Vscope_myproject__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85;
-    VerilatedScope __Vscope_myproject__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__sigmoid_table1_U;
-    VerilatedScope __Vscope_myproject__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__sigmoid_table1_U__sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom_U;
+    VerilatedScope __Vscope_test;
 
     // SCOPE HIERARCHY
     VerilatedHierarchy __Vhier;
