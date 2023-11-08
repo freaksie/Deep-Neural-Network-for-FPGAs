@@ -53,6 +53,21 @@ wire   [15:0] res_V_write_assign_fu_241_p2;
 reg    ap_ce_reg;
 reg   [15:0] ap_return_int_reg;
 
+localparam DS = 15;
+reg signed [DS:0] w0;
+reg signed[DS:0] w1;
+reg signed [DS:0] w2;
+reg signed [DS:0] w3;
+reg signed [DS:0] b;
+
+initial begin
+w0=16'd64822;
+w1=16'd65139;
+w2=16'd911;
+w3=16'd64698;
+b=16'd333;
+end 
+
 always @ (posedge ap_clk) begin
     ap_ce_reg <= ap_ce;
 end
@@ -90,25 +105,25 @@ assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
 assign r_V_6_1_fu_73_p0 = data_1_V_read;
 
-assign r_V_6_1_fu_73_p2 = ($signed(r_V_6_1_fu_73_p0) * $signed(16'd65139));
+assign r_V_6_1_fu_73_p2 = ($signed(r_V_6_1_fu_73_p0) * $signed(w1));
 
 assign r_V_6_2_fu_70_p0 = data_2_V_read;
 
-assign r_V_6_2_fu_70_p2 = ($signed(r_V_6_2_fu_70_p0) * $signed(16'd911));
+assign r_V_6_2_fu_70_p2 = ($signed(r_V_6_2_fu_70_p0) * $signed(w2));
 
 assign r_V_6_3_fu_72_p0 = data_3_V_read;
 
-assign r_V_6_3_fu_72_p2 = ($signed(r_V_6_3_fu_72_p0) * $signed(16'd64698));
+assign r_V_6_3_fu_72_p2 = ($signed(r_V_6_3_fu_72_p0) * $signed(w3));
 
 assign r_V_6_fu_71_p0 = data_0_V_read;
 
-assign r_V_6_fu_71_p2 = ($signed(r_V_6_fu_71_p0) * $signed(16'd64822));
+assign r_V_6_fu_71_p2 = ($signed(r_V_6_fu_71_p0) * $signed(w0));
 
 assign res_V_write_assign_fu_241_p2 = (tmp1_fu_236_p2 + tmp_fu_227_p2);
 
 assign tmp1_fu_236_p2 = (tmp2_fu_231_p2 + tmp_5_2_reg_257);
 
-assign tmp2_fu_231_p2 = (tmp_5_3_reg_262 + 16'd333);
+assign tmp2_fu_231_p2 = (tmp_5_3_reg_262 + b);
 
 assign tmp_fu_227_p2 = (tmp_5_reg_247 + tmp_5_1_reg_252);
 
