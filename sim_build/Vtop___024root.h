@@ -36,6 +36,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*15:0*/ test__DOT__layer7_out_0_V;
     SData/*15:0*/ test__DOT__w0_0;
     SData/*15:0*/ test__DOT__w1_0;
+    SData/*15:0*/ test__DOT__div;
     SData/*15:0*/ test__DOT__res_0_V_write_assign_fu_1431_p2;
     SData/*15:0*/ test__DOT__tmp_33_1_reg_1603;
     SData/*15:0*/ test__DOT__tmp_3_reg_1568;
@@ -48,6 +49,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*15:0*/ test__DOT__tmp_fu_1180_p1;
     VL_IN(input_2_V,31,0);
     IData/*31:0*/ test__DOT__input_2_V;
+    IData/*17:0*/ test__DOT__ans;
+    IData/*31:0*/ test__DOT__ans2;
     IData/*25:0*/ test__DOT__r_V_10_1_fu_108_p2;
     IData/*25:0*/ test__DOT__r_V_s_fu_110_p2;
     IData/*31:0*/ __VstlIterCount;

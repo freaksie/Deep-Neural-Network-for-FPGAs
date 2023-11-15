@@ -23,6 +23,7 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->ap_ready = vlSelf->test__DOT__ap_ready;
     vlSelf->layer7_out_0_V = vlSelf->test__DOT__layer7_out_0_V;
     vlSelf->layer7_out_0_V_ap_vld = vlSelf->test__DOT__layer7_out_0_V_ap_vld;
+    vlSelf->test__DOT__ans2 = ((IData)(0x1a364U) * vlSelf->test__DOT__ans);
     vlSelf->test__DOT__tmp2_fu_1426_p2 = (0xffffU & 
                                           ((IData)(0x9dU) 
                                            + (IData)(vlSelf->test__DOT__tmp_33_1_reg_1603)));

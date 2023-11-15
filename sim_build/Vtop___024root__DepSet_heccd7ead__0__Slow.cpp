@@ -8,10 +8,22 @@
 #include "Vtop__Syms.h"
 #include "Vtop___024root.h"
 
+VL_ATTR_COLD void Vtop___024root___eval_static__TOP(Vtop___024root* vlSelf);
+
 VL_ATTR_COLD void Vtop___024root___eval_static(Vtop___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_static\n"); );
+    // Body
+    Vtop___024root___eval_static__TOP(vlSelf);
+}
+
+VL_ATTR_COLD void Vtop___024root___eval_static__TOP(Vtop___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_static__TOP\n"); );
+    // Body
+    vlSelf->test__DOT__div = 0xfee0U;
 }
 
 VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf);
@@ -163,6 +175,9 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->test__DOT__layer7_out_0_V_ap_vld = VL_RAND_RESET_I(1);
     vlSelf->test__DOT__w0_0 = VL_RAND_RESET_I(16);
     vlSelf->test__DOT__w1_0 = VL_RAND_RESET_I(16);
+    vlSelf->test__DOT__div = VL_RAND_RESET_I(16);
+    vlSelf->test__DOT__ans = VL_RAND_RESET_I(18);
+    vlSelf->test__DOT__ans2 = VL_RAND_RESET_I(32);
     vlSelf->test__DOT__res_0_V_write_assign_fu_1431_p2 = VL_RAND_RESET_I(16);
     vlSelf->test__DOT__tmp_33_1_reg_1603 = VL_RAND_RESET_I(16);
     vlSelf->test__DOT__tmp_3_reg_1568 = VL_RAND_RESET_I(16);

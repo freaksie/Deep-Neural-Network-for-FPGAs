@@ -17,7 +17,8 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     vlSelf->test__DOT__w0_0 = 0xfee0U;
     vlSelf->test__DOT__w1_0 = 0x130U;
     vlSymsp->_vm_contextp__->dumpfile(std::string{"dump.vcd"});
-    VL_PRINTF_MT("-Info: /home/neelvora/Projects/Verilog/verilog/test.v:84: $dumpvar ignored, as Verilated without --trace\n");
+    VL_PRINTF_MT("-Info: /home/neelvora/Projects/Verilog/verilog/test.v:89: $dumpvar ignored, as Verilated without --trace\n");
+    vlSelf->test__DOT__ans = 0x2785U;
 }
 
 #ifdef VL_DEBUG

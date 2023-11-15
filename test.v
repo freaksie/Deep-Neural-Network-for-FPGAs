@@ -31,6 +31,9 @@ reg layer7_out_0_V_ap_vld;
 parameter DS = 15;
 reg signed [DS:0] w0_0;
 reg signed [DS:0] w1_0;
+reg signed [15:0] div = 16'd65248;
+reg signed [17:0] ans;
+reg signed [31:0] ans2;
 
 initial begin 
 w0_0 = 16'd65248;
@@ -71,6 +74,8 @@ assign r_V_s_fu_110_p2 = ($signed(16'd65248) * $signed(r_V_s_fu_110_p1));
 assign r_V_s_fu_110_p1 = r_V_cast3_fu_1184_p1;
 assign r_V_cast3_fu_1184_p1 = tmp_fu_1180_p1;
 
+assign ans = ((($signed(18'd33536)+$signed(18'd32768))*10000) >> 16);
+assign ans2 = $signed(ans) * 18'd107364;
 
 assign r_V_10_1_fu_108_p2 = ($signed(16'd304) * $signed(r_V_10_1_fu_108_p1));
 assign r_V_10_1_fu_108_p1 = r_V_1_cast_fu_1289_p1;

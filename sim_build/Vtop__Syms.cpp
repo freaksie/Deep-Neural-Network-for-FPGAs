@@ -47,6 +47,8 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_TOP.varInsert(__Vfinal,"layer7_out_0_V", &(TOP.layer7_out_0_V), false, VLVT_UINT16,VLVD_OUT|VLVF_PUB_RW,1 ,15,0);
         __Vscope_TOP.varInsert(__Vfinal,"layer7_out_0_V_ap_vld", &(TOP.layer7_out_0_V_ap_vld), false, VLVT_UINT8,VLVD_OUT|VLVF_PUB_RW,0);
         __Vscope_test.varInsert(__Vfinal,"DS", const_cast<void*>(static_cast<const void*>(&(TOP.test__DOT__DS))), true, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_test.varInsert(__Vfinal,"ans", &(TOP.test__DOT__ans), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,17,0);
+        __Vscope_test.varInsert(__Vfinal,"ans2", &(TOP.test__DOT__ans2), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_test.varInsert(__Vfinal,"ap_ST_fsm_pp0_stage0", const_cast<void*>(static_cast<const void*>(&(TOP.test__DOT__ap_ST_fsm_pp0_stage0))), true, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,0,0);
         __Vscope_test.varInsert(__Vfinal,"ap_clk", &(TOP.test__DOT__ap_clk), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_test.varInsert(__Vfinal,"ap_done", &(TOP.test__DOT__ap_done), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
@@ -54,6 +56,7 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_test.varInsert(__Vfinal,"ap_ready", &(TOP.test__DOT__ap_ready), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_test.varInsert(__Vfinal,"ap_rst", &(TOP.test__DOT__ap_rst), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_test.varInsert(__Vfinal,"ap_start", &(TOP.test__DOT__ap_start), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_test.varInsert(__Vfinal,"div", &(TOP.test__DOT__div), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,15,0);
         __Vscope_test.varInsert(__Vfinal,"input_2_V", &(TOP.test__DOT__input_2_V), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_test.varInsert(__Vfinal,"input_2_V_ap_vld", &(TOP.test__DOT__input_2_V_ap_vld), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_test.varInsert(__Vfinal,"layer7_out_0_V", &(TOP.test__DOT__layer7_out_0_V), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,15,0);
