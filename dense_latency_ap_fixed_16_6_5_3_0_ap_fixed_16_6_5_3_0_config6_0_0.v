@@ -21,39 +21,41 @@ module dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0 (
 
 input   ap_clk;
 input   ap_rst;
-input  [15:0] data_0_V_read;
-input  [15:0] data_1_V_read;
-input  [15:0] data_2_V_read;
-input  [15:0] data_3_V_read;
-output  [15:0] ap_return;
+localparam DS = 15;
+localparam MS = 25;
+input  [DS:0] data_0_V_read;
+input  [DS:0] data_1_V_read;
+input  [DS:0] data_2_V_read;
+input  [DS:0] data_3_V_read;
+output  [DS:0] ap_return;
 input   ap_ce;
 
-reg[15:0] ap_return;
+reg[DS:0] ap_return;
 
-reg   [15:0] tmp_5_reg_247;
+reg   [DS:0] tmp_5_reg_247;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_11001;
-reg   [15:0] tmp_5_1_reg_252;
-reg   [15:0] tmp_5_2_reg_257;
-reg   [15:0] tmp_5_3_reg_262;
-wire  signed [15:0] r_V_6_2_fu_70_p0;
+reg   [DS:0] tmp_5_1_reg_252;
+reg   [DS:0] tmp_5_2_reg_257;
+reg   [DS:0] tmp_5_3_reg_262;
+wire  signed [DS:0] r_V_6_2_fu_70_p0;
 wire    ap_block_pp0_stage0;
-wire  signed [15:0] r_V_6_fu_71_p0;
-wire  signed [15:0] r_V_6_3_fu_72_p0;
-wire  signed [15:0] r_V_6_1_fu_73_p0;
-wire   [25:0] r_V_6_fu_71_p2;
-wire   [25:0] r_V_6_1_fu_73_p2;
-wire   [25:0] r_V_6_2_fu_70_p2;
-wire   [25:0] r_V_6_3_fu_72_p2;
-wire   [15:0] tmp2_fu_231_p2;
-wire   [15:0] tmp1_fu_236_p2;
-wire   [15:0] tmp_fu_227_p2;
-wire   [15:0] res_V_write_assign_fu_241_p2;
+wire  signed [DS:0] r_V_6_fu_71_p0;
+wire  signed [DS:0] r_V_6_3_fu_72_p0;
+wire  signed [DS:0] r_V_6_1_fu_73_p0;
+wire   [MS:0] r_V_6_fu_71_p2;
+wire   [MS:0] r_V_6_1_fu_73_p2;
+wire   [MS:0] r_V_6_2_fu_70_p2;
+wire   [MS:0] r_V_6_3_fu_72_p2;
+wire   [DS:0] tmp2_fu_231_p2;
+wire   [DS:0] tmp1_fu_236_p2;
+wire   [DS:0] tmp_fu_227_p2;
+wire   [DS:0] res_V_write_assign_fu_241_p2;
 reg    ap_ce_reg;
-reg   [15:0] ap_return_int_reg;
+reg   [DS:0] ap_return_int_reg;
 
-localparam DS = 15;
+
 reg signed [DS:0] w0;
 reg signed[DS:0] w1;
 reg signed [DS:0] w2;
@@ -61,11 +63,11 @@ reg signed [DS:0] w3;
 reg signed [DS:0] b;
 
 initial begin
-w0=16'd64822;
-w1=16'd65139;
-w2=16'd911;
-w3=16'd64698;
-b=16'd333;
+w0=64822;
+w1=65139;
+w2=911;
+w3=64698;
+b=333;
 end 
 
 always @ (posedge ap_clk) begin
@@ -80,10 +82,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == 1'b1))) begin
-        tmp_5_1_reg_252 <= {{r_V_6_1_fu_73_p2[25:10]}};
-        tmp_5_2_reg_257 <= {{r_V_6_2_fu_70_p2[25:10]}};
-        tmp_5_3_reg_262 <= {{r_V_6_3_fu_72_p2[25:10]}};
-        tmp_5_reg_247 <= {{r_V_6_fu_71_p2[25:10]}};
+        tmp_5_1_reg_252 <= {{r_V_6_1_fu_73_p2[MS:MS-DS]}};
+        tmp_5_2_reg_257 <= {{r_V_6_2_fu_70_p2[MS:MS-DS]}};
+        tmp_5_3_reg_262 <= {{r_V_6_3_fu_72_p2[MS:MS-DS]}};
+        tmp_5_reg_247 <= {{r_V_6_fu_71_p2[MS:MS-DS]}};
     end
 end
 

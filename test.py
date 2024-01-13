@@ -29,10 +29,14 @@ async def testbench(dut):
     print(dut.r_V_10_1_fu_108_p2.value)
     print(dut.res_0_V_write_assign_fu_1431_p2.value)
 
-    # print(dut.input_2_V.value)
-    # print(dut.div.value)
+
+    print(dut.sum.value)
+    print(dut.multi.value)
+    print(dut.divid.value)
+    print(dut.normalized.value)
     print(dut.ans.value)
-    print(dut.ans2.value)
+
+
 # 00000101111110000101000000
 # 0000010111111000
 

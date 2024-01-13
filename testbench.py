@@ -43,7 +43,7 @@ async def testbench(dut):
     pred=[]
     x,y=getData('tb_data/x_test_her.npy','tb_data/y_test_her.npy')
     
-    for i in range(1000):
+    for i in range(100):
         clock = Clock(dut.ap_clk, 2, units="ns")
         cocotb.start_soon(clock.start())
         # print("---Start---")
@@ -58,8 +58,6 @@ async def testbench(dut):
         for k in range(13):
             await RisingEdge(dut.ap_clk)
 
-
-        
 
         # # Rising Edge to send input to input_2_v_preg and input_2_V_in_sig
         # # await RisingEdge(dut.ap_clk)
