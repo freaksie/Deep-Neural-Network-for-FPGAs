@@ -1,7 +1,7 @@
 //Numpy array shape [4]
-//Min -0.269770145416
-//Max 0.350173503160
-//Number of zeros 0
+//Min -0.587027370930
+//Max 0.000000000000
+//Number of zeros 1
 
 #ifndef B4_H_
 #define B4_H_
@@ -9,7 +9,7 @@
 #ifndef __SYNTHESIS__
 hiddenlayer2_bias_t b4[4];
 #else
-hiddenlayer2_bias_t b4[4] = {-0.2697701454, 0.1560648978, 0.3501735032, -0.1109162271};
+hiddenlayer2_bias_t b4[4] = {-0.003454852151, -0.540175259113, 0.000000000000, -0.587027370930};
 #endif
 
 #endif

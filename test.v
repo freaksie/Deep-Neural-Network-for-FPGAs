@@ -33,7 +33,11 @@ reg signed [DS:0] w0_0;
 reg signed [DS:0] w1_0;
 reg signed [15:0] div = 16'd65248;
 reg signed [17:0] ans;
-reg signed [31:0] ans2;
+
+reg [31:0] sum;
+reg [63:0] multi;
+reg [17:0] divid;
+reg [31:0] normalized;
 
 initial begin 
 w0_0 = 16'd65248;
@@ -74,8 +78,24 @@ assign r_V_s_fu_110_p2 = ($signed(16'd65248) * $signed(r_V_s_fu_110_p1));
 assign r_V_s_fu_110_p1 = r_V_cast3_fu_1184_p1;
 assign r_V_cast3_fu_1184_p1 = tmp_fu_1180_p1;
 
-assign ans = ((($signed(18'd33536)+$signed(18'd32768))*10000) >> 16);
-assign ans2 = $signed(ans) * 18'd107364;
+//For input of 32bit, with min-max of 31 bit
+//representation by <18,4>
+
+//assign sum = $signed(32'd2294967296) + $signed(32'd2147483647);
+//assign multi = sum * 10000;
+//assign divid = multi >>32; 
+//assign normalized = divid * 18'd26843; 
+
+
+//For Q3 with range of 2^18
+// working condition
+
+assign sum = $signed(32'd4294767296) + $signed(19'd262143);
+assign multi = sum * 10000;
+assign divid = multi >>19; 
+assign normalized = divid * 18'd26843; 
+
+assign ans = normalized[31:14];
 
 assign r_V_10_1_fu_108_p2 = ($signed(16'd304) * $signed(r_V_10_1_fu_108_p1));
 assign r_V_10_1_fu_108_p1 = r_V_1_cast_fu_1289_p1;
@@ -85,7 +105,7 @@ assign tmp_2_fu_1269_p4 = {{input_2_V[31:16]}};
 assign tmp_fu_1180_p1 = input_2_V[15:0];
 
 initial begin
-    $dumpfile("dump.vcd");
+
     $dumpvars(1,test);
 end
 

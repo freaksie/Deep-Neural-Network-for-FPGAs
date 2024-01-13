@@ -20,7 +20,8 @@ module sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s (
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
-
+localparam DS = 17;
+localparam OS = 11;
 input   ap_clk;
 input   ap_rst;
 input   ap_start;
@@ -28,8 +29,8 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input   ap_ce;
-input  [15:0] data_V_read;
-output  [9:0] ap_return;
+input  [DS:0] data_V_read;
+output  [OS:0] ap_return;
 
 reg ap_done;
 reg ap_idle;
@@ -55,9 +56,9 @@ reg   [1:0] tmp_6_reg_211;
 reg    ap_block_pp0_stage0_subdone;
 wire   [63:0] tmp_8_fu_201_p1;
 wire   [11:0] tmp_fu_83_p4;
-wire   [25:0] r_V_fu_75_p3;
-wire   [3:0] tmp_1_fu_103_p1;
-wire   [9:0] p_Result_2_fu_107_p3;
+wire   [DS+10:0] r_V_fu_75_p3;
+wire   [OS-6:0] tmp_1_fu_103_p1;
+wire   [OS:0] p_Result_2_fu_107_p3;
 wire  signed [12:0] ret_V_cast_fu_93_p1;
 wire   [0:0] tmp_3_fu_115_p2;
 wire   [12:0] ret_V_fu_121_p2;
@@ -71,6 +72,8 @@ wire   [11:0] index_cast_fu_153_p2;
 wire   [11:0] p_1_fu_167_p3;
 wire   [0:0] icmp_fu_189_p2;
 wire   [9:0] index_1_fu_194_p3;
+//Reg for sigmoid
+reg signed [DS+10:0] comp;
 reg   [0:0] ap_NS_fsm;
 reg    ap_idle_pp0_0to1;
 reg    ap_reset_idle_pp0;
@@ -81,6 +84,7 @@ initial begin
 ap_CS_fsm = 1'd1;
 ap_enable_reg_pp0_iter1 = 1'b0;
 ap_enable_reg_pp0_iter2 = 1'b0;
+comp = 67108849;
 end
 
 sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb #(
@@ -221,7 +225,9 @@ assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_enable_reg_pp0_iter0 = ap_start;
 
-assign ap_return = sigmoid_table1_q0;
+//Append zeros accord {{sigmoid_table1_q0}, {2'd0}};
+assign ap_return = {{sigmoid_table1_q0}, {2'd0}};
+//assign ap_return =sigmoid_table1_q0;  
 
 assign icmp_fu_189_p2 = ((tmp_6_reg_211 != 2'd0) ? 1'b1 : 1'b0);
 
@@ -237,7 +243,8 @@ assign p_2_fu_135_p3 = ((p_Result_s_fu_97_p2[0:0] === 1'b1) ? p_s_fu_127_p3 : re
 
 assign p_Result_2_fu_107_p3 = {{tmp_1_fu_103_p1}, {6'd0}};
 
-assign p_Result_s_fu_97_p2 = (($signed(r_V_fu_75_p3) < $signed(26'd67108849)) ? 1'b1 : 1'b0);
+// $signed(26'd67108849) 26=DS+10, {111...10001}
+assign p_Result_s_fu_97_p2 = (($signed(r_V_fu_75_p3) < $signed(comp)) ? 1'b1 : 1'b0);
 
 assign p_s_fu_127_p3 = ((tmp_3_fu_115_p2[0:0] === 1'b1) ? ret_V_cast_fu_93_p1 : ret_V_fu_121_p2);
 
@@ -249,11 +256,11 @@ assign ret_V_fu_121_p2 = ($signed(13'd1) + $signed(ret_V_cast_fu_93_p1));
 
 assign sigmoid_table1_address0 = tmp_8_fu_201_p1;
 
-assign tmp_1_fu_103_p1 = data_V_read[3:0];
+assign tmp_1_fu_103_p1 = data_V_read[OS-6:0];
 
 assign tmp_2_fu_143_p1 = p_2_fu_135_p3[11:0];
 
-assign tmp_3_fu_115_p2 = ((p_Result_2_fu_107_p3 == 10'd0) ? 1'b1 : 1'b0);
+assign tmp_3_fu_115_p2 = ((p_Result_2_fu_107_p3 == 0) ? 1'b1 : 1'b0);
 
 assign tmp_4_fu_159_p3 = index_fu_147_p2[32'd12];
 
@@ -261,6 +268,6 @@ assign tmp_5_fu_175_p1 = p_1_fu_167_p3[9:0];
 
 assign tmp_8_fu_201_p1 = index_1_fu_194_p3;
 
-assign tmp_fu_83_p4 = {{data_V_read[15:4]}};
+assign tmp_fu_83_p4 = {{data_V_read[DS:DS-11]}};
 
 endmodule //sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s
