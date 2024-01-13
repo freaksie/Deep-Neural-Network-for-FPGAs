@@ -10,8 +10,8 @@
 #include "Vtop___024root.h"
 
 // Parameter definitions for Vtop___024root
-constexpr CData/*0:0*/ Vtop___024root::test__DOT__ap_ST_fsm_pp0_stage0;
-constexpr IData/*31:0*/ Vtop___024root::test__DOT__DS;
+constexpr IData/*31:0*/ Vtop___024root::layer2__DOT__DS;
+constexpr IData/*31:0*/ Vtop___024root::layer2__DOT__MS;
 
 
 void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf);

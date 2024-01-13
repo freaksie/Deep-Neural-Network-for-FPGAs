@@ -13,14 +13,19 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , vlSymsp{new Vtop__Syms(contextp(), _vcname__, this)}
     , ap_clk{vlSymsp->TOP.ap_clk}
     , ap_rst{vlSymsp->TOP.ap_rst}
-    , ap_start{vlSymsp->TOP.ap_start}
-    , ap_done{vlSymsp->TOP.ap_done}
-    , ap_idle{vlSymsp->TOP.ap_idle}
-    , ap_ready{vlSymsp->TOP.ap_ready}
-    , input_2_V_ap_vld{vlSymsp->TOP.input_2_V_ap_vld}
-    , layer7_out_0_V_ap_vld{vlSymsp->TOP.layer7_out_0_V_ap_vld}
-    , layer7_out_0_V{vlSymsp->TOP.layer7_out_0_V}
-    , input_2_V{vlSymsp->TOP.input_2_V}
+    , ap_ce{vlSymsp->TOP.ap_ce}
+    , data_0_V_read{vlSymsp->TOP.data_0_V_read}
+    , data_1_V_read{vlSymsp->TOP.data_1_V_read}
+    , data_2_V_read{vlSymsp->TOP.data_2_V_read}
+    , data_3_V_read{vlSymsp->TOP.data_3_V_read}
+    , data_4_V_read{vlSymsp->TOP.data_4_V_read}
+    , data_5_V_read{vlSymsp->TOP.data_5_V_read}
+    , data_6_V_read{vlSymsp->TOP.data_6_V_read}
+    , data_7_V_read{vlSymsp->TOP.data_7_V_read}
+    , ap_return_0{vlSymsp->TOP.ap_return_0}
+    , ap_return_1{vlSymsp->TOP.ap_return_1}
+    , ap_return_2{vlSymsp->TOP.ap_return_2}
+    , ap_return_3{vlSymsp->TOP.ap_return_3}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

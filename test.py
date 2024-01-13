@@ -10,41 +10,28 @@ async def testbench(dut):
     print("---Start---")
     # Initalization
     dut.ap_rst.value=0
-    dut.ap_start.value=1
-    dut.input_2_V_ap_vld.value=1
-    dut.input_2_V.value=4181650118
+    dut.ap_ce.value=1
+    # dut.input_2_V_ap_vld.value=1
+    dut.data_0_V_read.value=0
+    dut.data_1_V_read.value=1134
+    dut.data_2_V_read.value=0
+    dut.data_3_V_read.value=0
+    dut.data_4_V_read.value=0
+    dut.data_5_V_read.value=0
+    dut.data_6_V_read.value=0
+    dut.data_7_V_read.value=63
     await RisingEdge(dut.ap_clk)
-
-    
+    await RisingEdge(dut.ap_clk)
+    await RisingEdge(dut.ap_clk)
 
     # Rising Edge to send input to input_2_v_preg and input_2_V_in_sig
     await RisingEdge(dut.ap_clk)
     await RisingEdge(dut.ap_clk)
-    print(dut.r_V_s_fu_110_p2.value)
-    print(dut.tmp_3_reg_1568.value)
-    print(end="\n")
-    print(dut.r_V_10_1_fu_108_p2.value)
-    print(dut.tmp_33_1_reg_1603.value)
-    print(end="\n")
-    print(dut.r_V_10_1_fu_108_p2.value)
-    print(dut.res_0_V_write_assign_fu_1431_p2.value)
-
-    # print(dut.input_2_V.value)
-    # print(dut.div.value)
-    print(dut.ans.value)
-    print(dut.ans2.value)
-# 00000101111110000101000000
-# 0000010111111000
-
-# 11111101111111100110100000
-# 1111110111111110
-
-# 11111101111111100110100000
-# 0000010010010011
-# 1111111011100000
-
-
-# 0000110010110010
-
-
     
+    print(dut.ap_return_0.value)    
+    print(dut.ap_return_1.value)
+    print(dut.ap_return_2.value)
+    print(dut.ap_return_3.value)
+    # print(dut.tmp_33_0_5_fu_1410_p4.value)
+    # print(dut.tmp7_cast_fu_1483_p1.value)
+    # print(dut.acc_5_V_fu_1487_p2.value)
