@@ -38,6 +38,7 @@ async def testbench(dut):
     x,y=getData('tb_data/Q3_x_text.npy','tb_data/Q3_y_test.npy')
     
     for i in range(10):
+        # print(x[i])
         clock = Clock(dut.ap_clk, 2, units="ns")
         cocotb.start_soon(clock.start())
         # print("---Start---")
@@ -45,12 +46,12 @@ async def testbench(dut):
         dut.ap_rst.value=0
         dut.ap_start.value=1
         dut.input_2_V_ap_vld.value=1
-        dut.ap_block_pp0_stage0_11001.value=0
-        dut.ap_CS_fsm_pp0_stage0.value=1
-        dut.input_2_V.value=654837788
+        # dut.ap_block_pp0_stage0_11001.value=0
+        # dut.ap_CS_fsm_pp0_stage0.value=1
+        dut.input_2_V.value=609224869
         
 
-        for k in range(13):
+        for k in range(14):
             await RisingEdge(dut.ap_clk)
 
 

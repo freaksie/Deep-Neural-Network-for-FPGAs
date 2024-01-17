@@ -18,8 +18,8 @@ module myproject (
         ap_ready,
         input_2_V_ap_vld,
         input_2_V,
-        layer7_out_0_V,
-        layer7_out_0_V_ap_vld
+        layer7_out_0_V
+        
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -35,12 +35,12 @@ output   ap_ready;
 input   input_2_V_ap_vld;
 input  [IN:0] input_2_V;
 output  [DS:0] layer7_out_0_V;
-output   layer7_out_0_V_ap_vld;
+
 
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
-reg layer7_out_0_V_ap_vld;
+
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -612,13 +612,7 @@ always @ (*) begin
     end
 end
 
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter12 == 1'b1))) begin
-        layer7_out_0_V_ap_vld = 1'b1;
-    end else begin
-        layer7_out_0_V_ap_vld = 1'b0;
-    end
-end
+
 
 always @ (*) begin
     case (ap_CS_fsm)

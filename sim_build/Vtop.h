@@ -33,8 +33,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_OUT8(&ap_ready,0,0);
     VL_IN8(&input_2_V_ap_vld,0,0);
     VL_OUT8(&layer7_out_0_V_ap_vld,0,0);
-    VL_OUT(&layer7_out_0_V,17,0);
-    VL_IN64(&input_2_V,35,0);
+    VL_OUT16(&layer7_out_0_V,15,0);
+    VL_IN(&input_2_V,31,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
