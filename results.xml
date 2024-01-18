@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1705540620" />
+    <testcase name="testbench" classname="test" file="/home/neelvora/Projects/Verilog/Q3_Parameter/test.py" lineno="6" time="0.0010182857513427734" sim_time_ns="4.001" ratio_time="3929.152494497776" />
+  </testsuite>
+</testsuites>
