@@ -18,10 +18,9 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     // Body
     vlSelf->normalize__DOT__nn_start = 1U;
     vlSelf->normalize__DOT__rst = 0U;
-    vlSelf->normalize__DOT__input_2_V_ap_vld = 1U;
     vlSelf->normalize__DOT__min = 0x3ffffU;
     vlSelf->normalize__DOT__flag = 0U;
-    VL_PRINTF_MT("-Info: /home/neelvora/Projects/Verilog/Q3_Parameter/normalize.v:95: $dumpvar ignored, as Verilated without --trace\n");
+    VL_PRINTF_MT("-Info: /home/neelvora/Projects/Verilog/Q3_Parameter/normalize.v:102: $dumpvar ignored, as Verilated without --trace\n");
     vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm = 1U;
     vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter1 = 0U;
     vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter2 = 0U;

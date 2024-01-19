@@ -142,13 +142,19 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___ctor_var_reset\n"); );
     // Body
     vlSelf->ap_clk = VL_RAND_RESET_I(1);
+    vlSelf->ap_start = VL_RAND_RESET_I(1);
+    vlSelf->ap_rst = VL_RAND_RESET_I(1);
     vlSelf->input_V = VL_RAND_RESET_Q(64);
+    vlSelf->input_V_ap_vld = VL_RAND_RESET_I(1);
     vlSelf->output_V = VL_RAND_RESET_I(18);
-    vlSelf->__pinNumber4 = VL_RAND_RESET_I(1);
+    vlSelf->output_V_ap_vld = VL_RAND_RESET_I(1);
     vlSelf->normalize__DOT__ap_clk = VL_RAND_RESET_I(1);
+    vlSelf->normalize__DOT__ap_start = VL_RAND_RESET_I(1);
+    vlSelf->normalize__DOT__ap_rst = VL_RAND_RESET_I(1);
     vlSelf->normalize__DOT__input_V = VL_RAND_RESET_Q(64);
+    vlSelf->normalize__DOT__input_V_ap_vld = VL_RAND_RESET_I(1);
     vlSelf->normalize__DOT__output_V = VL_RAND_RESET_I(18);
-    vlSelf->normalize__DOT____pinNumber4 = VL_RAND_RESET_I(1);
+    vlSelf->normalize__DOT__output_V_ap_vld = VL_RAND_RESET_I(1);
     vlSelf->normalize__DOT__value1 = VL_RAND_RESET_I(32);
     vlSelf->normalize__DOT__value2 = VL_RAND_RESET_I(32);
     vlSelf->normalize__DOT__min = VL_RAND_RESET_I(19);

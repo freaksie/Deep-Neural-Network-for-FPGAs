@@ -17,9 +17,15 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     // Anonymous structures to workaround compiler member-count bugs
     struct {
         VL_IN8(ap_clk,0,0);
-        VL_IN8(__pinNumber4,0,0);
+        VL_IN8(ap_start,0,0);
+        VL_IN8(ap_rst,0,0);
+        VL_IN8(input_V_ap_vld,0,0);
+        VL_OUT8(output_V_ap_vld,0,0);
         CData/*0:0*/ normalize__DOT__ap_clk;
-        CData/*0:0*/ normalize__DOT____pinNumber4;
+        CData/*0:0*/ normalize__DOT__ap_start;
+        CData/*0:0*/ normalize__DOT__ap_rst;
+        CData/*0:0*/ normalize__DOT__input_V_ap_vld;
+        CData/*0:0*/ normalize__DOT__output_V_ap_vld;
         CData/*0:0*/ normalize__DOT__nn_start;
         CData/*0:0*/ normalize__DOT__rst;
         CData/*0:0*/ normalize__DOT__flag;
@@ -74,14 +80,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state4_pp0_stage0_iter3_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state5_pp0_stage0_iter4_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state6_pp0_stage0_iter5_ignore_call25;
+    };
+    struct {
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state7_pp0_stage0_iter6_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state8_pp0_stage0_iter7_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state9_pp0_stage0_iter8_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state10_pp0_stage0_iter9_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state11_pp0_stage0_iter10_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state12_pp0_stage0_iter11_ignore_call25;
-    };
-    struct {
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_state13_pp0_stage0_iter12_ignore_call25;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001_ignoreCallOp34;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_ce;
@@ -140,14 +146,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_NS_fsm;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_idle_pp0_0to11;
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_reset_idle_pp0;
+    };
+    struct {
         CData/*0:0*/ normalize__DOT__myproject__DOT__ap_enable_pp0;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_clk;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_rst;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_block_state1_pp0_stage0_iter0;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_block_state2_pp0_stage0_iter1;
-    };
-    struct {
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_block_state3_pp0_stage0_iter2;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_block_pp0_stage0_11001;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_block_pp0_stage0;
@@ -206,14 +212,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom_U__DOT__clk;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_clk;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_rst;
+    };
+    struct {
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_ce;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_block_state1_pp0_stage0_iter0;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_block_state2_pp0_stage0_iter1;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_block_pp0_stage0_11001;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_block_pp0_stage0;
         CData/*0:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_ce_reg;
-    };
-    struct {
         CData/*0:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__ap_ready;
         CData/*0:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__tmp_1_fu_50_p2;
         CData/*0:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__tmp_1_1_fu_72_p2;
@@ -272,14 +278,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer3_out_6_V_reg_279;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer3_out_7_V_reg_284;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer4_out_0_V_reg_289;
+    };
+    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer4_out_1_V_reg_294;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer4_out_2_V_reg_299;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer4_out_3_V_reg_304;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer5_out_0_V_reg_309;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer5_out_1_V_reg_314;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer5_out_2_V_reg_319;
-    };
-    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer5_out_3_V_reg_324;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92_ap_return;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer6_out_0_V_reg_329;
@@ -338,14 +344,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_3_reg_4077;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_3_1_reg_4082;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_3_2_reg_4087;
+    };
+    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_3_3_reg_4092;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_9_reg_4097;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_4_1_reg_4102;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_11_reg_4107;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_13_reg_4112;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_5_reg_4117;
-    };
-    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_5_1_reg_4122;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_5_2_reg_4127;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_15_reg_4132;
@@ -404,14 +410,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_fu_223_p0;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_cast_fu_3225_p0;
         IData/*29:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_fu_221_p2;
+    };
+    struct {
         IData/*29:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_1_fu_215_p2;
         IData/*29:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_2_fu_197_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_neel_D4_1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_neel_D6_2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_neel_D7_2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_neel_D0_3;
-    };
-    struct {
         IData/*29:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_3_fu_3292_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_1_cast1_fu_3308_p0;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_1_cast_fu_3313_p0;
@@ -470,14 +476,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_cast_fu_3882_p1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_fu_3885_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp19_fu_3878_p2;
+    };
+    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp20_cast_fu_3891_p1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp18_fu_3895_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_12_fu_3828_p1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_25_fu_3846_p1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_20_fu_3840_p1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2;
-    };
-    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp26_fu_3906_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp27_fu_3917_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp25_fu_3923_p2;
@@ -536,14 +542,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_0;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_2;
+    };
+    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w7_3;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b0;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b3;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_0;
-    };
-    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_3;
@@ -602,14 +608,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*29:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_6_fu_111_p2;
         IData/*29:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_7_fu_112_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl_fu_1382_p3;
+    };
+    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_fu_1393_p3;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl_cast_fu_1389_p1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_cast_fu_1400_p1;
         IData/*29:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_5_fu_1404_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp2_fu_1426_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_28_fu_1379_p1;
-    };
-    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp3_fu_1436_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp4_fu_1447_p2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp5_fu_1457_p2;
@@ -668,14 +674,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_4_V_read;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_5_V_read;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_6_V_read;
+    };
+    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_7_V_read;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_0;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_2;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_3;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_4;
-    };
-    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_5;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_6;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_7;
@@ -734,14 +740,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__w3;
         IData/*17:0*/ normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__b;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__data_0_V_read;
+    };
+    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__data_1_V_read;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__data_2_V_read;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__data_3_V_read;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__ap_return_0;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__ap_return_1;
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__ap_return_2;
-    };
-    struct {
         IData/*17:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__ap_return_3;
         IData/*16:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__tmp_fu_56_p1;
         IData/*16:0*/ normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__res_0_V_write_assign_fu_60_p3;

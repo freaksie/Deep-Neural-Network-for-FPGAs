@@ -12,7 +12,10 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtop__Syms(contextp(), _vcname__, this)}
     , ap_clk{vlSymsp->TOP.ap_clk}
-    , __pinNumber4{vlSymsp->TOP.__pinNumber4}
+    , ap_start{vlSymsp->TOP.ap_start}
+    , ap_rst{vlSymsp->TOP.ap_rst}
+    , input_V_ap_vld{vlSymsp->TOP.input_V_ap_vld}
+    , output_V_ap_vld{vlSymsp->TOP.output_V_ap_vld}
     , output_V{vlSymsp->TOP.output_V}
     , input_V{vlSymsp->TOP.input_V}
     , rootp{&(vlSymsp->TOP)}

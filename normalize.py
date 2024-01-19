@@ -37,6 +37,7 @@ async def testbench(dut):
         clock = Clock(dut.ap_clk, 2, units="ns")
         cocotb.start_soon(clock.start())
         # Initalization
+        dut.input_V_ap_vld.value=1
         dut.input_V.value=x[i]
         await RisingEdge(dut.ap_clk)
         await RisingEdge(dut.ap_clk)

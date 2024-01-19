@@ -63,13 +63,17 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
 
     // Setup export functions
     for (int __Vfinal = 0; __Vfinal < 2; ++__Vfinal) {
-        __Vscope_TOP.varInsert(__Vfinal,"__pinNumber4", &(TOP.__pinNumber4), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
         __Vscope_TOP.varInsert(__Vfinal,"ap_clk", &(TOP.ap_clk), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"ap_rst", &(TOP.ap_rst), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"ap_start", &(TOP.ap_start), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
         __Vscope_TOP.varInsert(__Vfinal,"input_V", &(TOP.input_V), false, VLVT_UINT64,VLVD_IN|VLVF_PUB_RW,1 ,63,0);
+        __Vscope_TOP.varInsert(__Vfinal,"input_V_ap_vld", &(TOP.input_V_ap_vld), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
         __Vscope_TOP.varInsert(__Vfinal,"output_V", &(TOP.output_V), false, VLVT_UINT32,VLVD_OUT|VLVF_PUB_RW,1 ,17,0);
-        __Vscope_normalize.varInsert(__Vfinal,"__pinNumber4", &(TOP.normalize__DOT____pinNumber4), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"output_V_ap_vld", &(TOP.output_V_ap_vld), false, VLVT_UINT8,VLVD_OUT|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"ap_clk", &(TOP.normalize__DOT__ap_clk), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"ap_return", &(TOP.normalize__DOT__ap_return), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
+        __Vscope_normalize.varInsert(__Vfinal,"ap_rst", &(TOP.normalize__DOT__ap_rst), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_normalize.varInsert(__Vfinal,"ap_start", &(TOP.normalize__DOT__ap_start), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"divid1", &(TOP.normalize__DOT__divid1), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,17,0);
         __Vscope_normalize.varInsert(__Vfinal,"divid2", &(TOP.normalize__DOT__divid2), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,17,0);
         __Vscope_normalize.varInsert(__Vfinal,"dt1", &(TOP.normalize__DOT__dt1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
@@ -77,6 +81,7 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_normalize.varInsert(__Vfinal,"flag", &(TOP.normalize__DOT__flag), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"input_2_V_ap_vld", &(TOP.normalize__DOT__input_2_V_ap_vld), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"input_V", &(TOP.normalize__DOT__input_V), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
+        __Vscope_normalize.varInsert(__Vfinal,"input_V_ap_vld", &(TOP.normalize__DOT__input_V_ap_vld), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"min", &(TOP.normalize__DOT__min), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,18,0);
         __Vscope_normalize.varInsert(__Vfinal,"multi1", &(TOP.normalize__DOT__multi1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
         __Vscope_normalize.varInsert(__Vfinal,"multi2", &(TOP.normalize__DOT__multi2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
@@ -85,6 +90,7 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_normalize.varInsert(__Vfinal,"normalized1", &(TOP.normalize__DOT__normalized1), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,17,0);
         __Vscope_normalize.varInsert(__Vfinal,"normalized2", &(TOP.normalize__DOT__normalized2), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,17,0);
         __Vscope_normalize.varInsert(__Vfinal,"output_V", &(TOP.normalize__DOT__output_V), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,17,0);
+        __Vscope_normalize.varInsert(__Vfinal,"output_V_ap_vld", &(TOP.normalize__DOT__output_V_ap_vld), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"rst", &(TOP.normalize__DOT__rst), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"sum1", &(TOP.normalize__DOT__sum1), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_normalize.varInsert(__Vfinal,"sum2", &(TOP.normalize__DOT__sum2), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);

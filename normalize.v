@@ -9,8 +9,10 @@ module normalize(
     output_V_ap_vld
 );
 input ap_clk;
-//input ap_rst;
-//input ap_ce;
+input ap_rst;
+input ap_start;
+input input_V_ap_vld;
+output output_V_ap_vld;
 input [63:0] input_V;
 output [17:0] output_V;
 
@@ -65,7 +67,7 @@ always @(*) begin
     assign ap_return = {normalized2,normalized1};
     assign nn_start = 1'b1;
     assign rst =1'b0;
-    assign input_V_ap_vld = 1'b1;
+    assign input_2_V_ap_vld = input_V_ap_vld;
 end
 
 assign sum1 = $signed(value1) + $signed(min);
@@ -89,7 +91,7 @@ myproject myproject(
     .input_2_V_ap_vld(input_V_ap_vld),
     .input_2_V(ap_return),
     .layer7_out_0_V(nn_out),
-    .layer7_out_0_V_ap_vld(output_V_ap_vld),
+    .layer7_out_0_V_ap_vld(output_V_ap_vld)
 );
 
 assign output_V = nn_out;

@@ -18,12 +18,12 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     CData/*0:0*/ normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT____VdfgTmp_h1f434ff9__0;
     normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT____VdfgTmp_h1f434ff9__0 = 0;
     // Body
+    vlSelf->normalize__DOT__ap_start = vlSelf->ap_start;
+    vlSelf->normalize__DOT__ap_rst = vlSelf->ap_rst;
     vlSelf->normalize__DOT__input_V = vlSelf->input_V;
-    vlSelf->normalize__DOT____pinNumber4 = vlSelf->__pinNumber4;
+    vlSelf->normalize__DOT__input_2_V_ap_vld = vlSelf->input_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__ap_start 
         = vlSelf->normalize__DOT__nn_start;
-    vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld 
-        = vlSelf->normalize__DOT__input_2_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__ap_NS_fsm 
         = vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read 
@@ -315,6 +315,7 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp21_fu_3790_p2 
         = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b1 
                        + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4));
+    vlSelf->normalize__DOT__input_V_ap_vld = vlSelf->input_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_q0 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom_U__DOT__q0;
     vlSelf->normalize__DOT__divid1 = (0x3ffffU & (IData)(
@@ -516,9 +517,9 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__ap_return = (((QData)((IData)(vlSelf->normalize__DOT__normalized2)) 
                                           << 0x12U) 
                                          | (QData)((IData)(vlSelf->normalize__DOT__normalized1)));
-    if (vlSelf->normalize__DOT__input_2_V_ap_vld) {
+    if (vlSelf->input_V_ap_vld) {
         vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_in_sig 
-            = vlSelf->normalize__DOT__input_2_V_ap_vld;
+            = vlSelf->input_V_ap_vld;
         vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig 
             = vlSelf->normalize__DOT__ap_return;
     } else {
@@ -527,6 +528,8 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig 
             = vlSelf->normalize__DOT__myproject__DOT__input_2_V_preg;
     }
+    vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld 
+        = vlSelf->normalize__DOT__input_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__q0 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_q0;
     vlSelf->normalize__DOT__dt1 = (0xfffffffffULL & 
@@ -561,7 +564,7 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = (1U & ((~ ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0)) 
                      & ((IData)(vlSelf->normalize__DOT__nn_start) 
                         & (IData)(normalize__DOT__myproject__DOT____VdfgTmp_h1f434ff9__0)))) 
-                 | (IData)(vlSelf->normalize__DOT__input_2_V_ap_vld)));
+                 | (IData)(vlSelf->input_V_ap_vld)));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_4_cast_fu_3476_p1 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_2_fu_196_p0;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_neel_D4_1 
@@ -1028,9 +1031,8 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__ap_ready 
         = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
            & (IData)(normalize__DOT__myproject__DOT____VdfgTmp_h1f434ff9__0));
-    vlSelf->normalize__DOT__myproject__DOT__ap_done 
-        = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
-           & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter12));
+    vlSelf->output_V_ap_vld = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
+                               & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter12));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce 
         = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
            & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm));
@@ -1160,8 +1162,11 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__clk;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_idle 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_idle;
+    vlSelf->normalize__DOT__output_V_ap_vld = vlSelf->output_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__layer7_out_0_V_ap_vld 
-        = vlSelf->normalize__DOT__myproject__DOT__ap_done;
+        = vlSelf->output_V_ap_vld;
+    vlSelf->normalize__DOT__myproject__DOT__ap_done 
+        = vlSelf->output_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_ce 
@@ -1365,8 +1370,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     }
     if (vlSelf->normalize__DOT__rst) {
         vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_enable_reg_pp0_iter2 = 0U;
-        vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_preg = 0U;
         vlSelf->normalize__DOT__myproject__DOT__input_2_V_preg = 0ULL;
+        vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_preg = 0U;
         vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg = 0U;
         vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter12 = 0U;
         vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_enable_reg_pp0_iter1 = 0U;
@@ -1386,21 +1391,21 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
             vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_enable_reg_pp0_iter2 
                 = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_enable_reg_pp0_iter1;
         }
+        if (((~ ((~ (IData)(vlSelf->normalize__DOT__nn_start)) 
+                 & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm_pp0_stage0))) 
+             & (IData)(vlSelf->input_V_ap_vld))) {
+            vlSelf->normalize__DOT__myproject__DOT__input_2_V_preg 
+                = vlSelf->normalize__DOT__ap_return;
+        }
         if ((((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
               & (IData)(vlSelf->normalize__DOT__nn_start)) 
              & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm_pp0_stage0))) {
             vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_preg = 0U;
         } else if (((~ ((~ (IData)(vlSelf->normalize__DOT__nn_start)) 
                         & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm_pp0_stage0))) 
-                    & (IData)(vlSelf->normalize__DOT__input_2_V_ap_vld))) {
+                    & (IData)(vlSelf->input_V_ap_vld))) {
             vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_preg 
-                = vlSelf->normalize__DOT__input_2_V_ap_vld;
-        }
-        if (((~ ((~ (IData)(vlSelf->normalize__DOT__nn_start)) 
-                 & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm_pp0_stage0))) 
-             & (IData)(vlSelf->normalize__DOT__input_2_V_ap_vld))) {
-            vlSelf->normalize__DOT__myproject__DOT__input_2_V_preg 
-                = vlSelf->normalize__DOT__ap_return;
+                = vlSelf->input_V_ap_vld;
         }
         if (((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
              & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter9))) {
@@ -1995,9 +2000,9 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__ap_return = (((QData)((IData)(vlSelf->normalize__DOT__normalized2)) 
                                           << 0x12U) 
                                          | (QData)((IData)(vlSelf->normalize__DOT__normalized1)));
-    if (vlSelf->normalize__DOT__input_2_V_ap_vld) {
+    if (vlSelf->input_V_ap_vld) {
         vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_in_sig 
-            = vlSelf->normalize__DOT__input_2_V_ap_vld;
+            = vlSelf->input_V_ap_vld;
         vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig 
             = vlSelf->normalize__DOT__ap_return;
     } else {
@@ -2207,7 +2212,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = (1U & ((~ ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0)) 
                      & ((IData)(vlSelf->normalize__DOT__nn_start) 
                         & (IData)(normalize__DOT__myproject__DOT____VdfgTmp_h1f434ff9__0)))) 
-                 | (IData)(vlSelf->normalize__DOT__input_2_V_ap_vld)));
+                 | (IData)(vlSelf->input_V_ap_vld)));
     vlSelf->normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__res_0_V_write_assign_fu_60_p3 
         = ((IData)(vlSelf->normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__tmp_1_fu_50_p2)
             ? vlSelf->normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__tmp_fu_56_p1
@@ -2769,9 +2774,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__ap_ready 
         = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
            & (IData)(normalize__DOT__myproject__DOT____VdfgTmp_h1f434ff9__0));
-    vlSelf->normalize__DOT__myproject__DOT__ap_done 
-        = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
-           & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter12));
+    vlSelf->output_V_ap_vld = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
+                               & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter12));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce 
         = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0_11001)) 
            & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm));
@@ -2781,8 +2785,11 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__ap_idle_pp0 
         = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter12)) 
            & (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_idle_pp0_0to11));
+    vlSelf->normalize__DOT__output_V_ap_vld = vlSelf->output_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__layer7_out_0_V_ap_vld 
-        = vlSelf->normalize__DOT__myproject__DOT__ap_done;
+        = vlSelf->output_V_ap_vld;
+    vlSelf->normalize__DOT__myproject__DOT__ap_done 
+        = vlSelf->output_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_ce 
@@ -2925,7 +2932,11 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
     // Body
     if (VL_UNLIKELY((vlSelf->ap_clk & 0xfeU))) {
         Verilated::overWidthError("ap_clk");}
-    if (VL_UNLIKELY((vlSelf->__pinNumber4 & 0xfeU))) {
-        Verilated::overWidthError("__pinNumber4");}
+    if (VL_UNLIKELY((vlSelf->ap_start & 0xfeU))) {
+        Verilated::overWidthError("ap_start");}
+    if (VL_UNLIKELY((vlSelf->ap_rst & 0xfeU))) {
+        Verilated::overWidthError("ap_rst");}
+    if (VL_UNLIKELY((vlSelf->input_V_ap_vld & 0xfeU))) {
+        Verilated::overWidthError("input_V_ap_vld");}
 }
 #endif  // VL_DEBUG
