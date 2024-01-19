@@ -30,14 +30,16 @@ def getData(X,Y):
 # 9469. -2776
 # 21220.0, 35443.0
 async def testbench(dut):
+    orig=[]
     pred=[]
     x,y=getData('tb_data/input.npy','tb_data/Q3_y_test.npy')
     print("---Start---")
-    for i in range(100):
+    for i in range(3000,5000):
         clock = Clock(dut.ap_clk, 2, units="ns")
         cocotb.start_soon(clock.start())
         # Initalization
         dut.input_V_ap_vld.value=1
+        orig.append(y[i])
         dut.input_V.value=x[i]
         await RisingEdge(dut.ap_clk)
         await RisingEdge(dut.ap_clk)
@@ -132,11 +134,11 @@ async def testbench(dut):
 
         y_pred=(int(str(dut.output_V.value),2)/2**12)
         pred.append(y_pred)
-    print(pred)
+    # print(pred)
     count=0
     count1=0
     for i in range(len(pred)):
-        if y[i]==0:
+        if orig[i]==0:
             count+=1
             if pred[i]<0.5:
                 count1+=1
@@ -147,7 +149,7 @@ async def testbench(dut):
     count=0
     count1=0
     for i in range(len(pred)):
-        if y[i]==1:
+        if orig[i]==1:
             count+=1
             if pred[i]>0.5:
                 count1+=1
