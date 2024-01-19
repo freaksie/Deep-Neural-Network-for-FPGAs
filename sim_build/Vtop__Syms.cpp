@@ -94,8 +94,6 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_normalize.varInsert(__Vfinal,"rst", &(TOP.normalize__DOT__rst), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_normalize.varInsert(__Vfinal,"sum1", &(TOP.normalize__DOT__sum1), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_normalize.varInsert(__Vfinal,"sum2", &(TOP.normalize__DOT__sum2), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
-        __Vscope_normalize.varInsert(__Vfinal,"tmp1", &(TOP.normalize__DOT__tmp1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
-        __Vscope_normalize.varInsert(__Vfinal,"tmp2", &(TOP.normalize__DOT__tmp2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
         __Vscope_normalize.varInsert(__Vfinal,"value1", &(TOP.normalize__DOT__value1), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_normalize.varInsert(__Vfinal,"value2", &(TOP.normalize__DOT__value2), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_normalize.varInsert(__Vfinal,"width", const_cast<void*>(static_cast<const void*>(&(TOP.normalize__DOT__width))), true, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);

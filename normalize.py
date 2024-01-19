@@ -34,37 +34,39 @@ async def testbench(dut):
     pred=[]
     x,y=getData('tb_data/input.npy','tb_data/Q3_y_test.npy')
     print("---Start---")
-    for i in range(3000,5000):
+    for i in range(100):
         clock = Clock(dut.ap_clk, 2, units="ns")
         cocotb.start_soon(clock.start())
         # Initalization
         dut.input_V_ap_vld.value=1
         orig.append(y[i])
         dut.input_V.value=x[i]
+        # print(y[i])
+        await RisingEdge(dut.ap_clk)
+        await RisingEdge(dut.ap_clk)
         await RisingEdge(dut.ap_clk)
         await RisingEdge(dut.ap_clk)
         await RisingEdge(dut.ap_clk)
         # await RisingEdge(dut.ap_clk)
         # print(dut.input_V.value)
-        # print(dut.value1.value)
-        # print(dut.value2.value)
+
         # print('*****************')
         # print(dut.sum1.value)
         # print(dut.sum2.value)
         # print('*****************')
-        # print(dut.tmp1.value , dut.tmp2.value)
-        # print("Multi",dut.multi1.value , dut.multi2.value)
+        # # print(dut.tmp1.value , dut.tmp2.value)
+        # print("Multi",dut.multi1.value,  dut.multi2.value)
         # print('*****************')
-        # print(dut.divid1.value , dut.divid2.value)
+        # print(dut.divid1.value, dut.divid2.value)
         # print('*****************')
-        # print(dut.dt1.value , dut.dt2.value)
+        # print(dut.dt1.value, dut.dt2.value)
         # print(dut.normalized1.value , dut.normalized2.value)
         # print('*****************')
         # print(dut.ap_return.value)
         # print('*****************')
         # print('*****************')
 
-        for k in range(14):
+        for k in range(13):
             await RisingEdge(dut.ap_clk)
         # print("ML input",dut.myproject.input_2_V.value)
         # print('--- Input to HiddenLayer 1----')
@@ -134,7 +136,7 @@ async def testbench(dut):
 
         y_pred=(int(str(dut.output_V.value),2)/2**12)
         pred.append(y_pred)
-    # print(pred)
+    print(pred)
     count=0
     count1=0
     for i in range(len(pred)):

@@ -254,10 +254,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*31:0*/ normalize__DOT__value2;
         IData/*18:0*/ normalize__DOT__min;
         IData/*31:0*/ normalize__DOT__sum1;
-        IData/*17:0*/ normalize__DOT__divid1;
-        IData/*17:0*/ normalize__DOT__normalized1;
         IData/*31:0*/ normalize__DOT__sum2;
+        IData/*17:0*/ normalize__DOT__divid1;
         IData/*17:0*/ normalize__DOT__divid2;
+        IData/*17:0*/ normalize__DOT__normalized1;
         IData/*17:0*/ normalize__DOT__normalized2;
         IData/*17:0*/ normalize__DOT__nn_out;
         IData/*17:0*/ normalize__DOT__myproject__DOT__layer7_out_0_V;
@@ -766,11 +766,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*31:0*/ __VactIterCount;
         VL_IN64(input_V,63,0);
         QData/*63:0*/ normalize__DOT__input_V;
-        QData/*63:0*/ normalize__DOT__multi1;
-        QData/*63:0*/ normalize__DOT__tmp1;
-        QData/*63:0*/ normalize__DOT__tmp2;
         QData/*35:0*/ normalize__DOT__dt1;
         QData/*35:0*/ normalize__DOT__dt2;
+        QData/*63:0*/ normalize__DOT__multi1;
         QData/*63:0*/ normalize__DOT__multi2;
         QData/*35:0*/ normalize__DOT__ap_return;
         QData/*35:0*/ normalize__DOT__myproject__DOT__input_2_V;

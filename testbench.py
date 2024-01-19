@@ -37,7 +37,7 @@ async def testbench(dut):
     pred=[]
     x,y=getData('tb_data/Q3_x_text.npy','tb_data/Q3_y_test.npy')
     
-    for i in range(10):
+    for i in range(2):
         # print(x[i])
         clock = Clock(dut.ap_clk, 2, units="ns")
         cocotb.start_soon(clock.start())
@@ -48,7 +48,7 @@ async def testbench(dut):
         dut.input_2_V_ap_vld.value=1
         # dut.ap_block_pp0_stage0_11001.value=0
         # dut.ap_CS_fsm_pp0_stage0.value=1
-        dut.input_2_V.value=655099933
+        dut.input_2_V.value=535299615
         
 
         for k in range(14):

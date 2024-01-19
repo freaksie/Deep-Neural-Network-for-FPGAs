@@ -78,6 +78,9 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->normalize__DOT__myproject__DOT__layer4_out_2_V_reg_299;
     vlSelf->normalize__DOT__myproject__DOT__call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100__DOT__data_3_V_read 
         = vlSelf->normalize__DOT__myproject__DOT__layer4_out_3_V_reg_304;
+    vlSelf->normalize__DOT__value1 = (IData)(vlSelf->input_V);
+    vlSelf->normalize__DOT__value2 = (IData)((vlSelf->input_V 
+                                              >> 0x20U));
     vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm_pp0_stage0 
         = vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm;
     vlSelf->normalize__DOT__myproject__DOT__ap_enable_reg_pp0_iter0 
@@ -318,12 +321,6 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__input_V_ap_vld = vlSelf->input_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_q0 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom_U__DOT__q0;
-    vlSelf->normalize__DOT__divid1 = (0x3ffffU & (IData)(
-                                                         (vlSelf->normalize__DOT__multi1 
-                                                          >> 0x13U)));
-    vlSelf->normalize__DOT__divid2 = (0x3ffffU & (IData)(
-                                                         (vlSelf->normalize__DOT__multi2 
-                                                          >> 0x13U)));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_fu_1393_p3 
         = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_reg_1562 
                        << 1U));
@@ -356,9 +353,6 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
                        + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_s_reg_4057));
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg;
-    vlSelf->normalize__DOT__value2 = (IData)((vlSelf->input_V 
-                                              >> 0x20U));
-    vlSelf->normalize__DOT__value1 = (IData)(vlSelf->input_V);
     normalize__DOT__myproject__DOT____VdfgTmp_h1f434ff9__0 
         = ((IData)(vlSelf->normalize__DOT__myproject__DOT__ap_CS_fsm) 
            & (IData)(vlSelf->normalize__DOT__nn_start));
@@ -514,6 +508,14 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_fu_83_p4 
         = (0xfffU & (vlSelf->normalize__DOT__myproject__DOT__layer6_out_0_V_reg_329 
                      >> 6U));
+    vlSelf->normalize__DOT__normalized1 = (0x3ffffU 
+                                           & (IData)(
+                                                     (vlSelf->normalize__DOT__dt1 
+                                                      >> 0x12U)));
+    vlSelf->normalize__DOT__normalized2 = (0x3ffffU 
+                                           & (IData)(
+                                                     (vlSelf->normalize__DOT__dt2 
+                                                      >> 0x12U)));
     vlSelf->normalize__DOT__ap_return = (((QData)((IData)(vlSelf->normalize__DOT__normalized2)) 
                                           << 0x12U) 
                                          | (QData)((IData)(vlSelf->normalize__DOT__normalized1)));
@@ -532,10 +534,6 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->normalize__DOT__input_V_ap_vld;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_U__DOT__q0 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_q0;
-    vlSelf->normalize__DOT__dt1 = (0xfffffffffULL & 
-                                   (0x1a36eULL * (QData)((IData)(vlSelf->normalize__DOT__divid1))));
-    vlSelf->normalize__DOT__dt2 = (0xfffffffffULL & 
-                                   (0x1a36eULL * (QData)((IData)(vlSelf->normalize__DOT__divid2))));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_cast_fu_1400_p1 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_fu_1393_p3;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl_cast_fu_1389_p1 
@@ -556,10 +554,6 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_enable_reg_pp0_iter0 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start;
-    vlSelf->normalize__DOT__sum2 = (vlSelf->normalize__DOT__value2 
-                                    + VL_EXTENDS_II(32,19, vlSelf->normalize__DOT__min));
-    vlSelf->normalize__DOT__sum1 = (vlSelf->normalize__DOT__value1 
-                                    + VL_EXTENDS_II(32,19, vlSelf->normalize__DOT__min));
     vlSelf->normalize__DOT__myproject__DOT__input_2_V_blk_n 
         = (1U & ((~ ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__ap_block_pp0_stage0)) 
                      & ((IData)(vlSelf->normalize__DOT__nn_start) 
@@ -773,8 +767,6 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = (0x1fffU & VL_EXTENDS_II(13,12, (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_fu_83_p4)));
     vlSelf->normalize__DOT__myproject__DOT__input_2_V 
         = vlSelf->normalize__DOT__ap_return;
-    vlSelf->normalize__DOT__tmp2 = (0x2710ULL * (QData)((IData)(vlSelf->normalize__DOT__sum2)));
-    vlSelf->normalize__DOT__tmp1 = (0x2710ULL * (QData)((IData)(vlSelf->normalize__DOT__sum1)));
     vlSelf->normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_0 
         = vlSelf->normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__res_0_V_write_assign_fu_92_p3;
     vlSelf->normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_1 
@@ -1260,11 +1252,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     CData/*0:0*/ normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT____VdfgTmp_h1f434ff9__0;
     normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT____VdfgTmp_h1f434ff9__0 = 0;
     // Body
-    if ((1U & (~ (IData)(vlSelf->normalize__DOT__flag)))) {
-        vlSelf->normalize__DOT__flag = 1U;
-        vlSelf->normalize__DOT__multi1 = vlSelf->normalize__DOT__tmp1;
-        vlSelf->normalize__DOT__multi2 = vlSelf->normalize__DOT__tmp2;
-    }
     if ((1U & (~ (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_block_pp0_stage0_11001)))) {
         vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp_5_reg_247 
             = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_fu_71_p2 
@@ -1448,6 +1435,10 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
                 = vlSelf->normalize__DOT__nn_start;
         }
     }
+    vlSelf->normalize__DOT__dt2 = (0xfffffffffULL & 
+                                   (0x1a36eULL * (QData)((IData)(vlSelf->normalize__DOT__divid2))));
+    vlSelf->normalize__DOT__dt1 = (0xfffffffffULL & 
+                                   (0x1a36eULL * (QData)((IData)(vlSelf->normalize__DOT__divid1))));
     if (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce) {
         vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg 
             = vlSelf->normalize__DOT__myproject__DOT__layer3_out_0_V_reg_249;
@@ -1621,23 +1612,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         vlSelf->normalize__DOT__myproject__DOT__layer3_out_4_V_reg_269 
             = vlSelf->normalize__DOT__myproject__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_4;
     }
-    if (vlSelf->normalize__DOT__flag) {
-        vlSelf->normalize__DOT__flag = 0U;
-        vlSelf->normalize__DOT__normalized1 = (0x3ffffU 
-                                               & (IData)(
-                                                         (vlSelf->normalize__DOT__dt1 
-                                                          >> 0x12U)));
-        vlSelf->normalize__DOT__normalized2 = (0x3ffffU 
-                                               & (IData)(
-                                                         (vlSelf->normalize__DOT__dt2 
-                                                          >> 0x12U)));
-    }
-    vlSelf->normalize__DOT__divid1 = (0x3ffffU & (IData)(
-                                                         (vlSelf->normalize__DOT__multi1 
-                                                          >> 0x13U)));
-    vlSelf->normalize__DOT__divid2 = (0x3ffffU & (IData)(
-                                                         (vlSelf->normalize__DOT__multi2 
-                                                          >> 0x13U)));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp_fu_227_p2 
         = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp_5_1_reg_252 
                        + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp_5_reg_247));
@@ -1828,6 +1802,23 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     }
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_ce_reg 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce;
+    vlSelf->normalize__DOT__divid2 = (0x3ffffU & (IData)(
+                                                         (vlSelf->normalize__DOT__multi2 
+                                                          >> 0x13U)));
+    vlSelf->normalize__DOT__divid1 = (0x3ffffU & (IData)(
+                                                         (vlSelf->normalize__DOT__multi1 
+                                                          >> 0x13U)));
+    vlSelf->normalize__DOT__normalized1 = (0x3ffffU 
+                                           & (IData)(
+                                                     (vlSelf->normalize__DOT__dt1 
+                                                      >> 0x12U)));
+    vlSelf->normalize__DOT__normalized2 = (0x3ffffU 
+                                           & (IData)(
+                                                     (vlSelf->normalize__DOT__dt2 
+                                                      >> 0x12U)));
+    vlSelf->normalize__DOT__ap_return = (((QData)((IData)(vlSelf->normalize__DOT__normalized2)) 
+                                          << 0x12U) 
+                                         | (QData)((IData)(vlSelf->normalize__DOT__normalized1)));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_1_fu_215_p2 
         = (0x3fffffffU & VL_MULS_III(30, (0x3fffffffU 
                                           & VL_EXTENDS_II(30,18, vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg)), 
@@ -1997,9 +1988,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2 
         = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__b2 
                        + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_24_reg_4162));
-    vlSelf->normalize__DOT__ap_return = (((QData)((IData)(vlSelf->normalize__DOT__normalized2)) 
-                                          << 0x12U) 
-                                         | (QData)((IData)(vlSelf->normalize__DOT__normalized1)));
     if (vlSelf->input_V_ap_vld) {
         vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_in_sig 
             = vlSelf->input_V_ap_vld;
@@ -2126,10 +2114,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
            & (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg));
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_state1_pp0_stage0_iter0 
         = (1U & (~ (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg)));
-    vlSelf->normalize__DOT__dt1 = (0xfffffffffULL & 
-                                   (0x1a36eULL * (QData)((IData)(vlSelf->normalize__DOT__divid1))));
-    vlSelf->normalize__DOT__dt2 = (0xfffffffffULL & 
-                                   (0x1a36eULL * (QData)((IData)(vlSelf->normalize__DOT__divid2))));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp1_fu_236_p2 
         = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp2_fu_231_p2 
                        + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp_5_2_reg_257));
@@ -2265,6 +2249,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_CS_fsm;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start 
         = vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg;
+    vlSelf->normalize__DOT__myproject__DOT__input_2_V 
+        = vlSelf->normalize__DOT__ap_return;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_cast_fu_3225_p1 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_2_fu_197_p0;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_neel_D0_3 
@@ -2337,8 +2323,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp27_fu_3917_p2 
         = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_19_reg_4147 
                        + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp28_fu_3911_p2));
-    vlSelf->normalize__DOT__myproject__DOT__input_2_V 
-        = vlSelf->normalize__DOT__ap_return;
     vlSelf->normalize__DOT__myproject__DOT__ap_block_state1_pp0_stage0_iter0 
         = (1U & ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__input_2_V_ap_vld_in_sig)) 
                  | (~ (IData)(vlSelf->normalize__DOT__nn_start))));
@@ -2428,6 +2412,15 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_idle_pp0_0to1 
         = ((~ (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_enable_reg_pp0_iter1)) 
            & (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_state1_pp0_stage0_iter0));
+    vlSelf->normalize__DOT__multi2 = (0x2710ULL * (QData)((IData)(vlSelf->normalize__DOT__sum2)));
+    vlSelf->normalize__DOT__multi1 = (0x2710ULL * (QData)((IData)(vlSelf->normalize__DOT__sum1)));
+    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__data_V_read 
+        = vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig;
+    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_fu_1180_p1 
+        = (0x3ffffU & (IData)(vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig));
+    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_4_fu_98_p1 
+        = (0x3ffffU & (IData)((vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig 
+                               >> 0x12U)));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read 
         = vlSelf->normalize__DOT__myproject__DOT__layer3_out_0_V_reg_249;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_3_V_read 
@@ -2448,13 +2441,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp25_fu_3923_p2 
         = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp26_fu_3906_p2 
                        + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp27_fu_3917_p2));
-    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__data_V_read 
-        = vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig;
-    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_fu_1180_p1 
-        = (0x3ffffU & (IData)(vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig));
-    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_4_fu_98_p1 
-        = (0x3ffffU & (IData)((vlSelf->normalize__DOT__myproject__DOT__input_2_V_in_sig 
-                               >> 0x12U)));
     vlSelf->normalize__DOT__myproject__DOT__ap_block_state1_pp0_stage0_iter0_ignore_call25 
         = vlSelf->normalize__DOT__myproject__DOT__ap_block_state1_pp0_stage0_iter0;
     vlSelf->normalize__DOT__myproject__DOT__ap_block_state1_pp0_stage0_iter0_ignore_call35 
@@ -2521,36 +2507,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_6;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_7 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_7;
-    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__res_0_V_write_assign_fu_3873_p2 
-        = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_reg_4172 
-                       + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp11_fu_3867_p2));
-    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_3_V_fu_3958_p2 
-        = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp29_reg_4192 
-                       + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp32_fu_3952_p2));
-    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_2_V_fu_3929_p2 
-        = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp22_reg_4187 
-                       + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp25_fu_3923_p2));
-    if (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce_reg) {
-        if (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce_reg) {
-            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1 
-                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_1_V_fu_3901_p2;
-            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0 
-                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__res_0_V_write_assign_fu_3873_p2;
-            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_3 
-                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_3_V_fu_3958_p2;
-            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_2 
-                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_2_V_fu_3929_p2;
-        }
-    } else {
-        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1 
-            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1_int_reg;
-        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0 
-            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0_int_reg;
-        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_3 
-            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_3_int_reg;
-        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_2 
-            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_2_int_reg;
-    }
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_1_fu_104_p1 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_fu_1180_p1;
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_cast3_fu_1184_p1 
@@ -2665,6 +2621,36 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
                                           & VL_EXTENDS_II(30,18, vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__w1_5)), 
                                      (0x3fffffffU & 
                                       VL_EXTENDS_II(30,18, vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_4_fu_98_p1))));
+    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__res_0_V_write_assign_fu_3873_p2 
+        = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_reg_4172 
+                       + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp11_fu_3867_p2));
+    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_3_V_fu_3958_p2 
+        = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp29_reg_4192 
+                       + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp32_fu_3952_p2));
+    vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_2_V_fu_3929_p2 
+        = (0x3ffffU & (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp22_reg_4187 
+                       + vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp25_fu_3923_p2));
+    if (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce_reg) {
+        if (vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce_reg) {
+            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1 
+                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_1_V_fu_3901_p2;
+            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0 
+                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__res_0_V_write_assign_fu_3873_p2;
+            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_3 
+                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_3_V_fu_3958_p2;
+            vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_2 
+                = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__acc_2_V_fu_3929_p2;
+        }
+    } else {
+        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1 
+            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1_int_reg;
+        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0 
+            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0_int_reg;
+        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_3 
+            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_3_int_reg;
+        vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_2 
+            = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_2_int_reg;
+    }
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__p_s_fu_127_p3 
         = ((IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_3_fu_115_p2)
             ? (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ret_V_cast_fu_93_p1)
@@ -2685,6 +2671,10 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = ((IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_state1_pp0_stage0_iter0) 
            & ((IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_idle_pp0) 
               & (IData)(vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_CS_fsm)));
+    vlSelf->normalize__DOT__sum2 = (vlSelf->normalize__DOT__value2 
+                                    + VL_EXTENDS_II(32,19, vlSelf->normalize__DOT__min));
+    vlSelf->normalize__DOT__sum1 = (vlSelf->normalize__DOT__value1 
+                                    + VL_EXTENDS_II(32,19, vlSelf->normalize__DOT__min));
     vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_1 
         = vlSelf->normalize__DOT__myproject__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1;
     vlSelf->normalize__DOT__myproject__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__p_2_fu_135_p3 
