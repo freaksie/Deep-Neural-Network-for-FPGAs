@@ -48,7 +48,7 @@ async def testbench(dut):
         dut.input_2_V_ap_vld.value=1
         # dut.ap_block_pp0_stage0_11001.value=0
         # dut.ap_CS_fsm_pp0_stage0.value=1
-        dut.input_2_V.value=609224869
+        dut.input_2_V.value=655099933
         
 
         for k in range(14):
@@ -116,11 +116,12 @@ async def testbench(dut):
         
         print("---Output from OutputLayer----")
         print(dut.layer6_out_0_V_reg_329.value)
-
+        print(dut.grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85.sigmoid_table1_address0.value)
+        print(dut.grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85.sigmoid_table1_q0.value)
         # await RisingEdge(dut.ap_clk)
         # await RisingEdge(dut.ap_clk)
         print("---Prediction----")
-        print(str(dut.layer7_out_0_V.value))
+        print(str(dut.layer7_out_0_V.value)) #64 
         print(int(str(dut.layer7_out_0_V.value),2)/2**12)
 
     #     y_pred=(int(str(dut.layer7_out_0_V.value),2)/2**12)

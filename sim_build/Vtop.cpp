@@ -12,15 +12,9 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtop__Syms(contextp(), _vcname__, this)}
     , ap_clk{vlSymsp->TOP.ap_clk}
-    , ap_rst{vlSymsp->TOP.ap_rst}
-    , ap_start{vlSymsp->TOP.ap_start}
-    , ap_done{vlSymsp->TOP.ap_done}
-    , ap_idle{vlSymsp->TOP.ap_idle}
-    , ap_ready{vlSymsp->TOP.ap_ready}
-    , input_2_V_ap_vld{vlSymsp->TOP.input_2_V_ap_vld}
-    , layer7_out_0_V_ap_vld{vlSymsp->TOP.layer7_out_0_V_ap_vld}
-    , layer7_out_0_V{vlSymsp->TOP.layer7_out_0_V}
-    , input_2_V{vlSymsp->TOP.input_2_V}
+    , __pinNumber4{vlSymsp->TOP.__pinNumber4}
+    , output_V{vlSymsp->TOP.output_V}
+    , input_V{vlSymsp->TOP.input_V}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context
