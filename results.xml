@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1705796740" />
+    <testcase name="inference_test" classname="interface_test" file="/home/neelvora/Projects/Verilog/Q3_Final/interface_test.py" lineno="26" time="2.2717418670654297" sim_time_ns="3598.001" ratio_time="1583.8071447121736" />
+  </testsuite>
+</testsuites>
