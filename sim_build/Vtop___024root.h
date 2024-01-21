@@ -40,13 +40,13 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay3;
         CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay4;
         CData/*0:0*/ ml_interface__DOT__normalizer__DOT__startNN;
-        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_clk;
-        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_rst;
-        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_start;
-        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_ready;
-        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_idle;
-        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_done;
-        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__layer7_state;
+        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__clk;
+        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__rst;
+        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__nn_start;
+        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ready;
+        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__idle;
+        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__done;
+        CData/*0:0*/ ml_interface__DOT__nn_model__DOT__state;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__input_2_V_ap_vld;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__state_pred;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_CS_fsm;
@@ -266,7 +266,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*31:0*/ ml_interface__DOT__normalizer__DOT__sumQ;
         IData/*17:0*/ ml_interface__DOT__normalizer__DOT__shiftI;
         IData/*17:0*/ ml_interface__DOT__normalizer__DOT__shiftQ;
-        IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer7_out_0_V;
+        IData/*17:0*/ ml_interface__DOT__nn_model__DOT__state_probability;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_0_V_reg_209;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_1_V_reg_214;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_2_V_reg_219;
@@ -779,7 +779,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         QData/*35:0*/ ml_interface__DOT__normalizer__DOT__normalizedQ;
         QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiI;
         QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiQ;
-        QData/*35:0*/ ml_interface__DOT__nn_model__DOT__input_2_V;
+        QData/*35:0*/ ml_interface__DOT__nn_model__DOT__normalized_input;
         QData/*35:0*/ ml_interface__DOT__nn_model__DOT__input_2_V_preg;
         QData/*35:0*/ ml_interface__DOT__nn_model__DOT__input_2_V_in_sig;
         QData/*35:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__data_V_read;

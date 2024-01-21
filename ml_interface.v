@@ -37,15 +37,15 @@ normalizer normalizer(
 );
 
 nn_model nn_model(
-    .ap_clk(clk),
-    .ap_rst(rst),
-    .ap_start(NN_startTrigger),
-    .input_2_V(normalized_data),
-    .ap_idle(idle),
-    .ap_ready(ready),
-    .ap_done(done_trigger),
-    .layer7_out_0_V(inference_prob),
-    .layer7_state(inference_state)
+    .clk(clk),
+    .rst(rst),
+    .nn_start(NN_startTrigger),
+    .normalized_input(normalized_data),
+    .idle(idle),
+    .ready(ready),
+    .done(done_trigger),
+    .state_probability(inference_prob),
+    .state(inference_state)
 );
 
 initial begin

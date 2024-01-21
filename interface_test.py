@@ -59,9 +59,6 @@ async def inference_test(dut):
 
         for _ in range(13):
             await RisingEdge(dut.clk)
-
-        # print("ML input",int(str(dut.nn_model.input_2_V.value),2))
-
         # print('--- Input to HiddenLayer 1----')
         # print(int(str(dut.nn_model.input_2_V_in_sig.value),2))
 
@@ -96,7 +93,7 @@ async def inference_test(dut):
         # print("---Output from OutputLayer----")
         # print(int(str(dut.nn_model.layer6_out_0_V_reg_329.value),2))
         # print("---Prediction----")
-        # print(int(str(dut.nn_model.layer7_out_0_V.value),2))
+        # print(int(str(dut.nn_model.state_probability.value),2))
         # print(int(str(dut.inference_prob.value),2))
         # print(int(str(dut.inference_prob.value),2)/2**12)
         # print(dut.inference_state.value)
