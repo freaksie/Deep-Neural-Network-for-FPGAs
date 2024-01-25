@@ -39,6 +39,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay2;
         CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay3;
         CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay4;
+        CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay5;
+        CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay6;
+        CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay7;
+        CData/*0:0*/ ml_interface__DOT__normalizer__DOT__delay8;
         CData/*0:0*/ ml_interface__DOT__normalizer__DOT__startNN;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__clk;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__rst;
@@ -76,12 +80,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state8_pp0_stage0_iter7;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state9_pp0_stage0_iter8;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state10_pp0_stage0_iter9;
+    };
+    struct {
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state11_pp0_stage0_iter10;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state12_pp0_stage0_iter11;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state13_pp0_stage0_iter12;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_pp0_stage0_11001;
-    };
-    struct {
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__input_2_V_ap_vld_preg;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__input_2_V_blk_n;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_pp0_stage0;
@@ -142,12 +146,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state3_pp0_stage0_iter2_ignore_call35;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state4_pp0_stage0_iter3_ignore_call35;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state5_pp0_stage0_iter4_ignore_call35;
+    };
+    struct {
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state6_pp0_stage0_iter5_ignore_call35;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state7_pp0_stage0_iter6_ignore_call35;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state8_pp0_stage0_iter7_ignore_call35;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state9_pp0_stage0_iter8_ignore_call35;
-    };
-    struct {
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state10_pp0_stage0_iter9_ignore_call35;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state11_pp0_stage0_iter10_ignore_call35;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__ap_block_state12_pp0_stage0_iter11_ignore_call35;
@@ -208,12 +212,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*1:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_6_reg_211;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_pp0_stage0_subdone;
         CData/*5:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_1_fu_103_p1;
+    };
+    struct {
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_3_fu_115_p2;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__p_Result_s_fu_97_p2;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_4_fu_159_p3;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__icmp_fu_189_p2;
-    };
-    struct {
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_NS_fsm;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_idle_pp0_0to1;
         CData/*0:0*/ ml_interface__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_reset_idle_pp0;
@@ -266,20 +270,22 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*31:0*/ ml_interface__DOT__normalizer__DOT__sumQ;
         IData/*17:0*/ ml_interface__DOT__normalizer__DOT__shiftI;
         IData/*17:0*/ ml_interface__DOT__normalizer__DOT__shiftQ;
+        IData/*31:0*/ ml_interface__DOT__normalizer__DOT__sumI_r;
+        IData/*31:0*/ ml_interface__DOT__normalizer__DOT__sumQ_r;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__state_probability;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_0_V_reg_209;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_1_V_reg_214;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_2_V_reg_219;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_3_V_reg_224;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_4_V_reg_229;
+    };
+    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_5_V_reg_234;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_6_V_reg_239;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer2_out_7_V_reg_244;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer3_out_0_V_reg_249;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer3_out_1_V_reg_254;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer3_out_2_V_reg_259;
-    };
-    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer3_out_3_V_reg_264;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer3_out_4_V_reg_269;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__layer3_out_5_V_reg_274;
@@ -338,14 +344,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_1_reg_4017;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_0_1_reg_4022;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_0_2_reg_4027;
+    };
+    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_4_reg_4032;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_1_reg_4037;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_7_reg_4042;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_1_2_reg_4047;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_1_3_reg_4052;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_s_reg_4057;
-    };
-    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_2_1_reg_4062;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_2_2_reg_4067;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_2_3_reg_4072;
@@ -404,14 +410,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_fu_211_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_2_fu_212_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_fu_213_p0;
+    };
+    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_2_fu_214_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_1_fu_215_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_1_fu_216_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_3_fu_217_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_2_fu_218_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_7_cast_fu_3672_p1;
-    };
-    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_3_fu_219_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_fu_221_p0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_3_fu_222_p0;
@@ -470,14 +476,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_25_cast_fu_3735_p1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp23_fu_3796_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp24_fu_3800_p2;
+    };
+    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_5_fu_3464_p1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp30_fu_3810_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp31_fu_3815_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_10_fu_3825_p1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp14_fu_3857_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp12_fu_3852_p2;
-    };
-    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp11_fu_3867_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_19_cast_fu_3837_p1;
@@ -536,14 +542,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_2;
+    };
+    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w4_3;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w5_3;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_0;
-    };
-    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w6_3;
@@ -602,14 +608,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_2_fu_107_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_3_fu_101_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_4_fu_103_p2;
+    };
+    struct {
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_6_fu_105_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_7_fu_102_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_2_fu_1269_p4;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_fu_108_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_1_fu_99_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_2_fu_109_p2;
-    };
-    struct {
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_3_fu_106_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_4_fu_98_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_5_fu_113_p2;
@@ -668,14 +674,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b2;
+    };
+    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b3;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b4;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b5;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b6;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__b7;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_0_V_read;
-    };
-    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_1_V_read;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_2_V_read;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__data_3_V_read;
@@ -734,14 +740,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_fu_71_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_1_fu_73_p2;
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_2_fu_70_p2;
+    };
+    struct {
         IData/*29:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_3_fu_72_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp2_fu_231_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp1_fu_236_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp_fu_227_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__res_V_write_assign_fu_241_p2;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__ap_return_int_reg;
-    };
-    struct {
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__w0;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__w1;
         IData/*17:0*/ ml_interface__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__w2;
@@ -779,6 +785,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         QData/*35:0*/ ml_interface__DOT__normalizer__DOT__normalizedQ;
         QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiI;
         QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiQ;
+        QData/*35:0*/ ml_interface__DOT__normalizer__DOT__normalizedI_r;
+        QData/*35:0*/ ml_interface__DOT__normalizer__DOT__normalizedQ_r;
+        QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiI_r1;
+        QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiQ_r1;
+        QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiI_r2;
+        QData/*63:0*/ ml_interface__DOT__normalizer__DOT__multiQ_r2;
         QData/*35:0*/ ml_interface__DOT__nn_model__DOT__normalized_input;
         QData/*35:0*/ ml_interface__DOT__nn_model__DOT__input_2_V_preg;
         QData/*35:0*/ ml_interface__DOT__nn_model__DOT__input_2_V_in_sig;

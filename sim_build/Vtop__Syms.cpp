@@ -844,12 +844,22 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"delay2", &(TOP.ml_interface__DOT__normalizer__DOT__delay2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"delay3", &(TOP.ml_interface__DOT__normalizer__DOT__delay3), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"delay4", &(TOP.ml_interface__DOT__normalizer__DOT__delay4), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"delay5", &(TOP.ml_interface__DOT__normalizer__DOT__delay5), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"delay6", &(TOP.ml_interface__DOT__normalizer__DOT__delay6), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"delay7", &(TOP.ml_interface__DOT__normalizer__DOT__delay7), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"delay8", &(TOP.ml_interface__DOT__normalizer__DOT__delay8), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"inWidth", const_cast<void*>(static_cast<const void*>(&(TOP.ml_interface__DOT__normalizer__DOT__inWidth))), true, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"minimum", &(TOP.ml_interface__DOT__normalizer__DOT__minimum), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,18,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"multiI", &(TOP.ml_interface__DOT__normalizer__DOT__multiI), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"multiI_r1", &(TOP.ml_interface__DOT__normalizer__DOT__multiI_r1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"multiI_r2", &(TOP.ml_interface__DOT__normalizer__DOT__multiI_r2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"multiQ", &(TOP.ml_interface__DOT__normalizer__DOT__multiQ), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"multiQ_r1", &(TOP.ml_interface__DOT__normalizer__DOT__multiQ_r1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"multiQ_r2", &(TOP.ml_interface__DOT__normalizer__DOT__multiQ_r2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"normalizedI", &(TOP.ml_interface__DOT__normalizer__DOT__normalizedI), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"normalizedI_r", &(TOP.ml_interface__DOT__normalizer__DOT__normalizedI_r), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"normalizedQ", &(TOP.ml_interface__DOT__normalizer__DOT__normalizedQ), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"normalizedQ_r", &(TOP.ml_interface__DOT__normalizer__DOT__normalizedQ_r), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"normalized_output", &(TOP.ml_interface__DOT__normalizer__DOT__normalized_output), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"outWidth", const_cast<void*>(static_cast<const void*>(&(TOP.ml_interface__DOT__normalizer__DOT__outWidth))), true, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"shiftI", &(TOP.ml_interface__DOT__normalizer__DOT__shiftI), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,17,0);
@@ -857,6 +867,8 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"startNN", &(TOP.ml_interface__DOT__normalizer__DOT__startNN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"stb_start", &(TOP.ml_interface__DOT__normalizer__DOT__stb_start), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"sumI", &(TOP.ml_interface__DOT__normalizer__DOT__sumI), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"sumI_r", &(TOP.ml_interface__DOT__normalizer__DOT__sumI_r), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"sumQ", &(TOP.ml_interface__DOT__normalizer__DOT__sumQ), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_ml_interface__normalizer.varInsert(__Vfinal,"sumQ_r", &(TOP.ml_interface__DOT__normalizer__DOT__sumQ_r), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
     }
 }

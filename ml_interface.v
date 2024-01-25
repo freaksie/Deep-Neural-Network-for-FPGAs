@@ -2,7 +2,7 @@
 module ml_interface(
     clk,
     rst,
-    start_trigger,
+    start_trigger, //==we
     accumulated_data,
     idle,
     ready,

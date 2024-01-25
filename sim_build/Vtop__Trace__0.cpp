@@ -762,7 +762,19 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedFst::Buffe
     bufp->chgBit(oldp+750,(vlSelf->ml_interface__DOT__normalizer__DOT__delay2));
     bufp->chgBit(oldp+751,(vlSelf->ml_interface__DOT__normalizer__DOT__delay3));
     bufp->chgBit(oldp+752,(vlSelf->ml_interface__DOT__normalizer__DOT__delay4));
-    bufp->chgBit(oldp+753,(vlSelf->ml_interface__DOT__normalizer__DOT__startNN));
+    bufp->chgBit(oldp+753,(vlSelf->ml_interface__DOT__normalizer__DOT__delay5));
+    bufp->chgBit(oldp+754,(vlSelf->ml_interface__DOT__normalizer__DOT__delay6));
+    bufp->chgBit(oldp+755,(vlSelf->ml_interface__DOT__normalizer__DOT__delay7));
+    bufp->chgBit(oldp+756,(vlSelf->ml_interface__DOT__normalizer__DOT__delay8));
+    bufp->chgBit(oldp+757,(vlSelf->ml_interface__DOT__normalizer__DOT__startNN));
+    bufp->chgIData(oldp+758,(vlSelf->ml_interface__DOT__normalizer__DOT__sumI_r),32);
+    bufp->chgIData(oldp+759,(vlSelf->ml_interface__DOT__normalizer__DOT__sumQ_r),32);
+    bufp->chgQData(oldp+760,(vlSelf->ml_interface__DOT__normalizer__DOT__normalizedI_r),36);
+    bufp->chgQData(oldp+762,(vlSelf->ml_interface__DOT__normalizer__DOT__normalizedQ_r),36);
+    bufp->chgQData(oldp+764,(vlSelf->ml_interface__DOT__normalizer__DOT__multiI_r1),64);
+    bufp->chgQData(oldp+766,(vlSelf->ml_interface__DOT__normalizer__DOT__multiQ_r1),64);
+    bufp->chgQData(oldp+768,(vlSelf->ml_interface__DOT__normalizer__DOT__multiI_r2),64);
+    bufp->chgQData(oldp+770,(vlSelf->ml_interface__DOT__normalizer__DOT__multiQ_r2),64);
 }
 
 void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedFst* /*unused*/) {

@@ -15,6 +15,7 @@ input [(inWidth*2)+1:0] accumulated_input;
 output [(outWidth*2)+1:0] normalized_output;
 output NN_startTrigger;
 
+reg [(outWidth*2)+1:0] normalized_reg;
 reg [outWidth+1:0] minimum = 262143;
 reg [inWidth:0] sumI = 0;
 reg [inWidth:0] sumQ = 0;
@@ -29,6 +30,8 @@ reg delay1 = 0;
 reg delay2 = 0;
 reg delay3 = 0;
 reg delay4 = 0;
+reg delay5 = 0;
+reg delay6 = 0;
 reg startNN = 0;
 
 always @(posedge clk) begin
@@ -36,11 +39,19 @@ always @(posedge clk) begin
     delay2 <= delay1;
     delay3 <= delay2;
     delay4 <= delay3;
-    startNN <= delay4;
+    delay5 <= delay4;
+    delay6 <= delay5;
+
+    startNN <= delay6;
 end
 assign NN_startTrigger = startNN;
 
-assign normalized_output = {normalizedQ[35:18],normalizedI[35:18]};
+always @(posedge clk) begin
+if (delay5 == 1'b1) begin  //always one clk before startNN
+    normalized_reg <= {normalizedQ[35:18],normalizedI[35:18]};
+end
+end
+assign normalized_output = normalized_reg;
 
 always @(posedge clk) begin  
     
