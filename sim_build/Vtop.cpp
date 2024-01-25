@@ -3,6 +3,7 @@
 
 #include "Vtop.h"
 #include "Vtop__Syms.h"
+#include "verilated_fst_c.h"
 #include "verilated_dpi.h"
 
 //============================================================
@@ -11,13 +12,15 @@
 Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtop__Syms(contextp(), _vcname__, this)}
-    , ap_clk{vlSymsp->TOP.ap_clk}
-    , ap_start{vlSymsp->TOP.ap_start}
-    , ap_rst{vlSymsp->TOP.ap_rst}
-    , input_V_ap_vld{vlSymsp->TOP.input_V_ap_vld}
-    , output_V_ap_vld{vlSymsp->TOP.output_V_ap_vld}
-    , output_V{vlSymsp->TOP.output_V}
-    , input_V{vlSymsp->TOP.input_V}
+    , clk{vlSymsp->TOP.clk}
+    , rst{vlSymsp->TOP.rst}
+    , start_trigger{vlSymsp->TOP.start_trigger}
+    , idle{vlSymsp->TOP.idle}
+    , ready{vlSymsp->TOP.ready}
+    , inference_state{vlSymsp->TOP.inference_state}
+    , done_trigger{vlSymsp->TOP.done_trigger}
+    , inference_prob{vlSymsp->TOP.inference_prob}
+    , accumulated_data{vlSymsp->TOP.accumulated_data}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context
@@ -53,6 +56,7 @@ void Vtop::eval_step() {
     // Debug assertions
     Vtop___024root___eval_debug_assertions(&(vlSymsp->TOP));
 #endif  // VL_DEBUG
+    vlSymsp->__Vm_activity = true;
     vlSymsp->__Vm_deleter.deleteAll();
     if (VL_UNLIKELY(!vlSymsp->__Vm_didInit)) {
         vlSymsp->__Vm_didInit = true;
@@ -69,6 +73,14 @@ void Vtop::eval_step() {
     // Evaluate cleanup
     Verilated::endOfThreadMTask(vlSymsp->__Vm_evalMsgQp);
     Verilated::endOfEval(vlSymsp->__Vm_evalMsgQp);
+}
+
+void Vtop::eval_end_step() {
+    VL_DEBUG_IF(VL_DBG_MSGF("+eval_end_step Vtop::eval_end_step\n"); );
+#ifdef VM_TRACE
+    // Tracing
+    if (VL_UNLIKELY(vlSymsp->__Vm_dumping)) vlSymsp->_traceDump();
+#endif  // VM_TRACE
 }
 
 //============================================================
@@ -102,3 +114,39 @@ VL_ATTR_COLD void Vtop::final() {
 const char* Vtop::hierName() const { return vlSymsp->name(); }
 const char* Vtop::modelName() const { return "Vtop"; }
 unsigned Vtop::threads() const { return 1; }
+std::unique_ptr<VerilatedTraceConfig> Vtop::traceConfig() const {
+    return std::unique_ptr<VerilatedTraceConfig>{new VerilatedTraceConfig{false, false, false}};
+};
+
+//============================================================
+// Trace configuration
+
+void Vtop___024root__trace_init_top(Vtop___024root* vlSelf, VerilatedFst* tracep);
+
+VL_ATTR_COLD static void trace_init(void* voidSelf, VerilatedFst* tracep, uint32_t code) {
+    // Callback from tracep->open()
+    Vtop___024root* const __restrict vlSelf VL_ATTR_UNUSED = static_cast<Vtop___024root*>(voidSelf);
+    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    if (!vlSymsp->_vm_contextp__->calcUnusedSigs()) {
+        VL_FATAL_MT(__FILE__, __LINE__, __FILE__,
+            "Turning on wave traces requires Verilated::traceEverOn(true) call before time 0.");
+    }
+    vlSymsp->__Vm_baseCode = code;
+    tracep->scopeEscape(' ');
+    tracep->pushNamePrefix(std::string{vlSymsp->name()} + ' ');
+    Vtop___024root__trace_init_top(vlSelf, tracep);
+    tracep->popNamePrefix();
+    tracep->scopeEscape('.');
+}
+
+VL_ATTR_COLD void Vtop___024root__trace_register(Vtop___024root* vlSelf, VerilatedFst* tracep);
+
+VL_ATTR_COLD void Vtop::trace(VerilatedFstC* tfp, int levels, int options) {
+    if (tfp->isOpen()) {
+        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vtop::trace()' shall not be called after 'VerilatedFstC::open()'.");
+    }
+    if (false && levels && options) {}  // Prevent unused
+    tfp->spTrace()->addModel(this);
+    tfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP));
+    Vtop___024root__trace_register(&(vlSymsp->TOP), tfp->spTrace());
+}

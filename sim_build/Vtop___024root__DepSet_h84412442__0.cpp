@@ -35,9 +35,9 @@ void Vtop___024root___eval_triggers__act(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_triggers__act\n"); );
     // Body
-    vlSelf->__VactTriggered.set(0U, ((IData)(vlSelf->ap_clk) 
-                                     & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__ap_clk__0))));
-    vlSelf->__Vtrigprevexpr___TOP__ap_clk__0 = vlSelf->ap_clk;
+    vlSelf->__VactTriggered.set(0U, ((IData)(vlSelf->clk) 
+                                     & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__clk__0))));
+    vlSelf->__Vtrigprevexpr___TOP__clk__0 = vlSelf->clk;
 #ifdef VL_DEBUG
     if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {
         Vtop___024root___dump_triggers__act(vlSelf);

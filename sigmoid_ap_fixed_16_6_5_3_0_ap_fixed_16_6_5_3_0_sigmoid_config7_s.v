@@ -225,7 +225,7 @@ assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_enable_reg_pp0_iter0 = ap_start;
 
-//Append zeros accord {{sigmoid_table1_q0}, {2'd0}};
+//Append zeros according to output width {{sigmoid_table1_q0}, {2'd0}};
 assign ap_return = {{sigmoid_table1_q0}, {2'd0}};
 //assign ap_return =sigmoid_table1_q0;  
 

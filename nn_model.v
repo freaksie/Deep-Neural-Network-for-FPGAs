@@ -9,38 +9,37 @@
 
 (* CORE_GENERATION_INFO="myproject,hls_ip_2018_3,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7vx485tffg1761-2,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=4.082000,HLS_SYN_LAT=12,HLS_SYN_TPT=1,HLS_SYN_MEM=1,HLS_SYN_DSP=47,HLS_SYN_FF=1723,HLS_SYN_LUT=1992,HLS_VERSION=2018_3}" *)
 
-module myproject (
-        ap_clk,
-        ap_rst,
-        ap_start,
-        ap_done,
-        ap_idle,
-        ap_ready,
-        input_2_V_ap_vld,
-        input_2_V,
-        layer7_out_0_V,
-        layer7_out_0_V_ap_vld
+module nn_model (
+        clk,
+        rst,
+        nn_start,
+        normalized_input,
+        ready,
+        idle,
+        done,
+        state_probability,
+        state
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
 localparam IN=35;
 localparam DS=17;
 localparam SS=11;
-input   ap_clk;
-input   ap_rst;
-input   ap_start;
-output   ap_done;
-output   ap_idle;
-output   ap_ready;
-input   input_2_V_ap_vld;
-input  [IN:0] input_2_V;
-output  [DS:0] layer7_out_0_V;
-output   layer7_out_0_V_ap_vld;
+input   clk;
+input   rst;
+input   nn_start;
+output   done;
+output   idle;
+output   ready;
+input  [IN:0] normalized_input;
+output  [DS:0] state_probability;
+output state;
 
-reg ap_done;
-reg ap_idle;
-reg ap_ready;
-reg layer7_out_0_V_ap_vld;
+reg done;
+reg idle;
+reg ready;
+reg input_2_V_ap_vld = 1'b1;
+reg state_pred = 0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -57,6 +56,11 @@ reg    ap_enable_reg_pp0_iter9;
 reg    ap_enable_reg_pp0_iter10;
 reg    ap_enable_reg_pp0_iter11;
 reg    ap_enable_reg_pp0_iter12;
+reg    ap_enable_reg_pp0_iter13;
+reg    ap_enable_reg_pp0_iter14;
+reg    ap_enable_reg_pp0_iter15;
+
+
 reg    ap_idle_pp0;
 reg    input_2_V_ap_vld_in_sig;
 reg    ap_block_state1_pp0_stage0_iter0;
@@ -199,7 +203,7 @@ wire   [DS:0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config
 reg    grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg;
 reg    ap_block_pp0_stage0_01001;
 reg   [0:0] ap_NS_fsm;
-reg    ap_idle_pp0_0to11;
+reg    ap_idle_pp0_0to14;
 reg    ap_reset_idle_pp0;
 wire    ap_enable_pp0;
 
@@ -218,14 +222,19 @@ ap_enable_reg_pp0_iter9 = 1'b0;
 ap_enable_reg_pp0_iter10 = 1'b0;
 ap_enable_reg_pp0_iter11 = 1'b0;
 ap_enable_reg_pp0_iter12 = 1'b0;
+ap_enable_reg_pp0_iter13 = 1'b0;
+ap_enable_reg_pp0_iter14 = 1'b0;
+ap_enable_reg_pp0_iter15 = 1'b0;
+
+
 input_2_V_preg = 0;
 input_2_V_ap_vld_preg = 1'b0;
 grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg = 1'b0;
 end
 
 dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0 grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_clk(clk),
+    .ap_rst(rst),
     .data_0_V_read(layer3_out_0_V_reg_249),
     .data_1_V_read(layer3_out_1_V_reg_254),
     .data_2_V_read(layer3_out_2_V_reg_259),
@@ -242,8 +251,8 @@ dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0 grp_dense_latency_a
 );
 
 dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0 grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_clk(clk),
+    .ap_rst(rst),
     .data_V_read(input_2_V_in_sig),
     .ap_return_0(grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_0),
     .ap_return_1(grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_1),
@@ -277,8 +286,8 @@ relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s call_ret1_relu_ap_fi
 );
 
 sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_clk(clk),
+    .ap_rst(rst),
     .ap_start(grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start),
     .ap_done(grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_done),
     .ap_idle(grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_idle),
@@ -289,8 +298,8 @@ sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s grp_sigmoid_ap
 );
 
 dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0 grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_clk(clk),
+    .ap_rst(rst),
     .data_0_V_read(layer5_out_0_V_reg_309),
     .data_1_V_read(layer5_out_1_V_reg_314),
     .data_2_V_read(layer5_out_2_V_reg_319),
@@ -311,26 +320,27 @@ relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s call_ret3_relu_ap_fi
     .ap_return_3(call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_3)
 );
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_CS_fsm <= ap_ST_fsm_pp0_stage0;
     end else begin
         ap_CS_fsm <= ap_NS_fsm;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+// Constant delay counter of 12 clk (start->iter0->iter1->iter2 -----> iter12)
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
     end else begin
         if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
-            ap_enable_reg_pp0_iter1 <= ap_start;
+            ap_enable_reg_pp0_iter1 <= nn_start;
         end
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter10 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -339,8 +349,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter11 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -349,8 +359,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter12 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -359,8 +369,38 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter13 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter13 <= ap_enable_reg_pp0_iter12;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter14 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter14 <= ap_enable_reg_pp0_iter13;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter15 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter15 <= ap_enable_reg_pp0_iter14;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter2 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -369,8 +409,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter3 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -379,8 +419,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter4 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -389,8 +429,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter5 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -399,8 +439,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter6 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -409,8 +449,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter7 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -419,8 +459,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter8 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -429,8 +469,8 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter9 <= 1'b0;
     end else begin
         if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
@@ -439,11 +479,11 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1))) begin
+        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter12 == 1'b1))) begin
             grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg <= 1'b1;
         end else if ((grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_ready == 1'b1)) begin
             grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg <= 1'b0;
@@ -451,29 +491,29 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         input_2_V_ap_vld_preg <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        if (((1'b0 == ap_block_pp0_stage0_11001) & (nn_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
             input_2_V_ap_vld_preg <= 1'b0;
-        end else if ((~((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage0)) & (input_2_V_ap_vld == 1'b1))) begin
+        end else if ((~((nn_start == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage0)) & (input_2_V_ap_vld == 1'b1))) begin
             input_2_V_ap_vld_preg <= input_2_V_ap_vld;
         end
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
         input_2_V_preg <= 0;
     end else begin
-        if ((~((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage0)) & (input_2_V_ap_vld == 1'b1))) begin
-            input_2_V_preg <= input_2_V;
+        if ((~((nn_start == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage0)) & (input_2_V_ap_vld == 1'b1))) begin
+            input_2_V_preg <= normalized_input;
         end
     end
 end
 
-always @ (posedge ap_clk) begin
+always @ (posedge clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         layer2_out_0_V_reg_209 <= grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_0;
         layer2_out_1_V_reg_214 <= grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_1;
@@ -486,7 +526,7 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
+always @ (posedge clk) begin
     if ((1'b0 == ap_block_pp0_stage0_11001)) begin
         layer3_out_0_V_reg_249 <= call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_0;
         layer3_out_1_V_reg_254 <= call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_1;
@@ -509,23 +549,23 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter12 == 1'b1))) begin
-        ap_done = 1'b1;
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter15 == 1'b1))) begin
+        done = 1'b1;
     end else begin
-        ap_done = 1'b0;
+        done = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_idle = 1'b1;
+    if (((nn_start == 1'b0) & (ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        idle = 1'b1;
     end else begin
-        ap_idle = 1'b0;
+        idle = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter12 == 1'b0) & (ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter15 == 1'b0) & (ap_enable_reg_pp0_iter14 == 1'b0) & (ap_enable_reg_pp0_iter13 == 1'b0) & (ap_enable_reg_pp0_iter12 == 1'b0) & (ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -533,23 +573,23 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
-        ap_idle_pp0_0to11 = 1'b1;
+    if (((ap_enable_reg_pp0_iter14 == 1'b0) & (ap_enable_reg_pp0_iter13 == 1'b0) & (ap_enable_reg_pp0_iter12 == 1'b0) & (ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+        ap_idle_pp0_0to14 = 1'b1;
     end else begin
-        ap_idle_pp0_0to11 = 1'b0;
+        ap_idle_pp0_0to14 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_ready = 1'b1;
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (nn_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ready = 1'b1;
     end else begin
-        ap_ready = 1'b0;
+        ready = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (ap_idle_pp0_0to11 == 1'b1))) begin
+    if (((nn_start == 1'b0) & (ap_idle_pp0_0to14 == 1'b1))) begin
         ap_reset_idle_pp0 = 1'b1;
     end else begin
         ap_reset_idle_pp0 = 1'b0;
@@ -597,7 +637,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_start == 1'b1) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage0) & (nn_start == 1'b1) & (nn_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         input_2_V_blk_n = input_2_V_ap_vld;
     end else begin
         input_2_V_blk_n = 1'b1;
@@ -606,17 +646,9 @@ end
 
 always @ (*) begin
     if ((input_2_V_ap_vld == 1'b1)) begin
-        input_2_V_in_sig = input_2_V;
+        input_2_V_in_sig = normalized_input;
     end else begin
         input_2_V_in_sig = input_2_V_preg;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter12 == 1'b1))) begin
-        layer7_out_0_V_ap_vld = 1'b1;
-    end else begin
-        layer7_out_0_V_ap_vld = 1'b0;
     end
 end
 
@@ -636,31 +668,31 @@ assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((ap_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0)));
+    ap_block_pp0_stage0_01001 = ((nn_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((ap_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0)));
+    ap_block_pp0_stage0_11001 = ((nn_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001_ignoreCallOp15 = ((ap_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0)));
+    ap_block_pp0_stage0_11001_ignoreCallOp15 = ((nn_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001_ignoreCallOp34 = ((ap_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0)));
+    ap_block_pp0_stage0_11001_ignoreCallOp34 = ((nn_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001_ignoreCallOp47 = ((ap_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0)));
+    ap_block_pp0_stage0_11001_ignoreCallOp47 = ((nn_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001_ignoreCallOp49 = ((ap_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0)));
+    ap_block_pp0_stage0_11001_ignoreCallOp49 = ((nn_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((ap_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0)));
+    ap_block_pp0_stage0_subdone = ((nn_start == 1'b1) & ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0)));
 end
 
 assign ap_block_state10_pp0_stage0_iter9 = ~(1'b1 == 1'b1);
@@ -704,23 +736,23 @@ assign ap_block_state13_pp0_stage0_iter12_ignore_call36 = ~(1'b1 == 1'b1);
 assign ap_block_state13_pp0_stage0_iter12_ignore_call7 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state1_pp0_stage0_iter0 = ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0));
+    ap_block_state1_pp0_stage0_iter0 = ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state1_pp0_stage0_iter0_ignore_call25 = ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0));
+    ap_block_state1_pp0_stage0_iter0_ignore_call25 = ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state1_pp0_stage0_iter0_ignore_call35 = ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0));
+    ap_block_state1_pp0_stage0_iter0_ignore_call35 = ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state1_pp0_stage0_iter0_ignore_call36 = ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0));
+    ap_block_state1_pp0_stage0_iter0_ignore_call36 = ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state1_pp0_stage0_iter0_ignore_call7 = ((input_2_V_ap_vld_in_sig == 1'b0) | (ap_start == 1'b0));
+    ap_block_state1_pp0_stage0_iter0_ignore_call7 = ((input_2_V_ap_vld_in_sig == 1'b0) | (nn_start == 1'b0));
 end
 
 assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
@@ -805,15 +837,21 @@ assign ap_block_state9_pp0_stage0_iter8_ignore_call7 = ~(1'b1 == 1'b1);
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
-assign ap_enable_reg_pp0_iter0 = ap_start;
+assign ap_enable_reg_pp0_iter0 = nn_start;
 
 assign grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start = grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg;
 
-assign layer7_out_0_V = grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_return;
+assign state_probability = grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_return;
 
-initial begin
-    $dumpfile("dump.vcd");
-    $dumpvars(1,myproject);
+assign state = state_pred;
+
+always @(*) begin
+    if (state_probability > 2048) begin
+        state_pred = 1'b1;
+    end
+    else begin
+        state_pred = 0'b0;
+    end
 end
 
-endmodule //myproject
+endmodule 
