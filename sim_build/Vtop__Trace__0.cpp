@@ -830,8 +830,8 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedFst::Buffe
     bufp->chgQData(oldp+815,(vlSelf->state_disc__DOT__normalizer__DOT__normalizedQ),36);
     bufp->chgIData(oldp+817,(vlSelf->state_disc__DOT__normalizer__DOT__shiftI),18);
     bufp->chgIData(oldp+818,(vlSelf->state_disc__DOT__normalizer__DOT__shiftQ),18);
-    bufp->chgQData(oldp+819,(vlSelf->state_disc__DOT__normalizer__DOT__multiI),64);
-    bufp->chgQData(oldp+821,(vlSelf->state_disc__DOT__normalizer__DOT__multiQ),64);
+    bufp->chgQData(oldp+819,(vlSelf->state_disc__DOT__normalizer__DOT__multiI),36);
+    bufp->chgQData(oldp+821,(vlSelf->state_disc__DOT__normalizer__DOT__multiQ),36);
     bufp->chgBit(oldp+823,(vlSelf->state_disc__DOT__normalizer__DOT__delay1));
     bufp->chgBit(oldp+824,(vlSelf->state_disc__DOT__normalizer__DOT__delay2));
     bufp->chgBit(oldp+825,(vlSelf->state_disc__DOT__normalizer__DOT__delay3));

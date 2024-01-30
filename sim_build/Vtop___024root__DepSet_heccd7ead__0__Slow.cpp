@@ -1033,8 +1033,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->state_disc__DOT__normalizer__DOT__normalizedQ = VL_RAND_RESET_Q(36);
     vlSelf->state_disc__DOT__normalizer__DOT__shiftI = VL_RAND_RESET_I(18);
     vlSelf->state_disc__DOT__normalizer__DOT__shiftQ = VL_RAND_RESET_I(18);
-    vlSelf->state_disc__DOT__normalizer__DOT__multiI = VL_RAND_RESET_Q(64);
-    vlSelf->state_disc__DOT__normalizer__DOT__multiQ = VL_RAND_RESET_Q(64);
+    vlSelf->state_disc__DOT__normalizer__DOT__multiI = VL_RAND_RESET_Q(36);
+    vlSelf->state_disc__DOT__normalizer__DOT__multiQ = VL_RAND_RESET_Q(36);
     vlSelf->state_disc__DOT__normalizer__DOT__delay1 = VL_RAND_RESET_I(1);
     vlSelf->state_disc__DOT__normalizer__DOT__delay2 = VL_RAND_RESET_I(1);
     vlSelf->state_disc__DOT__normalizer__DOT__delay3 = VL_RAND_RESET_I(1);

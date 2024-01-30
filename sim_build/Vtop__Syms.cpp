@@ -921,8 +921,8 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
         __Vscope_state_disc__normalizer.varInsert(__Vfinal,"inWidth", const_cast<void*>(static_cast<const void*>(&(TOP.state_disc__DOT__normalizer__DOT__inWidth))), true, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
         __Vscope_state_disc__normalizer.varInsert(__Vfinal,"minimumI", &(TOP.state_disc__DOT__normalizer__DOT__minimumI), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,18,0);
         __Vscope_state_disc__normalizer.varInsert(__Vfinal,"minimumQ", &(TOP.state_disc__DOT__normalizer__DOT__minimumQ), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,18,0);
-        __Vscope_state_disc__normalizer.varInsert(__Vfinal,"multiI", &(TOP.state_disc__DOT__normalizer__DOT__multiI), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
-        __Vscope_state_disc__normalizer.varInsert(__Vfinal,"multiQ", &(TOP.state_disc__DOT__normalizer__DOT__multiQ), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,63,0);
+        __Vscope_state_disc__normalizer.varInsert(__Vfinal,"multiI", &(TOP.state_disc__DOT__normalizer__DOT__multiI), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
+        __Vscope_state_disc__normalizer.varInsert(__Vfinal,"multiQ", &(TOP.state_disc__DOT__normalizer__DOT__multiQ), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
         __Vscope_state_disc__normalizer.varInsert(__Vfinal,"normalizedI", &(TOP.state_disc__DOT__normalizer__DOT__normalizedI), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
         __Vscope_state_disc__normalizer.varInsert(__Vfinal,"normalizedQ", &(TOP.state_disc__DOT__normalizer__DOT__normalizedQ), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);
         __Vscope_state_disc__normalizer.varInsert(__Vfinal,"normalized_output", &(TOP.state_disc__DOT__normalizer__DOT__normalized_output), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,35,0);

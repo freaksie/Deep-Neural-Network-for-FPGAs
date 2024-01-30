@@ -859,8 +859,8 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declQuad(c+816,"normalizedQ",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1, 35,0);
     tracep->declBus(c+818,"shiftI",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1, 17,0);
     tracep->declBus(c+819,"shiftQ",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1, 17,0);
-    tracep->declQuad(c+820,"multiI",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1, 63,0);
-    tracep->declQuad(c+822,"multiQ",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+820,"multiI",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1, 35,0);
+    tracep->declQuad(c+822,"multiQ",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1, 35,0);
     tracep->declBit(c+824,"delay1",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1);
     tracep->declBit(c+825,"delay2",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1);
     tracep->declBit(c+826,"delay3",-1, FST_VD_IMPLICIT,FST_VT_SV_LOGIC, false,-1);
@@ -1720,8 +1720,8 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullQData(oldp+816,(vlSelf->state_disc__DOT__normalizer__DOT__normalizedQ),36);
     bufp->fullIData(oldp+818,(vlSelf->state_disc__DOT__normalizer__DOT__shiftI),18);
     bufp->fullIData(oldp+819,(vlSelf->state_disc__DOT__normalizer__DOT__shiftQ),18);
-    bufp->fullQData(oldp+820,(vlSelf->state_disc__DOT__normalizer__DOT__multiI),64);
-    bufp->fullQData(oldp+822,(vlSelf->state_disc__DOT__normalizer__DOT__multiQ),64);
+    bufp->fullQData(oldp+820,(vlSelf->state_disc__DOT__normalizer__DOT__multiI),36);
+    bufp->fullQData(oldp+822,(vlSelf->state_disc__DOT__normalizer__DOT__multiQ),36);
     bufp->fullBit(oldp+824,(vlSelf->state_disc__DOT__normalizer__DOT__delay1));
     bufp->fullBit(oldp+825,(vlSelf->state_disc__DOT__normalizer__DOT__delay2));
     bufp->fullBit(oldp+826,(vlSelf->state_disc__DOT__normalizer__DOT__delay3));

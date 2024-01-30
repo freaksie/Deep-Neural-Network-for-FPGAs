@@ -857,8 +857,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         QData/*35:0*/ state_disc__DOT__normalizer__DOT__normalized_output;
         QData/*35:0*/ state_disc__DOT__normalizer__DOT__normalizedI;
         QData/*35:0*/ state_disc__DOT__normalizer__DOT__normalizedQ;
-        QData/*63:0*/ state_disc__DOT__normalizer__DOT__multiI;
-        QData/*63:0*/ state_disc__DOT__normalizer__DOT__multiQ;
+        QData/*35:0*/ state_disc__DOT__normalizer__DOT__multiI;
+        QData/*35:0*/ state_disc__DOT__normalizer__DOT__multiQ;
         QData/*35:0*/ state_disc__DOT__nn_model__DOT__normalized_input;
         QData/*35:0*/ state_disc__DOT__nn_model__DOT__input_2_V_preg;
         QData/*35:0*/ state_disc__DOT__nn_model__DOT__input_2_V_in_sig;
