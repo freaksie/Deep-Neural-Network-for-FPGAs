@@ -10,7 +10,6 @@
 #include "Vtop___024root.h"
 
 // Parameter definitions for Vtop___024root
-constexpr CData/*0:0*/ Vtop___024root::state_disc__DOT__nn_model__DOT__ap_ST_fsm_pp0_stage0;
 constexpr CData/*0:0*/ Vtop___024root::state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_ST_fsm_pp0_stage0;
 constexpr IData/*31:0*/ Vtop___024root::state_disc__DOT__inWidth;
 constexpr IData/*31:0*/ Vtop___024root::state_disc__DOT__outWidth;

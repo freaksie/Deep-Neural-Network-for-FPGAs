@@ -31,6 +31,9 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     vlSelf->state_disc__DOT__nn_model__DOT__ap_enable_reg_pp0_iter13 = 0U;
     vlSelf->state_disc__DOT__nn_model__DOT__ap_enable_reg_pp0_iter14 = 0U;
     vlSelf->state_disc__DOT__nn_model__DOT__ap_enable_reg_pp0_iter15 = 0U;
+    vlSelf->state_disc__DOT__nn_model__DOT__ap_enable_reg_pp0_iter16 = 0U;
+    vlSelf->state_disc__DOT__nn_model__DOT__ap_enable_reg_pp0_iter17 = 0U;
+    vlSelf->state_disc__DOT__nn_model__DOT__ap_enable_reg_pp0_iter18 = 0U;
     vlSelf->state_disc__DOT__nn_model__DOT__input_2_V_preg = 0ULL;
     vlSelf->state_disc__DOT__nn_model__DOT__input_2_V_ap_vld_preg = 0U;
     vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg = 0U;

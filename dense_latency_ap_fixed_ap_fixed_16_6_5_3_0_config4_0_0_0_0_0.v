@@ -87,16 +87,20 @@ reg   [DS:0] tmp_21_reg_4152;
 reg   [DS:0] tmp_17_7_reg_4157;
 reg   [DS:0] tmp_24_reg_4162;
 reg   [DS:0] tmp_26_reg_4167;
-wire   [DS:0] tmp_fu_3769_p2;
+wire  [DS:0] tmp_fu_3769_p2;
 reg   [DS:0] tmp_reg_4172;
-wire   [DS:0] tmp15_fu_3784_p2;
+reg   [DS:0] tmp11_reg_3867_p2;
+wire  [DS:0] tmp15_fu_3784_p2;
 reg   [DS:0] tmp15_reg_4177;
-wire   [DS:0] tmp21_fu_3790_p2;
+reg   [DS:0] tmp18_reg_3895;
+wire  [DS:0] tmp21_fu_3790_p2;
 reg   [DS:0] tmp21_reg_4182;
-wire   [DS:0] tmp22_fu_3804_p2;
+wire  [DS:0] tmp22_fu_3804_p2;
 reg   [DS:0] tmp22_reg_4187;
-wire   [DS:0] tmp29_fu_3819_p2;
+reg   [DS:0] tmp25_reg_3923;
+wire  [DS:0] tmp29_fu_3819_p2;
 reg   [DS:0] tmp29_reg_4192;
+reg   [DS:0] tmp32_reg_3952;
 wire  signed [DS:0] r_V_8_3_fu_192_p0;
 wire    ap_block_pp0_stage0;
 wire  signed [DS:0] r_V_8_6_2_fu_193_p0;
@@ -306,6 +310,17 @@ reg signed [DS:0] node7_1;
 reg signed [DS:0] node7_2;
 reg signed [DS:0] node7_3;
 
+// summation buffer
+reg signed [DS:0] sum_0_0;
+reg signed [DS:0] sum_1_0;
+reg signed [DS:0] sum_0_1;
+reg signed [DS:0] sum_1_1;
+reg signed [DS:0] sum_0_2;
+reg signed [DS:0] sum_1_2;
+reg signed [DS:0] sum_0_3;
+reg signed [DS:0] sum_1_3;
+
+
 initial begin
 w0_0 = 260105 ;
 w0_1 = 261076 ;
@@ -377,10 +392,29 @@ always @ (posedge ap_clk) begin
         data_5_V_read_2_reg_4003 <= data_5_V_read_int_reg;
         data_6_V_read_2_reg_3995 <= data_6_V_read_int_reg;
         data_7_V_read11_reg_3987 <= data_7_V_read_int_reg;
-        tmp15_reg_4177 <= tmp15_fu_3784_p2;
-        tmp21_reg_4182 <= tmp21_fu_3790_p2;
-        tmp22_reg_4187 <= tmp22_fu_3804_p2;
-        tmp29_reg_4192 <= tmp29_fu_3819_p2;
+        //Node 0
+        tmp_reg_4172 <= tmp_fu_3769_p2; //0-3
+        sum_0_0 <= tmp_reg_4172;
+        tmp11_reg_3867_p2 <= tmp11_fu_3867_p2; //4-7
+        sum_1_0 <= tmp11_reg_3867_p2;
+        //Node 1
+        tmp15_reg_4177 <= tmp15_fu_3784_p2; //0-3
+        sum_0_1 <= tmp15_reg_4177;
+        tmp18_reg_3895 <= tmp18_fu_3895_p2; //4-7
+        sum_1_1 <= tmp18_reg_3895;
+        // tmp21_reg_4182 <= tmp21_fu_3790_p2;
+        //Node 2
+        tmp22_reg_4187 <= tmp22_fu_3804_p2; //0-3
+        sum_0_2 <= tmp22_reg_4187;
+        tmp25_reg_3923 <= tmp25_fu_3923_p2; //4-7
+        sum_1_2 <= tmp25_reg_3923;
+        //Node 3
+        tmp29_reg_4192 <= tmp29_fu_3819_p2; //0-3
+        sum_0_3 <= tmp29_reg_4192;
+        tmp32_reg_3952 <= tmp32_fu_3952_p2; //4-7
+        sum_1_3 <= tmp32_reg_3952;
+
+        //Multipliers
         tmp_11_reg_4107 <= {{r_V_8_4_2_fu_196_p2[MS:MS-DS]}};
         node4_2 <= tmp_11_reg_4107;
         tmp_13_reg_4112 <= {{r_V_8_4_3_fu_207_p2[MS:MS-DS]}};
@@ -441,50 +475,57 @@ always @ (posedge ap_clk) begin
         node1_1 <= tmp_7_reg_4042;
         tmp_9_reg_4097 <= {{r_V_8_4_fu_3507_p2[MS:MS-DS]}};
         node4_0 <= tmp_9_reg_4097;
-        tmp_reg_4172 <= tmp_fu_3769_p2;
         tmp_s_reg_4057 <= {{r_V_8_2_fu_213_p2[MS:MS-DS]}};
         node2_0 <= tmp_s_reg_4057;
         tmp_23_fu_3725_p4 <= {{r_V_8_7_1_fu_3719_p2[MS:MS-DS]}};
         node7_1 <= tmp_23_fu_3725_p4;
     end
 end
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_0 = ap_return_0_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_0 = res_0_V_write_assign_fu_3873_p2;
-    end
-end
+// always @ (*) begin
+//     if ((1'b0 == ap_ce_reg)) begin
+//         ap_return_0 = ap_return_0;
+//     end else if ((1'b1 == ap_ce_reg)) begin
+//         ap_return_0 = ap_return_0_int_reg;
+//     end
+// end
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_1 = ap_return_1_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_1 = acc_1_V_fu_3901_p2;
-    end
-end
+assign ap_return_0 = ap_return_0_int_reg;
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_2 = ap_return_2_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_2 = acc_2_V_fu_3929_p2;
-    end
-end
+// always @ (*) begin
+//     if ((1'b0 == ap_ce_reg)) begin
+//         ap_return_1 = ap_return_1_int_reg;
+//     end else if ((1'b1 == ap_ce_reg)) begin
+//         ap_return_1 = ap_return_1_int_reg;
+//     end
+// end
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_3 = ap_return_3_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_3 = acc_3_V_fu_3958_p2;
-    end
-end
+assign ap_return_1 = ap_return_1_int_reg;
 
-assign acc_1_V_fu_3901_p2 = (tmp15_reg_4177 + tmp18_fu_3895_p2);
+// always @ (*) begin
+//     if ((1'b0 == ap_ce_reg)) begin
+//         ap_return_2 = ap_return_2_int_reg;
+//     end else if ((1'b1 == ap_ce_reg)) begin
+//         ap_return_2 = ap_return_2_int_reg;
+//     end
+// end
 
-assign acc_2_V_fu_3929_p2 = (tmp22_reg_4187 + tmp25_fu_3923_p2);
+assign ap_return_2 = ap_return_2_int_reg;
 
-assign acc_3_V_fu_3958_p2 = (tmp29_reg_4192 + tmp32_fu_3952_p2);
+// always @ (*) begin
+//     if ((1'b0 == ap_ce_reg)) begin
+//         ap_return_3 = ap_return_3_int_reg;
+//     end else if ((1'b1 == ap_ce_reg)) begin
+//         ap_return_3 = ap_return_3_int_reg;
+//     end
+// end
+
+assign ap_return_3 = ap_return_3_int_reg;
+
+assign acc_1_V_fu_3901_p2 = (sum_0_1 + sum_1_1);
+
+assign acc_2_V_fu_3929_p2 = (sum_0_2 + sum_1_2);
+
+assign acc_3_V_fu_3958_p2 = (sum_0_3 + sum_1_3);
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
@@ -654,7 +695,7 @@ assign r_V_cast_fu_3225_p0 = data_0_V_read_int_reg;
 
 assign r_V_cast_fu_3225_p1 = r_V_cast_fu_3225_p0;
 
-assign res_0_V_write_assign_fu_3873_p2 = (tmp_reg_4172 + tmp11_fu_3867_p2);
+assign res_0_V_write_assign_fu_3873_p2 = (sum_0_0 + sum_1_0);
 
 assign tmp10_fu_3763_p2 = ($signed(tmp_6_fu_3473_p1) + $signed(tmp_2_fu_3470_p1));
 
@@ -678,9 +719,9 @@ assign tmp19_fu_3878_p2 = (node5_1 + node4_1);
 
 assign tmp20_cast_fu_3891_p1 = $signed(tmp20_fu_3885_p2);
 
-assign tmp20_fu_3885_p2 = ($signed(tmp_19_cast_fu_3837_p1) + $signed(tmp21_cast_fu_3882_p1));
+assign tmp20_fu_3885_p2 = ($signed(tmp_19_cast_fu_3837_p1) + $signed(tmp21_fu_3790_p2));
 
-assign tmp21_cast_fu_3882_p1 = $signed(tmp21_reg_4182);
+// assign tmp21_cast_fu_3882_p1 = $signed(tmp21_reg_4182);
 
 assign tmp21_fu_3790_p2 = ($signed(tmp_25_cast_fu_3735_p1) + $signed(b1));
 

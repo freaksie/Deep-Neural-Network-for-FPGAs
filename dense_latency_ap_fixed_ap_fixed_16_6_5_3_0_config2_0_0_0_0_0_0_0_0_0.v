@@ -264,7 +264,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_0 = ap_return_0_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_0 = res_0_V_write_assign_fu_1431_p2;
+        ap_return_0 = ap_return_0_int_reg;
     end
 end
 
@@ -272,7 +272,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_1 = ap_return_1_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_1 = acc_1_V_fu_1441_p2;
+        ap_return_1 = ap_return_1_int_reg;
     end
 end
 
@@ -280,7 +280,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_2 = ap_return_2_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_2 = acc_2_V_fu_1452_p2;
+        ap_return_2 = ap_return_2_int_reg;
     end
 end
 
@@ -288,7 +288,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_3 = ap_return_3_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_3 = acc_3_V_fu_1462_p2;
+        ap_return_3 = ap_return_3_int_reg;
     end
 end
 
@@ -296,7 +296,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_4 = ap_return_4_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_4 = acc_4_V_fu_1472_p2;
+        ap_return_4 = ap_return_4_int_reg;
     end
 end
 
@@ -304,7 +304,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_5 = ap_return_5_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_5 = acc_5_V_fu_1487_p2;
+        ap_return_5 = ap_return_5_int_reg;
     end
 end
 
@@ -312,7 +312,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_6 = ap_return_6_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_6 = acc_6_V_fu_1498_p2;
+        ap_return_6 = ap_return_6_int_reg;
     end
 end
 
@@ -320,7 +320,7 @@ always @ (*) begin
     if ((1'b0 == ap_ce_reg)) begin
         ap_return_7 = ap_return_7_int_reg;
     end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_7 = acc_7_V_fu_1509_p2;
+        ap_return_7 = ap_return_7_int_reg;
     end
 end
 
