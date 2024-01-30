@@ -556,13 +556,13 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->state_disc__DOT__normalized_data = (((QData)((IData)(
                                                                  (0x3ffffU 
                                                                   & (IData)(
-                                                                            (vlSelf->state_disc__DOT__normalizer__DOT__multiQ 
+                                                                            (vlSelf->state_disc__DOT__normalizer__DOT__normalizedQ 
                                                                              >> 0x12U))))) 
                                                  << 0x12U) 
                                                 | (QData)((IData)(
                                                                   (0x3ffffU 
                                                                    & (IData)(
-                                                                             (vlSelf->state_disc__DOT__normalizer__DOT__multiI 
+                                                                             (vlSelf->state_disc__DOT__normalizer__DOT__normalizedI 
                                                                               >> 0x12U))))));
     if (vlSelf->state_disc__DOT__nn_model__DOT__input_2_V_ap_vld) {
         vlSelf->state_disc__DOT__nn_model__DOT__input_2_V_ap_vld_in_sig 
@@ -1388,11 +1388,11 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0_int_reg 
             = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__res_0_V_write_assign_fu_3873_p2;
     }
-    vlSelf->state_disc__DOT__normalizer__DOT__multiQ 
-        = (0xfffffffffULL & ((QData)((IData)(vlSelf->state_disc__DOT__normalizer__DOT__sumQ)) 
+    vlSelf->state_disc__DOT__normalizer__DOT__normalizedQ 
+        = (0xfffffffffULL & (VL_EXTENDS_QI(36,32, vlSelf->state_disc__DOT__normalizer__DOT__sumQ) 
                              << 0xbU));
-    vlSelf->state_disc__DOT__normalizer__DOT__multiI 
-        = (0xfffffffffULL & ((QData)((IData)(vlSelf->state_disc__DOT__normalizer__DOT__sumI)) 
+    vlSelf->state_disc__DOT__normalizer__DOT__normalizedI 
+        = (0xfffffffffULL & (VL_EXTENDS_QI(36,32, vlSelf->state_disc__DOT__normalizer__DOT__sumI) 
                              << 0xbU));
     if (vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce) {
         vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg 
@@ -1405,17 +1405,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
             = vlSelf->state_disc__DOT__nn_model__DOT__layer3_out_1_V_reg_254;
     }
     vlSelf->state_disc__DOT__normalizer__DOT__startNN 
-        = vlSelf->state_disc__DOT__normalizer__DOT__delay6;
+        = vlSelf->state_disc__DOT__normalizer__DOT__delay4;
     if (((IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce_reg) 
          & (~ (IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_block_pp0_stage0_11001)))) {
         vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009 
             = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_int_reg;
         vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003 
             = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_int_reg;
-        vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987 
-            = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read_int_reg;
-        vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995 
-            = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_int_reg;
     }
     if (vlSelf->rst) {
         vlSelf->state_disc__DOT__nn_model__DOT__ap_CS_fsm 
@@ -1518,6 +1514,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
             vlSelf->state_disc__DOT__nn_model__DOT__ap_enable_reg_pp0_iter1 
                 = vlSelf->state_disc__DOT__NN_startTrigger;
         }
+    }
+    if (((IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_ce_reg) 
+         & (~ (IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_block_pp0_stage0_11001)))) {
+        vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987 
+            = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read_int_reg;
+        vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995 
+            = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_int_reg;
     }
     if (vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce) {
         vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_int_reg 
@@ -1976,13 +1979,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->state_disc__DOT__normalized_data = (((QData)((IData)(
                                                                  (0x3ffffU 
                                                                   & (IData)(
-                                                                            (vlSelf->state_disc__DOT__normalizer__DOT__multiQ 
+                                                                            (vlSelf->state_disc__DOT__normalizer__DOT__normalizedQ 
                                                                              >> 0x12U))))) 
                                                  << 0x12U) 
                                                 | (QData)((IData)(
                                                                   (0x3ffffU 
                                                                    & (IData)(
-                                                                             (vlSelf->state_disc__DOT__normalizer__DOT__multiI 
+                                                                             (vlSelf->state_disc__DOT__normalizer__DOT__normalizedI 
                                                                               >> 0x12U))))));
     vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_0_2_fu_197_p0 
         = vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_0_V_read_int_reg;
@@ -2013,8 +2016,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_fu_83_p4 
         = (0xfffU & (vlSelf->state_disc__DOT__nn_model__DOT__layer6_out_0_V_reg_329 
                      >> 6U));
-    vlSelf->state_disc__DOT__normalizer__DOT__delay6 
-        = vlSelf->state_disc__DOT__normalizer__DOT__delay5;
+    vlSelf->state_disc__DOT__normalizer__DOT__delay4 
+        = vlSelf->state_disc__DOT__normalizer__DOT__delay3;
     state_disc__DOT__nn_model__DOT____VdfgTmp_h65b60f1a__0 
         = ((IData)(vlSelf->state_disc__DOT__nn_model__DOT__ap_CS_fsm) 
            & (IData)(vlSelf->state_disc__DOT__normalizer__DOT__startNN));
@@ -2596,8 +2599,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelf->state_disc__DOT__nn_model__DOT__ap_block_state1_pp0_stage0_iter0;
     vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ret_V_fu_121_p2 
         = (0x1fffU & ((IData)(1U) + (IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ret_V_cast_fu_93_p1)));
-    vlSelf->state_disc__DOT__normalizer__DOT__delay5 
-        = vlSelf->state_disc__DOT__normalizer__DOT__delay4;
+    vlSelf->state_disc__DOT__normalizer__DOT__delay3 
+        = vlSelf->state_disc__DOT__normalizer__DOT__delay2;
     vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp11_fu_3867_p2 
         = (0x3ffffU & (vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp12_fu_3852_p2 
                        + vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp13_fu_3862_p2));
@@ -2812,8 +2815,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         = ((IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__p_Result_s_fu_97_p2)
             ? (IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__p_s_fu_127_p3)
             : (IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ret_V_cast_fu_93_p1));
-    vlSelf->state_disc__DOT__normalizer__DOT__delay4 
-        = vlSelf->state_disc__DOT__normalizer__DOT__delay3;
+    vlSelf->state_disc__DOT__normalizer__DOT__delay2 
+        = vlSelf->state_disc__DOT__normalizer__DOT__delay1;
     vlSelf->state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read 
         = vlSelf->state_disc__DOT__nn_model__DOT__layer3_out_4_V_reg_269;
     vlSelf->state_disc__DOT__nn_model__DOT__call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73__DOT__ap_return_4 
@@ -2849,8 +2852,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_4_fu_159_p3 
         = (1U & ((IData)(vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__index_fu_147_p2) 
                  >> 0xcU));
-    vlSelf->state_disc__DOT__normalizer__DOT__delay3 
-        = vlSelf->state_disc__DOT__normalizer__DOT__delay2;
+    vlSelf->state_disc__DOT__normalizer__DOT__delay1 
+        = vlSelf->start_trigger;
     if (vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_4_fu_159_p3) {
         vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_5_fu_175_p1 = 0U;
         vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__p_1_fu_167_p3 = 0U;
@@ -2860,10 +2863,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__p_1_fu_167_p3 
             = vlSelf->state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__index_cast_fu_153_p2;
     }
-    vlSelf->state_disc__DOT__normalizer__DOT__delay2 
-        = vlSelf->state_disc__DOT__normalizer__DOT__delay1;
-    vlSelf->state_disc__DOT__normalizer__DOT__delay1 
-        = vlSelf->start_trigger;
     vlSelf->state_disc__DOT__nn_model__DOT__ap_CS_fsm_pp0_stage0 
         = vlSelf->state_disc__DOT__nn_model__DOT__ap_CS_fsm;
     vlSelf->state_disc__DOT__NN_startTrigger = vlSelf->state_disc__DOT__normalizer__DOT__startNN;

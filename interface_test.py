@@ -45,7 +45,7 @@ async def inference_test(dut):
         dut.start_trigger.value=1
         await RisingEdge(dut.clk)
         dut.start_trigger.value=0
-        for _ in range(6):
+        for _ in range(4):
             await RisingEdge(dut.clk)
 
         print(int(str(dut.accumulated_data.value),2))

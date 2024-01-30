@@ -39,8 +39,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ state_disc__DOT__normalizer__DOT__delay2;
         CData/*0:0*/ state_disc__DOT__normalizer__DOT__delay3;
         CData/*0:0*/ state_disc__DOT__normalizer__DOT__delay4;
-        CData/*0:0*/ state_disc__DOT__normalizer__DOT__delay5;
-        CData/*0:0*/ state_disc__DOT__normalizer__DOT__delay6;
         CData/*0:0*/ state_disc__DOT__normalizer__DOT__startNN;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__clk;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__rst;
@@ -80,10 +78,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state3_pp0_stage0_iter2;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state4_pp0_stage0_iter3;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state5_pp0_stage0_iter4;
-    };
-    struct {
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state6_pp0_stage0_iter5;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state7_pp0_stage0_iter6;
+    };
+    struct {
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state8_pp0_stage0_iter7;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state9_pp0_stage0_iter8;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state10_pp0_stage0_iter9;
@@ -146,10 +144,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state13_pp0_stage0_iter12_ignore_call36;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_pp0_stage0_11001_ignoreCallOp49;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92_ap_ce;
-    };
-    struct {
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state1_pp0_stage0_iter0_ignore_call35;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state2_pp0_stage0_iter1_ignore_call35;
+    };
+    struct {
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state3_pp0_stage0_iter2_ignore_call35;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state4_pp0_stage0_iter3_ignore_call35;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__ap_block_state5_pp0_stage0_iter4_ignore_call35;
@@ -212,10 +210,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_state1_pp0_stage0_iter0;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_state2_pp0_stage0_iter1;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_state3_pp0_stage0_iter2;
-    };
-    struct {
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_pp0_stage0_11001;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__sigmoid_table1_ce0;
+    };
+    struct {
         CData/*1:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_6_reg_211;
         CData/*0:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__ap_block_pp0_stage0_subdone;
         CData/*5:0*/ state_disc__DOT__nn_model__DOT__grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85__DOT__tmp_1_fu_103_p1;
@@ -276,14 +274,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*31:0*/ state_disc__DOT__normalizer__DOT__sumQ;
         IData/*31:0*/ state_disc__DOT__normalizer__DOT__dataI;
         IData/*31:0*/ state_disc__DOT__normalizer__DOT__dataQ;
-        IData/*17:0*/ state_disc__DOT__normalizer__DOT__shiftI;
-        IData/*17:0*/ state_disc__DOT__normalizer__DOT__shiftQ;
-    };
-    struct {
         IData/*31:0*/ state_disc__DOT__normalizer__DOT__sumI_r;
         IData/*31:0*/ state_disc__DOT__normalizer__DOT__sumQ_r;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__state_probability;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__layer2_out_0_V_reg_209;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__layer2_out_1_V_reg_214;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__layer2_out_2_V_reg_219;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__layer2_out_3_V_reg_224;
@@ -344,12 +340,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_2;
-    };
-    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__ap_return_3;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_7_V_read11_reg_3987;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_6_V_read_2_reg_3995;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_5_V_read_2_reg_4003;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__data_4_V_read_2_reg_4009;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_1_reg_4017;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_17_0_1_reg_4022;
@@ -410,12 +406,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_6_3_fu_200_p0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_6_cast2_fu_3607_p1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_3_1_fu_202_p0;
-    };
-    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_1_1_fu_203_p0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_2_1_fu_204_p0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_2_cast1_fu_3360_p1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_fu_205_p0;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_2_fu_206_p0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_4_3_fu_207_p0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_5_1_fu_208_p0;
@@ -476,12 +472,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_fu_205_p2;
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_1_fu_3719_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_23_fu_3725_p4;
-    };
-    struct {
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_2_fu_218_p2;
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__r_V_8_7_3_fu_222_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_6_fu_3473_p1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_2_fu_3470_p1;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp9_fu_3759_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp10_fu_3763_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__tmp_8_fu_3467_p1;
@@ -542,12 +538,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_2;
-    };
-    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w1_3;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_2;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w2_3;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__w3_1;
@@ -608,12 +604,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_0_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_1_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_0_1;
-    };
-    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_1_1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_0_2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_1_2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_0_3;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55__DOT__sum_1_3;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__ap_return_1;
@@ -674,12 +670,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_6_fu_111_p2;
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_1_7_fu_112_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl_fu_1382_p3;
-    };
-    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_fu_1393_p3;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl_cast_fu_1389_p1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__p_shl1_cast_fu_1400_p1;
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__r_V_10_0_5_fu_1404_p2;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp2_fu_1426_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp_28_fu_1379_p1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__tmp3_fu_1436_p2;
@@ -740,12 +736,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node0_4;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node0_5;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node0_6;
-    };
-    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node0_7;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node1_0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node1_1;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node1_2;
+    };
+    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node1_3;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node1_4;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67__DOT__node1_5;
@@ -806,12 +802,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_2_fu_70_p0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_fu_71_p0;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_3_fu_72_p0;
-    };
-    struct {
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_1_fu_73_p0;
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_fu_71_p2;
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_1_fu_73_p2;
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_2_fu_70_p2;
+    };
+    struct {
         IData/*29:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__r_V_6_3_fu_72_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp2_fu_231_p2;
         IData/*17:0*/ state_disc__DOT__nn_model__DOT__grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92__DOT__tmp1_fu_236_p2;
@@ -857,8 +853,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         QData/*35:0*/ state_disc__DOT__normalizer__DOT__normalized_output;
         QData/*35:0*/ state_disc__DOT__normalizer__DOT__normalizedI;
         QData/*35:0*/ state_disc__DOT__normalizer__DOT__normalizedQ;
-        QData/*35:0*/ state_disc__DOT__normalizer__DOT__multiI;
-        QData/*35:0*/ state_disc__DOT__normalizer__DOT__multiQ;
         QData/*35:0*/ state_disc__DOT__nn_model__DOT__normalized_input;
         QData/*35:0*/ state_disc__DOT__nn_model__DOT__input_2_V_preg;
         QData/*35:0*/ state_disc__DOT__nn_model__DOT__input_2_V_in_sig;
