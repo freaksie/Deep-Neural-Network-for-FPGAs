@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1706755405" />
-    <testcase name="inference_test" classname="interface_test" file="/home/neelvora/Projects/Verilog/Q3_Parameter/interface_test.py" lineno="26" time="0.41932249069213867" sim_time_ns="286.001" ratio_time="682.0549966874502" />
+    <property name="random_seed" value="1706759613" />
+    <testcase name="inference_test" classname="interface_test" file="/home/neelvora/Projects/Verilog/Q3_Parameter/interface_test.py" lineno="26" time="0.24915838241577148" sim_time_ns="286.001" ratio_time="1147.8682644629996" />
   </testsuite>
 </testsuites>

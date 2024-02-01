@@ -38,16 +38,15 @@ output  [DS:0] ap_return_6;
 output  [DS:0] ap_return_7;
 input   ap_ce;
 
-reg[DS:0] ap_return_0;
-reg[DS:0] ap_return_1;
-reg[DS:0] ap_return_2;
-reg[DS:0] ap_return_3;
-reg[DS:0] ap_return_4;
-reg[DS:0] ap_return_5;
-reg[DS:0] ap_return_6;
-reg[DS:0] ap_return_7;
-
-wire  signed [DS:0] tmp_fu_1180_p1;
+reg[DS:0] return_0;
+reg[DS:0] return_1;
+reg[DS:0] return_2;
+reg[DS:0] return_3;
+reg[DS:0] return_4;
+reg[DS:0] return_5;
+reg[DS:0] return_6;
+reg[DS:0] return_7;
+ 
 reg  signed [DS:0] tmp_reg_1562;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
@@ -67,24 +66,9 @@ reg   [DS:0] tmp_33_1_4_reg_1623;
 reg   [DS:0] tmp_36_reg_1628;
 reg   [DS:0] tmp_33_1_6_reg_1633;
 reg   [DS:0] tmp_29_reg_1638;
-wire  signed [DS:0] r_V_10_1_4_fu_98_p1;
-wire  signed [DS:0] r_V_1_cast_fu_1289_p1;
 wire    ap_block_pp0_stage0;
-wire  signed [DS:0] r_V_10_1_1_fu_99_p1;
-wire  signed [DS:0] r_V_10_0_3_fu_101_p1;
-wire  signed [DS:0] r_V_cast3_fu_1184_p1;
-wire  signed [DS:0] r_V_10_0_7_fu_102_p1;
-wire  signed [DS:0] r_V_10_0_4_fu_103_p1;
-wire  signed [DS:0] r_V_10_0_1_fu_104_p1;
-wire  signed [DS:0] r_V_10_0_6_fu_105_p1;
-wire  signed [DS:0] r_V_10_1_3_fu_106_p1;
 wire  signed [DS:0] r_V_10_0_2_fu_107_p1;
-wire  signed [DS:0] r_V_10_1_fu_108_p1;
-wire  signed [DS:0] r_V_10_1_2_fu_109_p1;
 wire  signed [DS:0] r_V_s_fu_110_p1;
-wire  signed [DS:0] r_V_10_1_6_fu_111_p1;
-wire  signed [DS:0] r_V_10_1_7_fu_112_p1;
-wire  signed [DS:0] r_V_10_1_5_fu_113_p1;
 wire   [MS:0] r_V_s_fu_110_p2;
 wire   [MS:0] r_V_10_0_1_fu_104_p2;
 wire   [MS:0] r_V_10_0_2_fu_107_p2;
@@ -92,7 +76,6 @@ wire   [MS:0] r_V_10_0_3_fu_101_p2;
 wire   [MS:0] r_V_10_0_4_fu_103_p2;
 wire   [MS:0] r_V_10_0_6_fu_105_p2;
 wire   [MS:0] r_V_10_0_7_fu_102_p2;
-wire  signed [DS:0] tmp_2_fu_1269_p4;
 wire   [MS:0] r_V_10_1_fu_108_p2;
 wire   [MS:0] r_V_10_1_1_fu_99_p2;
 wire   [MS:0] r_V_10_1_2_fu_109_p2;
@@ -112,12 +95,9 @@ wire   [DS:0] tmp3_fu_1436_p2;
 wire   [DS:0] tmp4_fu_1447_p2;
 wire   [DS:0] tmp5_fu_1457_p2;
 wire   [DS:0] tmp6_fu_1467_p2;
-wire  signed [DS:0] tmp_32_cast_fu_1420_p1;
-wire   [DS:0] tmp7_fu_1477_p2;
 reg   [DS:0] tmp_33_0_5_fu_1410_p4;
 wire  signed [DS:0] tmp7_cast_fu_1483_p1;
 wire   [DS:0] tmp8_fu_1493_p2;
-wire  signed [DS:0] tmp_30_fu_1423_p1;
 wire   [DS:0] tmp9_fu_1503_p2;
 wire   [DS:0] res_0_V_write_assign_fu_1431_p2;
 wire   [DS:0] acc_1_V_fu_1441_p2;
@@ -137,6 +117,8 @@ reg   [DS:0] ap_return_5_int_reg;
 reg   [DS:0] ap_return_6_int_reg;
 reg   [DS:0] ap_return_7_int_reg;
 
+reg signed [DS:0] dataI;
+reg signed[DS:0] dataQ;
 reg signed [DS:0] w0_0;
 reg signed[DS:0] w0_1;
 reg signed [DS:0] w0_2;
@@ -196,19 +178,22 @@ w1_4 = 260881;
 w1_5 = 261883;
 w1_6 = 3074;
 w1_7 = 2106;
-b0 = 262042;
-b1 = 259230;
-b2 = 0;
-b3 = 0;
-b4 = 0;
-b5 = 0;
-b6 = 258988;
-b7 = 259290;
-end 
+b0   = 262042;
+b1   = 259230;
+b2   = 0;
+b3   = 0;
+b4   = 0;
+b5   = 0;
+b6   = 258988;
+b7   = 259290;
+end
 
 always @ (posedge ap_clk) begin
     ap_ce_reg <= ap_ce;
 end
+
+assign dataI = data_V_read[DS:0];
+assign dataQ = data_V_read[DS+DS+1:DS+1];
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_ce_reg)) begin
@@ -253,76 +238,72 @@ always @ (posedge ap_clk) begin
         node1_5 <= tmp_36_reg_1628;
         tmp_3_reg_1568 <= {{r_V_s_fu_110_p2[MS:MS-DS]}};
         node0_0 <= tmp_3_reg_1568;
-        // tmp_reg_1562 <= tmp_fu_1180_p1;
         tmp_s_reg_1573 <= {{r_V_10_0_1_fu_104_p2[MS:MS-DS]}};
         node0_1 <= tmp_s_reg_1573;
         tmp_33_0_5_fu_1410_p4 <= {{r_V_10_0_5_fu_1404_p2[MS:MS-DS]}};
         node0_5 <= tmp_33_0_5_fu_1410_p4;
     end
 end
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_0 = ap_return_0_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_0 = ap_return_0_int_reg;
-    end
-end
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_1 = ap_return_1_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_1 = ap_return_1_int_reg;
-    end
-end
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_2 = ap_return_2_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_2 = ap_return_2_int_reg;
-    end
-end
+assign return_0 = ap_return_0_int_reg;
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_3 = ap_return_3_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_3 = ap_return_3_int_reg;
-    end
-end
+assign return_1 = ap_return_1_int_reg; 
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_4 = ap_return_4_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_4 = ap_return_4_int_reg;
-    end
-end
+assign return_2 = ap_return_2_int_reg;
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_5 = ap_return_5_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_5 = ap_return_5_int_reg;
-    end
-end
+assign return_3 = ap_return_3_int_reg;
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_6 = ap_return_6_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_6 = ap_return_6_int_reg;
-    end
-end
+assign return_4 = ap_return_4_int_reg;
 
-always @ (*) begin
-    if ((1'b0 == ap_ce_reg)) begin
-        ap_return_7 = ap_return_7_int_reg;
-    end else if ((1'b1 == ap_ce_reg)) begin
-        ap_return_7 = ap_return_7_int_reg;
-    end
-end
+assign return_5 = ap_return_5_int_reg;
+
+assign return_6 = ap_return_6_int_reg;
+
+assign return_7 = ap_return_7_int_reg;
+
+assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
+
+assign ap_block_pp0_stage0_11001 = ~(1'b1 == 1'b1);
+
+assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
+
+assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
+
+
+assign r_V_s_fu_110_p2 = (w0_0 * dataI);
+
+assign r_V_10_0_1_fu_104_p2 = (w0_1 * dataI);
+
+assign r_V_10_0_2_fu_107_p2 = (w0_2 * dataI);
+
+assign r_V_10_0_3_fu_101_p2 = (w0_3 * dataI);
+
+assign r_V_10_0_4_fu_103_p2 = (w0_4 * dataI);
+
+assign r_V_10_0_5_fu_1404_p2 = (w0_5 * dataI);
+
+assign r_V_10_0_6_fu_105_p2 = (w0_6 * dataI);
+
+assign r_V_10_0_7_fu_102_p2 = (w0_7 * dataI);
+
+assign r_V_10_1_fu_108_p2 = (w1_0 * dataQ);
+
+assign r_V_10_1_1_fu_99_p2 = (w1_1 * dataQ);
+
+assign r_V_10_1_2_fu_109_p2 = (w1_2 * dataQ);
+
+assign r_V_10_1_3_fu_106_p2 = (w1_3 * dataQ);
+
+assign r_V_10_1_4_fu_98_p2 = (w1_4 * dataQ);
+
+assign r_V_10_1_5_fu_113_p2 = (w1_5 * dataQ);
+
+assign r_V_10_1_6_fu_111_p2 = (w1_6 * dataQ);
+
+assign r_V_10_1_7_fu_112_p2 = (w1_7 * dataQ);
+
+
 
 assign acc_1_V_fu_1441_p2 = ($signed(tmp_28_fu_1379_p1) + $signed(tmp3_fu_1436_p2));
 
@@ -338,89 +319,6 @@ assign acc_6_V_fu_1498_p2 = (node0_6 + tmp8_fu_1493_p2);
 
 assign acc_7_V_fu_1509_p2 = (node0_7 + tmp9_fu_1503_p2);
 
-assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage0_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
-
-// assign p_shl1_cast_fu_1400_p1 = $signed(p_shl1_fu_1393_p3);
-
-// assign p_shl1_fu_1393_p3 = {{tmp_reg_1562}, {1'd0}};
-
-// assign p_shl_cast_fu_1389_p1 = $signed(p_shl_fu_1382_p3);
-
-// assign p_shl_fu_1382_p3 = {{tmp_reg_1562}, {9'd0}};
-
-assign r_V_10_0_1_fu_104_p1 = tmp_fu_1180_p1;
-
-assign r_V_10_0_1_fu_104_p2 = ($signed(w0_1) * $signed(r_V_10_0_1_fu_104_p1));
-
-assign r_V_10_0_2_fu_107_p1 = r_V_cast3_fu_1184_p1;
-
-assign r_V_10_0_2_fu_107_p2 = ($signed(w0_2) * $signed(r_V_10_0_2_fu_107_p1));
-
-assign r_V_10_0_3_fu_101_p1 = r_V_cast3_fu_1184_p1;
-
-assign r_V_10_0_3_fu_101_p2 = ($signed(w0_3) * $signed(r_V_10_0_3_fu_101_p1));
-
-
-assign r_V_10_0_4_fu_103_p1 = r_V_cast3_fu_1184_p1;
-
-assign r_V_10_0_4_fu_103_p2 = ($signed(w0_4) * $signed(r_V_10_0_4_fu_103_p1));
-
-assign r_V_10_0_5_fu_1404_p2 = ($signed(w0_5) * $signed(r_V_10_0_4_fu_103_p1));
-
-assign r_V_10_0_6_fu_105_p1 = r_V_cast3_fu_1184_p1;
-
-assign r_V_10_0_6_fu_105_p2 = ($signed(w0_6) * $signed(r_V_10_0_6_fu_105_p1));
-
-assign r_V_10_0_7_fu_102_p1 = r_V_cast3_fu_1184_p1;
-
-assign r_V_10_0_7_fu_102_p2 = ($signed(w0_7) * $signed(r_V_10_0_7_fu_102_p1));
-
-assign r_V_10_1_1_fu_99_p1 = r_V_1_cast_fu_1289_p1;
-
-assign r_V_10_1_1_fu_99_p2 = ($signed(w1_1) * $signed(r_V_10_1_1_fu_99_p1));
-
-assign r_V_10_1_2_fu_109_p1 = r_V_1_cast_fu_1289_p1;
-
-assign r_V_10_1_2_fu_109_p2 = ($signed(w1_2) * $signed(r_V_10_1_2_fu_109_p1));
-
-assign r_V_10_1_3_fu_106_p1 = r_V_1_cast_fu_1289_p1;
-
-assign r_V_10_1_3_fu_106_p2 = ($signed(w1_3) * $signed(r_V_10_1_3_fu_106_p1));
-
-assign r_V_10_1_4_fu_98_p1 = r_V_1_cast_fu_1289_p1;
-
-assign r_V_10_1_4_fu_98_p2 = ($signed(w1_4) * $signed(r_V_10_1_4_fu_98_p1));
-
-assign r_V_10_1_5_fu_113_p1 = tmp_2_fu_1269_p4;
-
-assign r_V_10_1_5_fu_113_p2 = ($signed(w1_5) * $signed(r_V_10_1_5_fu_113_p1));
-
-assign r_V_10_1_6_fu_111_p1 = r_V_1_cast_fu_1289_p1;
-
-assign r_V_10_1_6_fu_111_p2 = ($signed(w1_6) * $signed(r_V_10_1_6_fu_111_p1));
-
-assign r_V_10_1_7_fu_112_p1 = tmp_2_fu_1269_p4;
-
-assign r_V_10_1_7_fu_112_p2 = ($signed(w1_7) * $signed(r_V_10_1_7_fu_112_p1));
-
-assign r_V_10_1_fu_108_p1 = r_V_1_cast_fu_1289_p1;
-
-assign r_V_10_1_fu_108_p2 = ($signed(w1_0) * $signed(r_V_10_1_fu_108_p1));
-
-assign r_V_1_cast_fu_1289_p1 = tmp_2_fu_1269_p4;
-
-assign r_V_cast3_fu_1184_p1 = tmp_fu_1180_p1;
-
-assign r_V_s_fu_110_p1 = r_V_cast3_fu_1184_p1;
-
-assign r_V_s_fu_110_p2 = ($signed(w0_0) * $signed(r_V_s_fu_110_p1));
-
 assign res_0_V_write_assign_fu_1431_p2 = (node0_0 + tmp2_fu_1426_p2);
 
 assign tmp2_fu_1426_p2 = ($signed(b0) + node1_0);
@@ -433,25 +331,29 @@ assign tmp5_fu_1457_p2 = ($signed(b3) + node1_3);
 
 assign tmp6_fu_1467_p2 = ($signed(b4) + $signed(node1_4));
 
-assign tmp7_cast_fu_1483_p1 = $signed(tmp7_fu_1477_p2);
-
-assign tmp7_fu_1477_p2 = ($signed(b5) + $signed(tmp_32_cast_fu_1420_p1));
+assign tmp7_cast_fu_1483_p1 = ($signed(b5) + $signed(node1_5));
 
 assign tmp8_fu_1493_p2 = ($signed(b6) + node1_6);
 
-assign tmp9_fu_1503_p2 = ($signed(b7) + $signed(tmp_30_fu_1423_p1));
+assign tmp9_fu_1503_p2 = ($signed(b7) + $signed(node1_7));
 
 assign tmp_28_fu_1379_p1 = $signed(node0_1);
 
-assign tmp_2_fu_1269_p4 = {{data_V_read[DS+DS+1:DS+1]}};
+assign ap_return_0 = return_0;
 
-assign tmp_30_fu_1423_p1 = $signed(node1_7);
+assign ap_return_1 = return_1;
 
-assign tmp_32_cast_fu_1420_p1 = $signed(node1_5);
+assign ap_return_2 = return_2;
 
+assign ap_return_3 = return_3;
 
+assign ap_return_4 = return_4;
 
-assign tmp_fu_1180_p1 = data_V_read[DS:0];
+assign ap_return_5 = return_5;
+
+assign ap_return_6 = return_6;
+
+assign ap_return_7 = return_7;
 
 
 endmodule //dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0
