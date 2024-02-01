@@ -41,7 +41,7 @@ async def inference_test(dut):
         # Initalization
         # dut.input_V_ap_vld.value=1
         orig.append(int(y[i]))
-        dut.accumulated_data.value=x[i]
+        dut.accumulated_data.value=  x[i]
         dut.start_trigger.value=1
         await RisingEdge(dut.clk)
         dut.start_trigger.value=0
@@ -55,7 +55,7 @@ async def inference_test(dut):
         print('*****************')
         print('*****************')
 
-        for _ in range(19):
+        for _ in range(20):
             await RisingEdge(dut.clk)
         print('--- Input to HiddenLayer 1----')
         print(int(str(dut.nn_model.input_2_V_in_sig.value),2))

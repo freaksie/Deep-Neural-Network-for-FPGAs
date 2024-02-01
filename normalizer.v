@@ -39,18 +39,18 @@ always @(posedge clk) begin
 end
 assign NN_startTrigger = startNN;
 
-assign normalized_output = {normalizedQ[35:18],normalizedI[35:18]};
+assign normalized_output = {normalizedI[35:18],normalizedQ[35:18]};
 
 reg signed [inWidth:0] sumI_r = 0;
 reg signed [inWidth:0] sumQ_r = 0;
 
 always @(posedge clk) begin  
-    dataI <= accumulated_input[31:0];
+    dataI <= accumulated_input[63:32];
     sumI_r <= dataI + minimumI;
     sumI <= sumI_r; 
     normalizedI <= sumI << 11;
     
-    dataQ <= accumulated_input[63:32];
+    dataQ <= accumulated_input[31:0];
     sumQ_r <= dataQ + minimumQ;
     sumQ <= sumQ_r;
     normalizedQ <= sumQ << 11;

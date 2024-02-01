@@ -329,29 +329,39 @@ always @ (posedge ap_clk) begin
     end
 end
 
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_ce)) begin
-        data_0_V_read_int_reg <= data_0_V_read;
-        data_1_V_read_int_reg <= data_1_V_read;
-        data_2_V_read_int_reg <= data_2_V_read;
-        data_3_V_read_int_reg <= data_3_V_read;
-        data_4_V_read_int_reg <= data_4_V_read;
-        data_5_V_read_int_reg <= data_5_V_read;
-        data_6_V_read_int_reg <= data_6_V_read;
-        data_7_V_read_int_reg <= data_7_V_read;
-    end
+// always @ (posedge ap_clk) begin
+//     if ((1'b1 == ap_ce)) begin
+//         data_0_V_read_int_reg <= data_0_V_read;
+//         data_1_V_read_int_reg <= data_1_V_read;
+//         data_2_V_read_int_reg <= data_2_V_read;
+//         data_3_V_read_int_reg <= data_3_V_read;
+//         data_4_V_read_int_reg <= data_4_V_read;
+//         data_5_V_read_int_reg <= data_5_V_read;
+//         data_6_V_read_int_reg <= data_6_V_read;
+//         data_7_V_read_int_reg <= data_7_V_read;
+//     end
+// end
+always @ (*) begin
+        data_0_V_read_2_reg_4000 <= data_0_V_read;
+        data_1_V_read_2_reg_4001 <= data_1_V_read;
+        data_2_V_read_2_reg_4002 <= data_2_V_read;
+        data_3_V_read_2_reg_4003 <= data_3_V_read;
+        data_4_V_read_2_reg_4009 <= data_4_V_read;
+        data_5_V_read_2_reg_4003 <= data_5_V_read;
+        data_6_V_read_2_reg_3995 <= data_6_V_read;
+        data_7_V_read11_reg_3987 <= data_7_V_read;
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        data_0_V_read_2_reg_4000 <= data_0_V_read_int_reg;
-        data_1_V_read_2_reg_4001 <= data_1_V_read_int_reg;
-        data_2_V_read_2_reg_4002 <= data_2_V_read_int_reg;
-        data_3_V_read_2_reg_4003 <= data_3_V_read_int_reg;
-        data_4_V_read_2_reg_4009 <= data_4_V_read_int_reg;
-        data_5_V_read_2_reg_4003 <= data_5_V_read_int_reg;
-        data_6_V_read_2_reg_3995 <= data_6_V_read_int_reg;
-        data_7_V_read11_reg_3987 <= data_7_V_read_int_reg;
+        // data_0_V_read_2_reg_4000 <= data_0_V_read_int_reg;
+        // data_1_V_read_2_reg_4001 <= data_1_V_read_int_reg;
+        // data_2_V_read_2_reg_4002 <= data_2_V_read_int_reg;
+        // data_3_V_read_2_reg_4003 <= data_3_V_read_int_reg;
+        // data_4_V_read_2_reg_4009 <= data_4_V_read_int_reg;
+        // data_5_V_read_2_reg_4003 <= data_5_V_read_int_reg;
+        // data_6_V_read_2_reg_3995 <= data_6_V_read_int_reg;
+        // data_7_V_read11_reg_3987 <= data_7_V_read_int_reg;
         //Node 0
         sum_0_0 <= tmp_fu_3769_p2;  //0-3
         sum_01_0 <= tmp9_fu_3759_p2;
