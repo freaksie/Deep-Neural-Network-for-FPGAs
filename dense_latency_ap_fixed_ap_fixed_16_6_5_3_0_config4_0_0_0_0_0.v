@@ -92,19 +92,11 @@ reg  signed [DS:0] tmp_17_7_reg_4157;
 reg  signed [DS:0] tmp_24_reg_4162;
 reg  signed [DS:0] tmp_26_reg_4167;
 wire signed [DS:0] tmp_fu_3769_p2;
-reg  signed [DS:0] tmp_reg_4172;
-reg  signed [DS:0] tmp11_reg_3867_p2;
 wire signed [DS:0] tmp15_fu_3784_p2;
-reg  signed [DS:0] tmp15_reg_4177;
-reg  signed [DS:0] tmp18_reg_3895;
 wire signed [DS:0] tmp21_fu_3790_p2;
 reg  signed [DS:0] tmp21_reg_4182;
 wire signed [DS:0] tmp22_fu_3804_p2;
-reg  signed [DS:0] tmp22_reg_4187;
-reg  signed [DS:0] tmp25_reg_3923;
 wire signed [DS:0] tmp29_fu_3819_p2;
-reg  signed [DS:0] tmp29_reg_4192;
-reg  signed [DS:0] tmp32_reg_3952;
 wire    ap_block_pp0_stage0;
 wire  signed [DS:0] r_V_6_cast2_fu_3607_p1;
 wire  signed [MS:0] r_V_8_fu_221_p2;
@@ -263,6 +255,25 @@ reg signed [DS:0] sum_1_2;
 reg signed [DS:0] sum_0_3;
 reg signed [DS:0] sum_1_3;
 
+reg signed [DS:0] sum_01_0;
+reg signed [DS:0] sum_23_0;
+reg signed [DS:0] sum_45_0;
+reg signed [DS:0] sum_67_0;
+
+reg signed [DS:0] sum_01_1;
+reg signed [DS:0] sum_23_1;
+reg signed [DS:0] sum_45_1;
+reg signed [DS:0] sum_67_1;
+
+reg signed [DS:0] sum_01_2;
+reg signed [DS:0] sum_23_2;
+reg signed [DS:0] sum_45_2;
+reg signed [DS:0] sum_67_2;
+
+reg signed [DS:0] sum_01_3;
+reg signed [DS:0] sum_23_3;
+reg signed [DS:0] sum_45_3;
+reg signed [DS:0] sum_67_3;
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_ce_reg)) begin
@@ -342,26 +353,33 @@ always @ (posedge ap_clk) begin
         data_6_V_read_2_reg_3995 <= data_6_V_read_int_reg;
         data_7_V_read11_reg_3987 <= data_7_V_read_int_reg;
         //Node 0
-        tmp_reg_4172 <= tmp_fu_3769_p2; //0-3
-        sum_0_0 <= tmp_reg_4172;
-        tmp11_reg_3867_p2 <= tmp11_fu_3867_p2; //4-7
-        sum_1_0 <= tmp11_reg_3867_p2;
+        sum_0_0 <= tmp_fu_3769_p2;  //0-3
+        sum_01_0 <= tmp9_fu_3759_p2;
+        sum_23_0 <= tmp10_fu_3763_p2;
+        sum_1_0 <= tmp11_fu_3867_p2; //4-7
+        sum_45_0 <= tmp12_fu_3852_p2;
+        sum_67_0 <= tmp13_fu_3862_p2;
         //Node 1
-        tmp15_reg_4177 <= tmp15_fu_3784_p2; //0-3
-        sum_0_1 <= tmp15_reg_4177;
-        tmp18_reg_3895 <= tmp18_fu_3895_p2; //4-7
-        sum_1_1 <= tmp18_reg_3895;
-        // tmp21_reg_4182 <= tmp21_fu_3790_p2;
+        sum_0_1 <= tmp15_fu_3784_p2;  
+        sum_01_1 <= tmp16_fu_3775_p2;
+        sum_23_1 <= tmp17_fu_3780_p2;
+        sum_1_1 <= tmp18_fu_3895_p2;  
+        sum_45_1 <= tmp19_fu_3878_p2;
+        sum_67_1 <= tmp20_fu_3885_p2;
         //Node 2
-        tmp22_reg_4187 <= tmp22_fu_3804_p2; //0-3
-        sum_0_2 <= tmp22_reg_4187;
-        tmp25_reg_3923 <= tmp25_fu_3923_p2; //4-7
-        sum_1_2 <= tmp25_reg_3923;
+        sum_0_2 <= tmp22_fu_3804_p2;   
+        sum_01_2 <= tmp23_fu_3796_p2;
+        sum_23_2 <= tmp24_fu_3800_p2;
+        sum_1_2 <= tmp25_fu_3923_p2;   
+        sum_45_2 <= tmp26_fu_3906_p2;
+        sum_67_2 <= tmp27_fu_3917_p2;
         //Node 3
-        tmp29_reg_4192 <= tmp29_fu_3819_p2; //0-3
-        sum_0_3 <= tmp29_reg_4192;
-        tmp32_reg_3952 <= tmp32_fu_3952_p2; //4-7
-        sum_1_3 <= tmp32_reg_3952;
+        sum_0_3 <= tmp29_fu_3819_p2;  
+        sum_01_3 <= tmp30_fu_3810_p2;
+        sum_23_3 <= tmp31_fu_3815_p2;
+        sum_1_3 <= tmp32_fu_3952_p2;  
+        sum_45_3 <= tmp33_fu_3934_p2;
+        sum_67_3 <= tmp34_fu_3946_p2;
 
         //Multipliers
         tmp_11_reg_4107 <= {{r_V_8_4_2_fu_196_p2[MS:MS-DS]}};
@@ -515,9 +533,9 @@ assign r_V_8_2_fu_213_p2 = (data_2_V_read_2_reg_4002 * w2_0);
 //Summation 3
 assign acc_3_V_fu_3958_p2 = (sum_0_3 + sum_1_3);
 
-assign tmp29_fu_3819_p2 = (tmp30_fu_3810_p2 + tmp31_fu_3815_p2);
+assign tmp29_fu_3819_p2 = (sum_01_3 + sum_23_3);
 
-assign tmp32_fu_3952_p2 = (tmp33_fu_3934_p2 + tmp34_fu_3946_p2);
+assign tmp32_fu_3952_p2 = (sum_45_3 + sum_67_3);
 
 assign tmp30_fu_3810_p2 = (node1_3 + node0_3);
 
@@ -533,9 +551,9 @@ assign tmp35_fu_3940_p2 = (node7_3 + b3);
 //Summation 2
 assign acc_2_V_fu_3929_p2 = (sum_0_2 + sum_1_2);
 
-assign tmp22_fu_3804_p2 = (tmp23_fu_3796_p2 + tmp24_fu_3800_p2);
+assign tmp22_fu_3804_p2 = (sum_01_2 + sum_23_2);
 
-assign tmp25_fu_3923_p2 = (tmp26_fu_3906_p2 + tmp27_fu_3917_p2);
+assign tmp25_fu_3923_p2 = (sum_45_2 + sum_67_2);
 
 assign tmp23_fu_3796_p2 = (node1_2 + node0_2);
 
@@ -551,9 +569,9 @@ assign tmp28_fu_3911_p2 = (node7_2 + b2);
 //Node 1
 assign acc_1_V_fu_3901_p2 = (sum_0_1 + sum_1_1);
 
-assign tmp15_fu_3784_p2 = (tmp16_fu_3775_p2 + tmp17_fu_3780_p2);
+assign tmp15_fu_3784_p2 = (sum_01_1 + sum_23_1);
 
-assign tmp18_fu_3895_p2 = (tmp19_fu_3878_p2 + tmp20_fu_3885_p2);
+assign tmp18_fu_3895_p2 = (sum_45_1 + sum_67_1);
 
 assign tmp16_fu_3775_p2 = (node1_1 + node0_1);
 
@@ -569,9 +587,9 @@ assign tmp21_fu_3790_p2 = (node7_1 + b1);
 //Node 0
 assign res_0_V_write_assign_fu_3873_p2 = (sum_0_0 + sum_1_0);
 
-assign tmp_fu_3769_p2 = (tmp9_fu_3759_p2 + tmp10_fu_3763_p2);
+assign tmp_fu_3769_p2 = (sum_01_0 + sum_23_0);
 
-assign tmp11_fu_3867_p2 = (tmp12_fu_3852_p2 + tmp13_fu_3862_p2);
+assign tmp11_fu_3867_p2 = (sum_45_0 + sum_67_0);
 
 assign tmp9_fu_3759_p2 = (node1_0 + node0_0);
 
