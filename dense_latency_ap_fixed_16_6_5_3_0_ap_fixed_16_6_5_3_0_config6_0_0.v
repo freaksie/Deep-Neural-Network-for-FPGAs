@@ -93,6 +93,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == 1'b1))) begin
+        data_0_V_read_int_reg <= data_0_V_read;
+        data_1_V_read_int_reg <= data_1_V_read;
+        data_2_V_read_int_reg <= data_2_V_read;
+        data_3_V_read_int_reg <= data_3_V_read;
         sum_01 <= tmp_fu_227_p2;
         sum_23 <= tmp1_fu_236_p2;
         tmp_5_1_reg_252 <= {{r_V_6_1_fu_73_p2[MS:MS-DS]}};
@@ -114,21 +118,21 @@ assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 
 assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
-assign r_V_6_1_fu_73_p0 = data_1_V_read;
+assign r_V_6_1_fu_73_p0 = data_1_V_read_int_reg;
 
 assign r_V_6_1_fu_73_p2 = ($signed(r_V_6_1_fu_73_p0) * $signed(w1));
 
-assign r_V_6_2_fu_70_p0 = data_2_V_read;
+assign r_V_6_2_fu_70_p0 = data_2_V_read_int_reg;
 
 assign r_V_6_2_fu_70_p2 = ($signed(r_V_6_2_fu_70_p0) * $signed(w2));
 
-assign r_V_6_3_fu_72_p0 = data_3_V_read;
+assign r_V_6_3_fu_72_p0 = data_3_V_read_int_reg;
 
 assign r_V_6_3_fu_72_p2 = ($signed(r_V_6_3_fu_72_p0) * $signed(w3));
 
-assign r_V_6_fu_71_p0 = data_0_V_read;
+assign r_V_6_fu_71_p0 = data_0_V_read_int_reg;
 
-assign r_V_6_fu_71_p2 = ($signed(data_0_V_read) * $signed(w0));
+assign r_V_6_fu_71_p2 = ($signed(r_V_6_fu_71_p0) * $signed(w0));
 
 assign res_V_write_assign_fu_241_p2 = (sum_23 + sum_01);
 
