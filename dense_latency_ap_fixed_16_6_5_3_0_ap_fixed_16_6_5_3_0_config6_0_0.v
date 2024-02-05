@@ -67,7 +67,7 @@ w0=64822;
 w1=65139;
 w2=911;
 w3=64698;
-b=333;
+b =333;
 end 
 
 always @ (posedge ap_clk) begin
