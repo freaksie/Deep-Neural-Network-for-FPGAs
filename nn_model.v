@@ -21,29 +21,28 @@ module nn_model (
         state
 );
 
-parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
-localparam IN=35;
-localparam DS=17;
-localparam SS=11;
+reg    ap_ST_fsm_pp0_stage0 = 1'd1;
+localparam INPUT_WIDTH = 54;
+localparam DATA_WIDTH = 27;
+localparam FRAC_WIDTH = 17;
 input   clk;
 input   rst;
 input   nn_start;
 output   done;
 output   idle;
 output   ready;
-input  [IN:0] normalized_input;
-output  [DS:0] state_probability;
+input  [(INPUT_WIDTH- 1):0] normalized_input;
+output  [(DATA_WIDTH - 1):0] state_probability;
 output state;
 
 reg done;
 reg idle;
 reg ready;
 reg input_2_V_ap_vld = 1'b1;
-reg state_pred = 0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
-wire    ap_CS_fsm_pp0_stage0;
-wire    ap_enable_reg_pp0_iter0;
+wire   ap_CS_fsm_pp0_stage0;
+wire   ap_enable_reg_pp0_iter0;
 reg    ap_enable_reg_pp0_iter1;
 reg    ap_enable_reg_pp0_iter2;
 reg    ap_enable_reg_pp0_iter3;
@@ -56,58 +55,68 @@ reg    ap_enable_reg_pp0_iter9;
 reg    ap_enable_reg_pp0_iter10;
 reg    ap_enable_reg_pp0_iter11;
 reg    ap_enable_reg_pp0_iter12;
+reg    ap_enable_reg_pp0_iter13;
+reg    ap_enable_reg_pp0_iter14;
+reg    ap_enable_reg_pp0_iter15;
+reg    ap_enable_reg_pp0_iter16;
+reg    ap_enable_reg_pp0_iter17;
+reg    ap_enable_reg_pp0_iter18;
+reg    ap_enable_reg_pp0_iter19;
+reg    ap_enable_reg_pp0_iter20;
+reg    ap_enable_reg_pp0_iter21;
+
+
 reg    ap_idle_pp0;
 reg    input_2_V_ap_vld_in_sig;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire    ap_block_state2_pp0_stage0_iter1;
-wire    ap_block_state3_pp0_stage0_iter2;
-wire    ap_block_state4_pp0_stage0_iter3;
-wire    ap_block_state5_pp0_stage0_iter4;
-wire    ap_block_state6_pp0_stage0_iter5;
-wire    ap_block_state7_pp0_stage0_iter6;
-wire    ap_block_state8_pp0_stage0_iter7;
-wire    ap_block_state9_pp0_stage0_iter8;
-wire    ap_block_state10_pp0_stage0_iter9;
-wire    ap_block_state11_pp0_stage0_iter10;
-wire    ap_block_state12_pp0_stage0_iter11;
-wire    ap_block_state13_pp0_stage0_iter12;
+wire   ap_block_state2_pp0_stage0_iter1;
+wire   ap_block_state3_pp0_stage0_iter2;
+wire   ap_block_state4_pp0_stage0_iter3;
+wire   ap_block_state5_pp0_stage0_iter4;
+wire   ap_block_state6_pp0_stage0_iter5;
+wire   ap_block_state7_pp0_stage0_iter6;
+wire   ap_block_state8_pp0_stage0_iter7;
+wire   ap_block_state9_pp0_stage0_iter8;
+wire   ap_block_state10_pp0_stage0_iter9;
+wire   ap_block_state11_pp0_stage0_iter10;
+wire   ap_block_state12_pp0_stage0_iter11;
+wire   ap_block_state13_pp0_stage0_iter12;
 reg    ap_block_pp0_stage0_11001;
-reg   [IN:0] input_2_V_preg;
-reg   [IN:0] input_2_V_in_sig;
+reg    [(INPUT_WIDTH- 1):0] input_2_V_in_sig;
 reg    input_2_V_ap_vld_preg;
 reg    input_2_V_blk_n;
 wire    ap_block_pp0_stage0;
-reg   [DS:0] layer2_out_0_V_reg_209;
-reg   [DS:0] layer2_out_1_V_reg_214;
-reg   [DS:0] layer2_out_2_V_reg_219;
-reg   [DS:0] layer2_out_3_V_reg_224;
-reg   [DS:0] layer2_out_4_V_reg_229;
-reg   [DS:0] layer2_out_5_V_reg_234;
-reg   [DS:0] layer2_out_6_V_reg_239;
-reg   [DS:0] layer2_out_7_V_reg_244;
-reg   [DS:0] layer3_out_0_V_reg_249;
-reg   [DS:0] layer3_out_1_V_reg_254;
-reg   [DS:0] layer3_out_2_V_reg_259;
-reg   [DS:0] layer3_out_3_V_reg_264;
-reg   [DS:0] layer3_out_4_V_reg_269;
-reg   [DS:0] layer3_out_5_V_reg_274;
-reg   [DS:0] layer3_out_6_V_reg_279;
-reg   [DS:0] layer3_out_7_V_reg_284;
-reg   [DS:0] layer4_out_0_V_reg_289;
-reg   [DS:0] layer4_out_1_V_reg_294;
-reg   [DS:0] layer4_out_2_V_reg_299;
-reg   [DS:0] layer4_out_3_V_reg_304;
-reg   [DS:0] layer5_out_0_V_reg_309;
-reg   [DS:0] layer5_out_1_V_reg_314;
-reg   [DS:0] layer5_out_2_V_reg_319;
-reg   [DS:0] layer5_out_3_V_reg_324;
-wire   [DS:0] grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92_ap_return;
-reg   [DS:0] layer6_out_0_V_reg_329;
+reg    [(DATA_WIDTH - 1):0] layer2_out_0_V_reg_209;
+reg    [(DATA_WIDTH - 1):0] layer2_out_1_V_reg_214;
+reg    [(DATA_WIDTH - 1):0] layer2_out_2_V_reg_219;
+reg    [(DATA_WIDTH - 1):0] layer2_out_3_V_reg_224;
+reg    [(DATA_WIDTH - 1):0] layer2_out_4_V_reg_229;
+reg    [(DATA_WIDTH - 1):0] layer2_out_5_V_reg_234;
+reg    [(DATA_WIDTH - 1):0] layer2_out_6_V_reg_239;
+reg    [(DATA_WIDTH - 1):0] layer2_out_7_V_reg_244;
+reg    [(DATA_WIDTH - 1):0] layer3_out_0_V_reg_249;
+reg    [(DATA_WIDTH - 1):0] layer3_out_1_V_reg_254;
+reg    [(DATA_WIDTH - 1):0] layer3_out_2_V_reg_259;
+reg    [(DATA_WIDTH - 1):0] layer3_out_3_V_reg_264;
+reg    [(DATA_WIDTH - 1):0] layer3_out_4_V_reg_269;
+reg    [(DATA_WIDTH - 1):0] layer3_out_5_V_reg_274;
+reg    [(DATA_WIDTH - 1):0] layer3_out_6_V_reg_279;
+reg    [(DATA_WIDTH - 1):0] layer3_out_7_V_reg_284;
+reg    [(DATA_WIDTH - 1):0] layer4_out_0_V_reg_289;
+reg    [(DATA_WIDTH - 1):0] layer4_out_1_V_reg_294;
+reg    [(DATA_WIDTH - 1):0] layer4_out_2_V_reg_299;
+reg    [(DATA_WIDTH - 1):0] layer4_out_3_V_reg_304;
+reg    [(DATA_WIDTH - 1):0] layer5_out_0_V_reg_309;
+reg    [(DATA_WIDTH - 1):0] layer5_out_1_V_reg_314;
+reg    [(DATA_WIDTH - 1):0] layer5_out_2_V_reg_319;
+reg    [(DATA_WIDTH - 1):0] layer5_out_3_V_reg_324;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_0_0_fu_92_ap_return;
+reg    [(DATA_WIDTH - 1):0] layer6_out_0_V_reg_329;
 reg    ap_block_pp0_stage0_subdone;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_0;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_1;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_2;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_3;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_0;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_1;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_2;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_return_3;
 reg    grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config4_0_0_0_0_0_fu_55_ap_ce;
 reg    ap_block_state1_pp0_stage0_iter0_ignore_call25;
 wire    ap_block_state2_pp0_stage0_iter1_ignore_call25;
@@ -123,14 +132,14 @@ wire    ap_block_state11_pp0_stage0_iter10_ignore_call25;
 wire    ap_block_state12_pp0_stage0_iter11_ignore_call25;
 wire    ap_block_state13_pp0_stage0_iter12_ignore_call25;
 reg    ap_block_pp0_stage0_11001_ignoreCallOp34;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_0;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_1;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_2;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_3;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_4;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_5;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_6;
-wire   [DS:0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_7;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_0;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_1;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_2;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_3;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_4;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_5;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_6;
+wire   [(DATA_WIDTH - 1):0] grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_return_7;
 reg    grp_dense_latency_ap_fixed_ap_fixed_16_6_5_3_0_config2_0_0_0_0_0_0_0_0_0_fu_67_ap_ce;
 reg    ap_block_state1_pp0_stage0_iter0_ignore_call7;
 wire    ap_block_state2_pp0_stage0_iter1_ignore_call7;
@@ -147,20 +156,20 @@ wire    ap_block_state12_pp0_stage0_iter11_ignore_call7;
 wire    ap_block_state13_pp0_stage0_iter12_ignore_call7;
 reg    ap_block_pp0_stage0_11001_ignoreCallOp15;
 wire    call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_ready;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_0;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_1;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_2;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_3;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_4;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_5;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_6;
-wire   [DS:0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_7;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_0;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_1;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_2;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_3;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_4;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_5;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_6;
+wire   [(DATA_WIDTH - 1):0] call_ret1_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s_fu_73_ap_return_7;
 wire    grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start;
 wire    grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_done;
 wire    grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_idle;
 wire    grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_ready;
 reg    grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_ce;
-wire   [SS:0] grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_return;
+wire   [(FRAC_WIDTH- 1):0] grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_return;
 reg    ap_block_state1_pp0_stage0_iter0_ignore_call36;
 wire    ap_block_state2_pp0_stage0_iter1_ignore_call36;
 wire    ap_block_state3_pp0_stage0_iter2_ignore_call36;
@@ -191,14 +200,14 @@ wire    ap_block_state12_pp0_stage0_iter11_ignore_call35;
 wire    ap_block_state13_pp0_stage0_iter12_ignore_call35;
 reg    ap_block_pp0_stage0_11001_ignoreCallOp47;
 wire    call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_ready;
-wire   [DS:0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_0;
-wire   [DS:0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_1;
-wire   [DS:0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_2;
-wire   [DS:0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_3;
+wire   [(DATA_WIDTH - 1):0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_0;
+wire   [(DATA_WIDTH - 1):0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_1;
+wire   [(DATA_WIDTH - 1):0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_2;
+wire   [(DATA_WIDTH - 1):0] call_ret3_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s_fu_100_ap_return_3;
 reg    grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg;
 reg    ap_block_pp0_stage0_01001;
 reg   [0:0] ap_NS_fsm;
-reg    ap_idle_pp0_0to11;
+reg    ap_idle_pp0_delays;
 reg    ap_reset_idle_pp0;
 wire    ap_enable_pp0;
 
@@ -217,7 +226,16 @@ ap_enable_reg_pp0_iter9 = 1'b0;
 ap_enable_reg_pp0_iter10 = 1'b0;
 ap_enable_reg_pp0_iter11 = 1'b0;
 ap_enable_reg_pp0_iter12 = 1'b0;
-input_2_V_preg = 0;
+ap_enable_reg_pp0_iter13 = 1'b0;
+ap_enable_reg_pp0_iter14 = 1'b0;
+ap_enable_reg_pp0_iter15 = 1'b0;
+ap_enable_reg_pp0_iter16 = 1'b0;
+ap_enable_reg_pp0_iter17 = 1'b0;
+ap_enable_reg_pp0_iter18 = 1'b0;
+ap_enable_reg_pp0_iter19 = 1'b0;
+ap_enable_reg_pp0_iter20 = 1'b0;
+ap_enable_reg_pp0_iter21 = 1'b0;
+
 input_2_V_ap_vld_preg = 1'b0;
 grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg = 1'b0;
 end
@@ -318,7 +336,7 @@ always @ (posedge clk) begin
     end
 end
 
-// Constant delay counter of 12 clk (start->iter0->iter1->iter2 -----> iter12)
+// Constant delay counter of 20 clk (start->iter0->iter1->iter2 -----> iter20)
 always @ (posedge clk) begin
     if (rst == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
@@ -357,6 +375,96 @@ always @ (posedge clk) begin
             ap_enable_reg_pp0_iter12 <= ap_enable_reg_pp0_iter11;
         end
     end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter13 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter13 <= ap_enable_reg_pp0_iter12;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter14 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter14 <= ap_enable_reg_pp0_iter13;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter15 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter15 <= ap_enable_reg_pp0_iter14;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter16 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter16 <= ap_enable_reg_pp0_iter15;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter17 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter17 <= ap_enable_reg_pp0_iter16;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+    if (rst == 1'b1) begin
+        ap_enable_reg_pp0_iter18 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter18 <= ap_enable_reg_pp0_iter17;
+        end
+    end
+end
+
+always @ (posedge clk) begin
+   if (rst == 1'b1) begin
+       ap_enable_reg_pp0_iter19 <= 1'b0;
+   end else begin
+       if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+           ap_enable_reg_pp0_iter19 <= ap_enable_reg_pp0_iter18;
+       end
+   end
+end
+
+always @ (posedge clk) begin
+   if (rst == 1'b1) begin
+       ap_enable_reg_pp0_iter20 <= 1'b0;
+   end else begin
+       if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+           ap_enable_reg_pp0_iter20 <= ap_enable_reg_pp0_iter19;
+       end
+   end
+end
+
+always @ (posedge clk) begin
+   if (rst == 1'b1) begin
+       ap_enable_reg_pp0_iter21 <= 1'b0;
+   end else begin
+       if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+           ap_enable_reg_pp0_iter21 <= ap_enable_reg_pp0_iter20;
+       end
+   end
 end
 
 always @ (posedge clk) begin
@@ -443,7 +551,7 @@ always @ (posedge clk) begin
     if (rst == 1'b1) begin
         grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1))) begin
+        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter18 == 1'b1))) begin
             grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg <= 1'b1;
         end else if ((grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_ready == 1'b1)) begin
             grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_start_reg <= 1'b0;
@@ -463,15 +571,6 @@ always @ (posedge clk) begin
     end
 end
 
-always @ (posedge clk) begin
-    if (rst == 1'b1) begin
-        input_2_V_preg <= 0;
-    end else begin
-        if ((~((nn_start == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage0)) & (input_2_V_ap_vld == 1'b1))) begin
-            input_2_V_preg <= normalized_input;
-        end
-    end
-end
 
 always @ (posedge clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
@@ -509,7 +608,7 @@ always @ (posedge clk) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter12 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter21 == 1'b1))) begin
         done = 1'b1;
     end else begin
         done = 1'b0;
@@ -525,7 +624,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter12 == 1'b0) & (ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter21 == 1'b0) & (ap_enable_reg_pp0_iter20 == 1'b0) & (ap_enable_reg_pp0_iter19 == 1'b0) & (ap_enable_reg_pp0_iter18 == 1'b0) & (ap_enable_reg_pp0_iter17 == 1'b0) & (ap_enable_reg_pp0_iter16 == 1'b0) & (ap_enable_reg_pp0_iter15 == 1'b0) & (ap_enable_reg_pp0_iter14 == 1'b0) & (ap_enable_reg_pp0_iter13 == 1'b0) & (ap_enable_reg_pp0_iter12 == 1'b0) & (ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -533,10 +632,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
-        ap_idle_pp0_0to11 = 1'b1;
+    if (((ap_enable_reg_pp0_iter20 == 1'b0) & (ap_enable_reg_pp0_iter19 == 1'b0) & (ap_enable_reg_pp0_iter18 == 1'b0) & (ap_enable_reg_pp0_iter17 == 1'b0) & (ap_enable_reg_pp0_iter16 == 1'b0) & (ap_enable_reg_pp0_iter15 == 1'b0) & (ap_enable_reg_pp0_iter14 == 1'b0) & (ap_enable_reg_pp0_iter13 == 1'b0) & (ap_enable_reg_pp0_iter12 == 1'b0) & (ap_enable_reg_pp0_iter11 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+        ap_idle_pp0_delays = 1'b1;
     end else begin
-        ap_idle_pp0_0to11 = 1'b0;
+        ap_idle_pp0_delays = 1'b0;
     end
 end
 
@@ -549,7 +648,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((nn_start == 1'b0) & (ap_idle_pp0_0to11 == 1'b1))) begin
+    if (((nn_start == 1'b0) & (ap_idle_pp0_delays == 1'b1))) begin
         ap_reset_idle_pp0 = 1'b1;
     end else begin
         ap_reset_idle_pp0 = 1'b0;
@@ -604,11 +703,10 @@ always @ (*) begin
     end
 end
 
-always @ (*) begin
+always @ (posedge clk) begin
     if ((input_2_V_ap_vld == 1'b1)) begin
         input_2_V_in_sig = normalized_input;
-    end else begin
-        input_2_V_in_sig = input_2_V_preg;
+
     end
 end
 
@@ -803,15 +901,6 @@ assign grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_
 
 assign state_probability = grp_sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_fu_85_ap_return;
 
-assign state = state_pred;
-
-always @(*) begin
-    if (state_probability > 2048) begin
-        state_pred = 1'b1;
-    end
-    else begin
-        state_pred = 0'b0;
-    end
-end
+assign state = (state_probability > 2048) ? 1'b1 : 1'b0;
 
 endmodule 

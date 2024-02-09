@@ -1,12 +1,12 @@
 SIM ?= verilator
 TOPLEVEL_LANG ?= verilog
 PWD =$(shell pwd)
-VERILOG_SOURCES = $(PWD)/ml_interface.v
+VERILOG_SOURCES = $(PWD)/state_disc.v
 
 EXTRA_ARGS += --trace --trace-structs --trace-fst
 COMPILE_ARGS += -Wno-fatal
 
-TOPLEVEL = ml_interface
+TOPLEVEL = state_disc
 MODULE = interface_test
 
 all: fst

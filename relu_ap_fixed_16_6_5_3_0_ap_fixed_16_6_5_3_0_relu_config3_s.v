@@ -27,57 +27,57 @@ module relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s (
         ap_return_7
 );
 
-localparam DS = 17;
+localparam DATA_WIDTH = 27;
 output   ap_ready;
-input  [DS:0] data_0_V_read;
-input  [DS:0] data_1_V_read;
-input  [DS:0] data_2_V_read;
-input  [DS:0] data_3_V_read;
-input  [DS:0] data_4_V_read;
-input  [DS:0] data_5_V_read;
-input  [DS:0] data_6_V_read;
-input  [DS:0] data_7_V_read;
-output  [DS:0] ap_return_0;
-output  [DS:0] ap_return_1;
-output  [DS:0] ap_return_2;
-output  [DS:0] ap_return_3;
-output  [DS:0] ap_return_4;
-output  [DS:0] ap_return_5;
-output  [DS:0] ap_return_6;
-output  [DS:0] ap_return_7;
+input  [(DATA_WIDTH - 1):0] data_0_V_read;
+input  [(DATA_WIDTH - 1):0] data_1_V_read;
+input  [(DATA_WIDTH - 1):0] data_2_V_read;
+input  [(DATA_WIDTH - 1):0] data_3_V_read;
+input  [(DATA_WIDTH - 1):0] data_4_V_read;
+input  [(DATA_WIDTH - 1):0] data_5_V_read;
+input  [(DATA_WIDTH - 1):0] data_6_V_read;
+input  [(DATA_WIDTH - 1):0] data_7_V_read;
+output  [(DATA_WIDTH - 1):0] ap_return_0;
+output  [(DATA_WIDTH - 1):0] ap_return_1;
+output  [(DATA_WIDTH - 1):0] ap_return_2;
+output  [(DATA_WIDTH - 1):0] ap_return_3;
+output  [(DATA_WIDTH - 1):0] ap_return_4;
+output  [(DATA_WIDTH - 1):0] ap_return_5;
+output  [(DATA_WIDTH - 1):0] ap_return_6;
+output  [(DATA_WIDTH - 1):0] ap_return_7;
 
 wire   [0:0] tmp_2_fu_82_p2;
-wire   [DS-1:0] tmp_fu_88_p1;
-wire   [DS-1:0] res_0_V_write_assign_fu_92_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_fu_88_p1;
+wire   [(DATA_WIDTH - 2):0] res_0_V_write_assign_fu_92_p3;
 wire   [0:0] tmp_2_1_fu_104_p2;
-wire   [DS-1:0] tmp_10_fu_110_p1;
-wire   [DS-1:0] res_1_V_write_assign_fu_114_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_10_fu_110_p1;
+wire   [(DATA_WIDTH - 2):0] res_1_V_write_assign_fu_114_p3;
 wire   [0:0] tmp_2_2_fu_126_p2;
-wire   [DS-1:0] tmp_11_fu_132_p1;
-wire   [DS-1:0] res_2_V_write_assign_fu_136_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_11_fu_132_p1;
+wire   [(DATA_WIDTH - 2):0] res_2_V_write_assign_fu_136_p3;
 wire   [0:0] tmp_2_3_fu_148_p2;
-wire   [DS-1:0] tmp_12_fu_154_p1;
-wire   [DS-1:0] res_3_V_write_assign_fu_158_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_12_fu_154_p1;
+wire   [(DATA_WIDTH - 2):0] res_3_V_write_assign_fu_158_p3;
 wire   [0:0] tmp_2_4_fu_170_p2;
-wire   [DS-1:0] tmp_13_fu_176_p1;
-wire   [DS-1:0] res_4_V_write_assign_fu_180_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_13_fu_176_p1;
+wire   [(DATA_WIDTH - 2):0] res_4_V_write_assign_fu_180_p3;
 wire   [0:0] tmp_2_5_fu_192_p2;
-wire   [DS-1:0] tmp_14_fu_198_p1;
-wire   [DS-1:0] res_5_V_write_assign_fu_202_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_14_fu_198_p1;
+wire   [(DATA_WIDTH - 2):0] res_5_V_write_assign_fu_202_p3;
 wire   [0:0] tmp_2_6_fu_214_p2;
-wire   [DS-1:0] tmp_15_fu_220_p1;
-wire   [DS-1:0] res_6_V_write_assign_fu_224_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_15_fu_220_p1;
+wire   [(DATA_WIDTH - 2):0] res_6_V_write_assign_fu_224_p3;
 wire   [0:0] tmp_2_7_fu_236_p2;
-wire   [DS-1:0] tmp_16_fu_242_p1;
-wire   [DS-1:0] res_7_V_write_assign_fu_246_p3;
-wire   [DS:0] res_0_V_write_assign_cast_fu_100_p1;
-wire   [DS:0] res_1_V_write_assign_cast_fu_122_p1;
-wire   [DS:0] res_2_V_write_assign_cast_fu_144_p1;
-wire   [DS:0] res_3_V_write_assign_cast_fu_166_p1;
-wire   [DS:0] res_4_V_write_assign_cast_fu_188_p1;
-wire   [DS:0] res_5_V_write_assign_cast_fu_210_p1;
-wire   [DS:0] res_6_V_write_assign_cast_fu_232_p1;
-wire   [DS:0] res_7_V_write_assign_cast_fu_254_p1;
+wire   [(DATA_WIDTH - 2):0] tmp_16_fu_242_p1;
+wire   [(DATA_WIDTH - 2):0] res_7_V_write_assign_fu_246_p3;
+wire   [(DATA_WIDTH - 1):0] res_0_V_write_assign_cast_fu_100_p1;
+wire   [(DATA_WIDTH - 1):0] res_1_V_write_assign_cast_fu_122_p1;
+wire   [(DATA_WIDTH - 1):0] res_2_V_write_assign_cast_fu_144_p1;
+wire   [(DATA_WIDTH - 1):0] res_3_V_write_assign_cast_fu_166_p1;
+wire   [(DATA_WIDTH - 1):0] res_4_V_write_assign_cast_fu_188_p1;
+wire   [(DATA_WIDTH - 1):0] res_5_V_write_assign_cast_fu_210_p1;
+wire   [(DATA_WIDTH - 1):0] res_6_V_write_assign_cast_fu_232_p1;
+wire   [(DATA_WIDTH - 1):0] res_7_V_write_assign_cast_fu_254_p1;
 
 assign ap_ready = 1'b1;
 
@@ -129,19 +129,19 @@ assign res_7_V_write_assign_cast_fu_254_p1 = res_7_V_write_assign_fu_246_p3;
 
 assign res_7_V_write_assign_fu_246_p3 = ((tmp_2_7_fu_236_p2[0:0] === 1'b1) ? tmp_16_fu_242_p1 : 0);
 
-assign tmp_10_fu_110_p1 = data_1_V_read[DS-1:0];
+assign tmp_10_fu_110_p1 = data_1_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_11_fu_132_p1 = data_2_V_read[DS-1:0];
+assign tmp_11_fu_132_p1 = data_2_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_12_fu_154_p1 = data_3_V_read[DS-1:0];
+assign tmp_12_fu_154_p1 = data_3_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_13_fu_176_p1 = data_4_V_read[DS-1:0];
+assign tmp_13_fu_176_p1 = data_4_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_14_fu_198_p1 = data_5_V_read[DS-1:0];
+assign tmp_14_fu_198_p1 = data_5_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_15_fu_220_p1 = data_6_V_read[DS-1:0];
+assign tmp_15_fu_220_p1 = data_6_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_16_fu_242_p1 = data_7_V_read[DS-1:0];
+assign tmp_16_fu_242_p1 = data_7_V_read[(DATA_WIDTH - 2):0];
 
 assign tmp_2_1_fu_104_p2 = (($signed(data_1_V_read) > $signed(0)) ? 1'b1 : 1'b0);
 
@@ -159,6 +159,6 @@ assign tmp_2_7_fu_236_p2 = (($signed(data_7_V_read) > $signed(0)) ? 1'b1 : 1'b0)
 
 assign tmp_2_fu_82_p2 = (($signed(data_0_V_read) > $signed(0)) ? 1'b1 : 1'b0);
 
-assign tmp_fu_88_p1 = data_0_V_read[DS-1:0];
+assign tmp_fu_88_p1 = data_0_V_read[(DATA_WIDTH - 2):0];
 
 endmodule //relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s

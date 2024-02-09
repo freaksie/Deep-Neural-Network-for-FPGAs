@@ -21,32 +21,32 @@ module relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s (
 
 
 output   ap_ready;
-localparam DS = 17;
-input  [DS:0] data_0_V_read;
-input  [DS:0] data_1_V_read;
-input  [DS:0] data_2_V_read;
-input  [DS:0] data_3_V_read;
-output  [DS:0] ap_return_0;
-output  [DS:0] ap_return_1;
-output  [DS:0] ap_return_2;
-output  [DS:0] ap_return_3;
+localparam DATA_WIDTH = 27;
+input  [(DATA_WIDTH - 1):0] data_0_V_read;
+input  [(DATA_WIDTH - 1):0] data_1_V_read;
+input  [(DATA_WIDTH - 1):0] data_2_V_read;
+input  [(DATA_WIDTH - 1):0] data_3_V_read;
+output  [(DATA_WIDTH - 1):0] ap_return_0;
+output  [(DATA_WIDTH - 1):0] ap_return_1;
+output  [(DATA_WIDTH - 1):0] ap_return_2;
+output  [(DATA_WIDTH - 1):0] ap_return_3;
 
 wire   [0:0] tmp_1_fu_50_p2;
-wire   [DS-1:0] tmp_fu_56_p1;
-wire   [DS-1:0] res_0_V_write_assign_fu_60_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_fu_56_p1;
+wire   [(DATA_WIDTH - 2):0] res_0_V_write_assign_fu_60_p3;
 wire   [0:0] tmp_1_1_fu_72_p2;
-wire   [DS-1:0] tmp_7_fu_78_p1;
-wire   [DS-1:0] res_1_V_write_assign_fu_82_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_7_fu_78_p1;
+wire   [(DATA_WIDTH - 2):0] res_1_V_write_assign_fu_82_p3;
 wire   [0:0] tmp_1_2_fu_94_p2;
-wire   [DS-1:0] tmp_8_fu_100_p1;
-wire   [DS-1:0] res_2_V_write_assign_fu_104_p3;
+wire   [(DATA_WIDTH - 2):0] tmp_8_fu_100_p1;
+wire   [(DATA_WIDTH - 2):0] res_2_V_write_assign_fu_104_p3;
 wire   [0:0] tmp_1_3_fu_116_p2;
-wire   [DS-1:0] tmp_9_fu_122_p1;
-wire   [DS-1:0] res_3_V_write_assign_fu_126_p3;
-wire   [DS:0] res_0_V_write_assign_cast_fu_68_p1;
-wire   [DS:0] res_1_V_write_assign_cast_fu_90_p1;
-wire   [DS:0] res_2_V_write_assign_cast_fu_112_p1;
-wire   [DS:0] res_3_V_write_assign_cast_fu_134_p1;
+wire   [(DATA_WIDTH - 2):0] tmp_9_fu_122_p1;
+wire   [(DATA_WIDTH - 2):0] res_3_V_write_assign_fu_126_p3;
+wire   [(DATA_WIDTH - 1):0] res_0_V_write_assign_cast_fu_68_p1;
+wire   [(DATA_WIDTH - 1):0] res_1_V_write_assign_cast_fu_90_p1;
+wire   [(DATA_WIDTH - 1):0] res_2_V_write_assign_cast_fu_112_p1;
+wire   [(DATA_WIDTH - 1):0] res_3_V_write_assign_cast_fu_134_p1;
 
 assign ap_ready = 1'b1;
 
@@ -82,12 +82,12 @@ assign tmp_1_3_fu_116_p2 = (($signed(data_3_V_read) > $signed(0)) ? 1'b1 : 1'b0)
 
 assign tmp_1_fu_50_p2 = (($signed(data_0_V_read) > $signed(0)) ? 1'b1 : 1'b0);
 
-assign tmp_7_fu_78_p1 = data_1_V_read[DS-1:0];
+assign tmp_7_fu_78_p1 = data_1_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_8_fu_100_p1 = data_2_V_read[DS-1:0];
+assign tmp_8_fu_100_p1 = data_2_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_9_fu_122_p1 = data_3_V_read[DS-1:0];
+assign tmp_9_fu_122_p1 = data_3_V_read[(DATA_WIDTH - 2):0];
 
-assign tmp_fu_56_p1 = data_0_V_read[DS-1:0];
+assign tmp_fu_56_p1 = data_0_V_read[(DATA_WIDTH - 2):0];
 
 endmodule //relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config5_s

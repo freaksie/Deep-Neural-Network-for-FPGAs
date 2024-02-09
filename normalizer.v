@@ -6,32 +6,30 @@ module normalizer(
     normalized_output,
     NN_startTrigger,
 );
-localparam outWidth = 17;
-localparam inWidth = 31;
+localparam DATA_WIDTH  = 27;
+localparam INPUT_WIDTH = 32;
 
 input clk;
 input stb_start;
-input [(inWidth*2)+1:0] accumulated_input;
-output [(outWidth*2)+1:0] normalized_output;
+input  [(INPUT_WIDTH*2)-1:0] accumulated_input;
+output [(DATA_WIDTH*2)-1:0] normalized_output;
 output NN_startTrigger;
 
-reg [(outWidth*2)+1:0] normalized_reg;
-reg [outWidth+1:0] minimum = 262143;
-reg [inWidth:0] sumI = 0;
-reg [inWidth:0] sumQ = 0;
-reg [(outWidth*2)+1:0] normalizedI = 0;
-reg [(outWidth*2)+1:0] normalizedQ = 0;
-reg [outWidth:0] shiftI = 0;
-reg [outWidth:0] shiftQ = 0;
-reg [(inWidth*2)+1:0] multiI = 0;
-reg [(inWidth*2)+1:0] multiQ = 0;
+// reg signed [INPUT_WIDTH - 1:0] minimumI_w = 262143;
+// reg signed [INPUT_WIDTH - 1:0] minimumQ_w = 262143;
+reg signed [INPUT_WIDTH - 1:0] minimumI;
+reg signed [INPUT_WIDTH - 1:0] minimumQ;
+reg [49:0] sumI = 0;
+reg [49:0] sumQ = 0;
+reg signed [DATA_WIDTH - 1:0] normalizedI = 0;
+reg signed [DATA_WIDTH - 1:0] normalizedQ = 0;
+reg signed [INPUT_WIDTH - 1:0] dataI;
+reg signed [INPUT_WIDTH - 1:0] dataQ;
 
 reg delay1 = 0;
 reg delay2 = 0;
 reg delay3 = 0;
 reg delay4 = 0;
-reg delay5 = 0;
-reg delay6 = 0;
 reg startNN = 0;
 
 always @(posedge clk) begin
@@ -39,33 +37,25 @@ always @(posedge clk) begin
     delay2 <= delay1;
     delay3 <= delay2;
     delay4 <= delay3;
-    delay5 <= delay4;
-    delay6 <= delay5;
-
-    startNN <= delay6;
+    startNN <= delay4;
 end
 assign NN_startTrigger = startNN;
-
-always @(posedge clk) begin
-if (delay5 == 1'b1) begin  //always one clk before startNN
-    normalized_reg <= {normalizedQ[35:18],normalizedI[35:18]};
-end
-end
-assign normalized_output = normalized_reg;
+assign normalized_output = {normalizedI,normalizedQ};
+reg [49:0] sumI_r = 0;
+reg [49:0] sumQ_r = 0;
 
 always @(posedge clk) begin  
+    dataI <= accumulated_input[63:32];
+    minimumI <= (1 << 18) - 1;
+    sumI_r <= dataI + minimumI;
+    sumI <= sumI_r; 
+    normalizedI <= (sumI << 17) >> 19;
     
-    sumI <= $signed(accumulated_input[31:0]) + $signed(minimum);
-    multiI <= (sumI) * 10000;
-    shiftI <= multiI >>19; 
-    //0.4096 in (18 bit fraction)
-    normalizedI <= shiftI * 18'd107374; 
-    
-    sumQ <= $signed(accumulated_input[63:32]) + $signed(minimum);
-    multiQ <= sumQ * 10000;
-    shiftQ <= multiQ >>19;
-    //0.4096 in (18 bit fraction)
-    normalizedQ <= shiftQ * 18'd107374;
+    dataQ <= accumulated_input[31:0];
+    minimumQ <= (1 << 18) - 1;
+    sumQ_r <= dataQ + minimumQ;
+    sumQ <= sumQ_r;
+    normalizedQ <= (sumQ << 17) >> 19;
 end
 
 endmodule

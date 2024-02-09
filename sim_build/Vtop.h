@@ -33,7 +33,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_OUT8(&ready,0,0);
     VL_OUT8(&inference_state,0,0);
     VL_OUT8(&done_trigger,0,0);
-    VL_OUT(&inference_prob,17,0);
+    VL_OUT(&inference_prob,26,0);
     VL_IN64(&accumulated_data,63,0);
 
     // CELLS

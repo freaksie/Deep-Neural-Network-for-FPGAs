@@ -1,5 +1,6 @@
 `timescale 1 ns / 1 ps 
-module ml_interface(
+
+module state_disc(
     clk,
     rst,
     start_trigger, //==we
@@ -12,7 +13,7 @@ module ml_interface(
 );
 
 localparam inWidth = 32;
-localparam outWidth = 18;
+localparam outWidth = 27;
 //Input Signals
 input clk;
 input start_trigger;
@@ -25,8 +26,8 @@ output [outWidth-1:0] inference_prob;
 output inference_state;
 output done_trigger;
 
-reg [(outWidth*2)-1:0] normalized_data;
-reg NN_startTrigger=0;
+wire [(outWidth*2)-1:0] normalized_data;
+wire NN_startTrigger;
 
 normalizer normalizer(
     .clk(clk),

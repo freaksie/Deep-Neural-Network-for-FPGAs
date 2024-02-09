@@ -18,11 +18,13 @@ input ce0;
 output reg[DWIDTH-1:0] q0;
 input clk;
 
-reg [DWIDTH-1:0] ram[0:MEM_SIZE-1];
+// reg [DWIDTH-1:0] ram[0:MEM_SIZE-1];
 
-initial begin
-    $readmemh("./sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom.dat", ram);
-end
+// initial begin
+//     $readmemh("./sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom.dat", ram);
+// end
+
+`include "sigmoid_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_sigmoid_config7_s_sigmoid_tabbkb_rom.vh"
 
 
 
