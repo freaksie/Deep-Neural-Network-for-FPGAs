@@ -38,10 +38,11 @@ reg ap_ready;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
-wire    ap_enable_reg_pp0_iter0;
 wire    ap_block_pp0_stage0;
+wire    ap_enable_reg_pp0_iter0;
 reg    ap_enable_reg_pp0_iter1;
 reg    ap_enable_reg_pp0_iter2;
+reg    ap_enable_reg_pp0_iter3;
 reg    ap_idle_pp0;
 reg    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
@@ -63,6 +64,7 @@ wire  signed [16:0] ret_V_cast_fu_93_p1;
 wire   [0:0] tmp_3_fu_115_p2;
 wire   [16:0] ret_V_fu_121_p2;
 wire   [0:0] p_Result_s_fu_97_p2;
+reg    [0:0] comp_reg_flag = 0;
 wire   [16:0] p_s_fu_127_p3;
 wire   [16:0] p_2_fu_135_p3;
 wire   [15:0] tmp_2_fu_143_p1;
@@ -75,7 +77,7 @@ wire   [9:0] index_1_fu_194_p3;
 //Reg for sigmoid
 reg signed [(DATA_WIDTH - 1)+10:0] comp;
 reg   [0:0] ap_NS_fsm;
-reg    ap_idle_pp0_0to1;
+reg    ap_idle_pp0_0to2;
 reg    ap_reset_idle_pp0;
 wire    ap_enable_pp0;
 
@@ -84,6 +86,7 @@ initial begin
 ap_CS_fsm = 1'd1;
 ap_enable_reg_pp0_iter1 = 1'b0;
 ap_enable_reg_pp0_iter2 = 1'b0;
+ap_enable_reg_pp0_iter3 = 1'b0;
 comp = 37'd137438953457;
 end
 
@@ -128,9 +131,25 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_enable_reg_pp0_iter3 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter3 <= ap_enable_reg_pp0_iter2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
     if (((1'b1 == ap_ce) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         tmp_5_reg_206 <= tmp_5_fu_175_p1;
         tmp_6_reg_211 <= {{p_1_fu_167_p3[15:10]}};
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_ce) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        comp_reg_flag <= ($signed(r_V_fu_75_p3) < $signed(comp));
     end
 end
 
@@ -151,7 +170,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -159,10 +178,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
-        ap_idle_pp0_0to1 = 1'b1;
+    if (((ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+        ap_idle_pp0_0to2 = 1'b1;
     end else begin
-        ap_idle_pp0_0to1 = 1'b0;
+        ap_idle_pp0_0to2 = 1'b0;
     end
 end
 
@@ -175,7 +194,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (ap_idle_pp0_0to1 == 1'b1))) begin
+    if (((ap_start == 1'b0) & (ap_idle_pp0_0to2 == 1'b1))) begin
         ap_reset_idle_pp0 = 1'b1;
     end else begin
         ap_reset_idle_pp0 = 1'b0;
@@ -183,7 +202,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_ce) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b1 == ap_ce) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         sigmoid_table1_ce0 = 1'b1;
     end else begin
         sigmoid_table1_ce0 = 1'b0;
@@ -244,7 +263,7 @@ assign p_2_fu_135_p3 = ((p_Result_s_fu_97_p2[0:0] === 1'b1) ? p_s_fu_127_p3 : re
 assign p_Result_2_fu_107_p3 = {{tmp_1_fu_103_p1}, {6'd0}};
 
 // $signed(26'd67108849) 26=DS+10, {111...10001}
-assign p_Result_s_fu_97_p2 = (($signed(r_V_fu_75_p3) < $signed(comp)) ? 1'b1 : 1'b0);
+assign p_Result_s_fu_97_p2 = ((comp_reg_flag) ? 1'b1 : 1'b0);
 
 assign p_s_fu_127_p3 = ((tmp_3_fu_115_p2[0:0] === 1'b1) ? ret_V_cast_fu_93_p1 : ret_V_fu_121_p2);
 
